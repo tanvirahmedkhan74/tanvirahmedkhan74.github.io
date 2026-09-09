@@ -1,0 +1,24 @@
+# ------------------------------------------------------------------
+# Public asset policy
+# ------------------------------------------------------------------
+# The local `assets/` directory holds source/reference material
+# (research documentation, interview prep, private PDFs, media
+# originals). Only `assets/public/` is part of the public website.
+assets/*
+!assets/public/
+!assets/public/**
+
+# Internal working documents — not part of the public repository
+Master Agentic Prompt — Academic GitHub Portfolio.md
+
+# OS / editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+
+# Tooling / caches (kept out in case a build tool is added later)
+node_modules/
+.cache/
+*.log
