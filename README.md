@@ -4,7 +4,10 @@ Personal academic portfolio site for [Tanvir Ahmed Khan](https://tanvirahmedkhan
 hosted on GitHub Pages at `tanvirahmedkhan74.github.io`.
 
 The site presents the profile of an early-career computer science researcher working on
-computer vision, 3D neural rendering, multimodal AI, and memory-driven video understanding.
+computer vision, 3D neural rendering, multimodal AI, and memory-driven video understanding,
+with a publication-first structure: peer-reviewed venues appear immediately below the hero,
+and every paper entry states the author's specific contribution. Ph.D. availability is
+stated as Fall 2027.
 
 ## Architecture
 
@@ -67,8 +70,10 @@ git push -u origin main
 
 | Content | What to change |
 | --- | --- |
-| Publications | `index.html` → Publications section (also update JSON-LD in `<head>`) |
-| Projects | `index.html` → Selected Research section |
+| Publications | `index.html` → Publications section (also update JSON-LD in `<head>`); keep status labels honest (Published, Accepted, Under revision) and restate contributions |
+| Research | `index.html` → Research Directions pillars and Selected projects |
+| Systems | `index.html` → Systems, Hardware & Deployment (industry work, compute facts, public artifacts) |
+| News | `index.html` → News section |
 | Research experience | `index.html` → Experience section |
 | CV | Replace `assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf` |
 | Portrait | Replace/optimize WebP in `assets/public/images/` (1000–4000 px, WebP, ~5:4 or 4:5 ratio) |
