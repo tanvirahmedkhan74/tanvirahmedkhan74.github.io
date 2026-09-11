@@ -117,6 +117,18 @@
     "sameAs": "https://arxiv.org/abs/2512.15547"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Implicit Manifold Entanglement: Resolving Low-Dimensional Stochasticity via Koopman-Regularized Conditional Flow Matching",
+    "creator": { "@type": "Person", "name": "Tanvir Ahmed Khan" },
+    "dateCreated": "2025-12-18",
+    "genre": "Working note",
+    "abstract": "A contemplation on partial observability: apparent randomness as a low-rank projection of a deterministic higher-dimensional manifold, written up formally as a Koopman-regularized conditional flow-matching formulation.",
+    "url": "https://tanvirahmedkhan74.github.io/assets/public/documents/Tanvir_Ahmed_Khan_Implicit_Manifold_Entanglement_Proposal.pdf"
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -139,6 +151,7 @@
         <li><a href="#systems">Systems</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#notes">Notebook</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a class="nav-cv" href="assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf">Download CV</a></li>
       </ul>
@@ -198,6 +211,13 @@
             <a class="btn btn-primary" href="assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf">Download CV</a>
             <a class="btn" href="#publications">Publications</a>
           </div>
+
+          <p class="hero-muse">
+            <a href="#notes">
+              <span class="muse-label">From the notebook <span class="muse-arrow" aria-hidden="true">→</span></span>
+              <em>Is apparent randomness only a shadow of a higher-dimensional order?</em>
+            </a>
+          </p>
 
           <ul class="profile-links" aria-label="Academic profiles">
             <li><a href="https://scholar.google.com/citations?user=Q5rEac8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
@@ -614,8 +634,61 @@
       </div>
     </section>
 
+    <!-- ============ NOTEBOOK ============ -->
+    <section class="section" id="notes" aria-labelledby="notes-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker">Notebook</p>
+          <h2 class="section-title" id="notes-title">Working Notes</h2>
+          <p class="section-lede">Open questions, intuitions, and half-formed positions — the part of research that happens away from the keyboard. These are not results; they are the questions I keep returning to.</p>
+        </header>
+
+        <div class="notes-col">
+          <blockquote class="note-epigraph">
+            <p>"If one aspires to comprehend the totality of all things, one must first embrace the void — the boundless nothing from which all knowledge, being, and mystery arise; for only the void reveals the essence of all that is."</p>
+            <footer><em>Embracing the Void</em> · <time datetime="2025-11-01">1 November 2025</time></footer>
+          </blockquote>
+
+          <article class="note note-feature">
+            <p class="note-tag">Physics · Geometry · Open contemplation</p>
+            <h3>The geometry of apparent chaos</h3>
+            <p>When a physical system suddenly bifurcates, or behaves in a way no equation seems to predict, we usually call it random. I keep wondering whether that randomness is real — or whether we are looking at a low-dimensional shadow of a higher-dimensional world that is perfectly deterministic. Classical philosophy imagined an unobserved soul steering the body. Dynamical systems offers the same intuition a coordinate: what looks like noise in the variables we happen to measure may be smooth, stable motion in a dimension we have not learned to observe — a subspace where the dynamics remain globally linear even as the visible world seems to fall apart.</p>
+            <p class="note-pull">Apparent chaos is often geometry in a dimension we have not yet learned to observe.</p>
+            <p>The claim is not that hidden order explains everything, but that what we call randomness may be an artifact of partial observation — and that the sharper question is not whether the world is stochastic, but which coordinates we are missing. I wrote the intuition up formally at the end of 2025, as much to discipline it as to share it: <a href="assets/public/documents/Tanvir_Ahmed_Khan_Implicit_Manifold_Entanglement_Proposal.pdf">full note (PDF, 6 pages)</a>.</p>
+          </article>
+
+          <article class="note">
+            <p class="note-tag">Language models · Intuition, later confirmed</p>
+            <h3>Why must reasoning move one token at a time?</h3>
+            <p>Autoregressive decoding feels less like thinking and more like walking a narrow path in the dark: one discrete step at a time, with no way to revise where the path has gone. Human reasoning does not feel that way. It wanders, settles, and refines in something closer to a continuous space than a sequence of symbols. If a model could reason by diffusion in a latent space — iteratively denoising a thought instead of committing to the next token — it might plan globally rather than locally.</p>
+            <p>I sketched this and then found that DeepMind had been exploring it and that Inception Labs' Mercury had already shipped a version. Humbling, and quietly validating: on the frontier, the same intuition often arrives in several places at once. The lesson I took was procedural — search the literature early, and hold a hunch loosely.</p>
+          </article>
+
+          <article class="note">
+            <p class="note-tag">Memory · Open question</p>
+            <h3>The anchors we did not choose</h3>
+            <p>Memory does not rank experience by importance. Some of the most vivid things I carry are ordinary moments — a street corner, an uneventful afternoon — with no obvious role in who I became. They persist and surface uninvited, while genuinely consequential events fade. Perhaps their contribution simply is not visible yet. Or perhaps their very distinctiveness lets them work as indexical anchors: low-entropy, easily addressable handles that bind the high-dimensional texture of an entire period. If so, the least significant-feeling memory may be doing the most significant work — holding a chapter together until we choose to open it.</p>
+          </article>
+
+          <article class="note">
+            <p class="note-tag">Genesis of PNEUMA · May 2025</p>
+            <h3>One moment, many retrieval paths</h3>
+            <p>Picture someone eating an apple. To a database it is one record. To a mind it is at least four: an action ("when did I eat an apple?"), a category ("when did I eat fruit?"), a visual property ("when did I eat something red?"), and a shape ("when did I hold something round?"). And it is never alone — the same moment is braided with parallel processes, waiting for someone, circling a problem, only some of which will matter later.</p>
+            <p>A single perception does not fragment into noise; it fragments into shared attributes, each reachable through its own retrieval pathway. That observation became the seed of my undergraduate thesis: a memory architecture that cross-indexes one experience under many lenses instead of flattening it into a single embedding.</p>
+          </article>
+
+          <article class="note">
+            <p class="note-tag">Practice · Ongoing</p>
+            <h3>Understanding the substrate by rebuilding it</h3>
+            <p>Papers can give you the feeling of understanding an architecture without giving you the understanding itself. For a long time I could recite how attention works and still not feel the mechanics under my fingers. So I started implementing a small language model from first principles — raw tensors upward — alongside the MIT 6.7960 (Deep Learning, Fall 2024) curriculum: slow, slightly stubborn work fitted into the gaps between lab deadlines.</p>
+            <p>It is the most reliable way I know to turn a black box into a system you can reason about. Foundational mastery, for me, is not a phase that ends; it is maintenance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CONTACT ============ -->
-    <section class="section" id="contact" aria-labelledby="contact-title">
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
       <div class="container container-narrow">
         <header class="section-head">
           <p class="section-kicker">Contact</p>

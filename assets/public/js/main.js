@@ -69,7 +69,7 @@
   /* ----- Gentle section reveals ----- */
   var revealables = Array.prototype.slice.call(
     document.querySelectorAll(
-      '.direction, .project, .publication, .exp-item, .skills-list li, .about-body p'
+      '.direction, .project, .publication, .note, .exp-item, .skills-list li, .about-body p'
     )
   );
 

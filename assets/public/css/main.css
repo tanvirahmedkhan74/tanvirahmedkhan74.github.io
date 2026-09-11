@@ -235,6 +235,29 @@ a:hover { color: var(--accent); }
 
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 30px; }
 
+/* ---------- Notebook entry hook ---------- */
+.hero-muse { margin: 0 0 24px; }
+.hero-muse a {
+  display: block;
+  max-width: 58ch;
+  padding-left: 14px;
+  border-left: 2px solid var(--accent-line);
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+.hero-muse a:hover { border-left-color: var(--accent); color: var(--ink); }
+.muse-label {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--ink-faint);
+  font-weight: 600; font-size: 0.72rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.hero-muse em { font-style: italic; color: var(--ink); }
+.muse-arrow { margin-left: 6px; color: var(--accent-ink); }
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
@@ -405,6 +428,56 @@ a:hover { color: var(--accent); }
 .ongoing-list li { padding-left: 20px; border-left: 2px solid var(--accent-line); }
 .ongoing-list h4 { margin: 0 0 4px; font-size: 1.02rem; }
 .ongoing-list p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+
+/* ---------- Notebook ---------- */
+.notes-col {
+  max-width: 780px;
+  margin-top: clamp(36px, 5vw, 56px);
+}
+.note-epigraph {
+  margin: 0 0 clamp(40px, 6vw, 64px);
+  padding-left: 22px;
+  border-left: 3px solid var(--accent-line);
+}
+.note-epigraph p {
+  margin: 0 0 12px;
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  line-height: 1.55;
+  font-style: italic;
+  color: var(--ink);
+}
+.note-epigraph footer { font-size: 0.9rem; color: var(--ink-faint); }
+
+.note {
+  border-top: 2px solid var(--line-strong);
+  padding-top: 22px;
+  margin-top: clamp(30px, 4.5vw, 46px);
+}
+.note-feature { border-top: 3px solid var(--accent); }
+.note-tag {
+  margin: 0 0 8px;
+  color: var(--ink-faint);
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.note h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+  margin-bottom: 0.5em;
+}
+.note p { margin: 0 0 1em; color: var(--ink-soft); font-size: 1rem; line-height: 1.75; }
+.note p:last-child { margin-bottom: 0; }
+.note a { font-weight: 500; }
+.note .note-pull {
+  margin: 22px 0;
+  padding-left: 18px;
+  border-left: 3px solid var(--accent);
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2.3vw, 1.4rem);
+  line-height: 1.5;
+  color: var(--ink);
+}
 
 /* ---------- Featured project ---------- */
 .project.is-featured {

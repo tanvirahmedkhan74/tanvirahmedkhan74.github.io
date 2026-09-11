@@ -72,6 +72,7 @@ git push -u origin main
 | --- | --- |
 | Publications | `index.html` → Publications section (also update JSON-LD in `<head>`); keep status labels honest (Published, Accepted, Under revision) and restate contributions |
 | Research | `index.html` → Research Directions pillars and Selected projects |
+| Notes | `index.html` → Working Notes (notebook contemplations, epigraph, partial-observability note); full technical note at `assets/public/documents/Tanvir_Ahmed_Khan_Implicit_Manifold_Entanglement_Proposal.pdf` |
 | Systems | `index.html` → Systems, Hardware & Deployment (industry work, compute facts, public artifacts) |
 | News | `index.html` → News section |
 | Research experience | `index.html` → Experience section |
