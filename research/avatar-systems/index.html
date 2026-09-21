@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Speech-Driven Avatar Systems · Tanvir Ahmed Khan</title>
+  <meta name="description" content="A provenance-aware dossier on speech-driven avatar systems: representation bridges, streaming, renderer distillation, and measured edge-deployment limits.">
+  <link rel="canonical" href="https://tanvirahmedkhan74.github.io/research/avatar-systems/">
+  <meta property="og:title" content="Speech-Driven Avatar Systems"><meta property="og:description" content="Applied research on speech-to-avatar integration, streaming semantics, distillation, and deployment constraints.">
+  <meta property="og:image" content="https://tanvirahmedkhan74.github.io/assets/public/figures/avatar-systems/personaplex-imtalker-bridge.png"><meta property="og:type" content="article">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&amp;display=swap"><link rel="stylesheet" href="/assets/public/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav" aria-label="Primary navigation">
+    <a class="nav-brand" href="/">Tanvir Ahmed Khan</a><button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation"><span class="sr-only">Menu</span><span></span><span></span><span></span></button>
+    <ul class="nav-menu" id="nav-menu"><li><a href="/research/" aria-current="page">Research</a></li><li><a href="/#publications">Publications</a></li><li><a href="/#experience">Experience</a></li><li><a href="/notes/">Notes</a></li><li><a class="nav-cv" href="/assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf">CV</a></li></ul>
+  </nav></header>
+  <main id="main">
+    <header class="page-head"><div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/research/">Research</a> / Avatar systems</nav>
+      <p class="eyebrow">Applied research &amp; systems</p><h1>Speech-Driven Avatar Systems</h1>
+      <p class="page-deck">A research-engineering trajectory connecting conversational speech models to visual renderers, then measuring where streaming, representation, and hardware constraints break the intended experience.</p>
+      <p class="page-meta"><span>MILab and industry collaboration</span><span>2025–present</span><span>Speech, vision, and efficient inference</span></p>
+      <p class="status-line"><strong>Disclosure:</strong> portions of this work were conducted through MILab and industry collaborations and are closed source. This page documents only public-safe architecture, contribution boundaries, evaluation methods, and approved measurements.</p>
+    </div></header>
+
+    <section class="section" aria-labelledby="overview-title"><div class="container">
+      <header class="section-head"><p class="section-label">Overview</p><h2 id="overview-title">One program, several constrained system questions</h2></header>
+      <div class="prose"><p>The work began with conversational lip-sync pipelines that had to preserve chronological frame delivery, synchronize browser audio and video, and recover cleanly from interruption. Later systems replaced text or audio-file boundaries with hidden-state bridges from Moshi/PersonaPlex to IMTalker and Gaussian-based renderers.</p><p>The technical focus then shifted from “can these models be connected?” to “which stage limits the system under a defined latency budget?” That produced adapter training, renderer export and validation, fixed-identity distillation, CUDA-event profiling, and a negative-result 3DGS research branch.</p></div>
+    </div></section>
+
+    <figure class="figure-wide">
+      <img src="/assets/public/figures/avatar-systems/personaplex-imtalker-bridge.png" width="1774" height="887" alt="PersonaPlex and Moshi feed a custom hidden-state capture, speech gate, and adapter before an inherited IMTalker generator and renderer produce synchronized browser audio and video." decoding="async">
+      <figcaption>Figure 1. The custom bridge captures PersonaPlex reply states, applies an assistant-output gate, and maps them into IMTalker's audio-conditioning space. The upstream speech model and frozen renderer remain explicitly outside the custom contribution boundary.</figcaption>
+    </figure>
+
+    <section class="section" aria-labelledby="lineage-title"><div class="container">
+      <header class="section-head"><p class="section-label">System lineage</p><h2 id="lineage-title">From conversational orchestration to representation bridges</h2></header>
+      <div class="evidence-grid">
+        <article class="evidence-block"><h3>Conversational pipeline</h3><p>Threaded orchestration, bounded queues, sequence reordering, audio-anchored frame scheduling, browser playback, silence handling, and interruption-safe stale-job rejection.</p></article>
+        <article class="evidence-block"><h3>Representation bridge</h3><p>A 12.5 Hz, 4096-dimensional speech-model state is mapped into Wav2Vec-style conditioning for the visual generator, with an explicit 0.96-second emission contract.</p></article>
+        <article class="evidence-block"><h3>Adapter training</h3><p>The project archive records 6,890 synchronized examples and distributed adapter training; RMS-weighted fine-tuning reduced silent-period motion by about 17% while reported speech behavior changed by about 2%.</p></article>
+        <article class="evidence-block"><h3>Streaming semantics</h3><p>Generation counters, queue purges, state carry, binary A/V messages, and timestamped playback keep interruption and delivery behavior separate from model quality claims.</p></article>
+      </div>
+      <div class="callout"><h3>Evaluation boundary</h3><p>The RobotBulls branch contains substantial orchestration and a silence-lip metric family, but no repository-preserved FPS, latency, VRAM, or metric outputs. This dossier does not attach invented performance values to that branch.</p></div>
+    </div></section>
+
+    <section class="section section-muted" aria-labelledby="deployment-title"><div class="container">
+      <header class="section-head"><p class="section-label">Measured deployment</p><h2 id="deployment-title">Optimization moved the bottleneck; it did not make the whole service real-time</h2></header>
+      <div class="prose"><p>On Jetson AGX Orin, TensorRT export reduced the isolated IMTalker renderer but still produced roughly 9 frames per second. A later fixed-identity student study measured 19.84× and 27.62× renderer-stage speedups in the preserved 30 W comparison. The full pipeline remained above its real-time factor target: RTF 4.46 and 4.08 for the two students.</p><p>The useful result was attribution. Renderer share fell from 74% to 9.3%, while PersonaPlex accounted for 85.9% of the Student-2 service. Accelerating the renderer therefore changed the next engineering decision instead of proving an end-to-end deployment claim.</p></div>
+      <figure class="figure-standard">
+        <img src="/assets/public/figures/avatar-systems/orin-bottleneck-reattribution.png" width="1672" height="941" alt="Relative Jetson comparison showing a teacher renderer at 74 percent of service time and two faster students, after which PersonaPlex becomes the dominant bottleneck and the pipeline remains non-real-time." loading="lazy" decoding="async">
+        <figcaption>Figure 2. In the preserved MODE_30W relative comparison, fixed-identity students reduce renderer cost by 19.84× and 27.62× and shift the dominant service time to PersonaPlex. Absolute 30 W timings were later invalidated by a power-mode configuration error; the relative bottleneck conclusion is retained, and a clean end-to-end MAXN rerun remains pending.</figcaption>
+      </figure>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Measurement</th><th>Observed</th><th>Scope</th></tr></thead>
+        <tbody>
+          <tr><td>RTX 4090 TensorRT FP16 renderer</td><td>72.55 ms at batch 8; 2.26× over the recorded PyTorch path</td><td>Renderer-only, host-specific validation</td></tr>
+          <tr><td>Orin TensorRT teacher core</td><td>891.24 ms at batch 8, approximately 8.98 FPS</td><td>Not sufficient for a 25 FPS target</td></tr>
+          <tr><td>Fixed-identity students</td><td>19.84× / 27.62× renderer-stage speedup</td><td>Relative MODE_30W comparison; not an end-to-end real-time result</td></tr>
+          <tr><td>Student pipelines</td><td>RTF 4.46 / 4.08</td><td>Service remains slower than real time under the recorded setup</td></tr>
+        </tbody>
+      </table></div>
+    </div></section>
+
+    <section class="section" aria-labelledby="boundary-title"><div class="container">
+      <header class="section-head"><p class="section-label">Provenance</p><h2 id="boundary-title">Who and what each layer belongs to</h2></header>
+      <div class="boundary-grid">
+        <article class="boundary-block"><h3>External / frozen foundation</h3><p>Moshi and PersonaPlex, IMTalker, MuseTalk, F5-TTS, Wav2Vec2, GaussianTalker, and the public datasets and renderer checkpoints.</p></article>
+        <article class="boundary-block custom"><h3>Documented custom project work</h3><p>Representation adapters, synchronized paired data, streaming state carry, A/V transport, TensorRT export rewrites and validation, profiling, student renderers, and experiment governance.</p></article>
+        <article class="boundary-block"><h3>Explicitly attributable to Tanvir</h3><p>Distributed multi-GPU inference pipelines and the NVIDIA Audio2Face–Three.js / ARKit blendshape investigation are supported by the CV. Deeper repository modules are described as collaborative where file-level attribution is unresolved.</p></article>
+        <article class="boundary-block caution"><h3>Inherited, planned, or incomplete</h3><p>Parts of the live PersonaPlex–IMTalker server and several training artifacts were inherited or collaborative. Full-scale student training, release qualification, and deployed INT4 execution were not completed in the audited archive.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section section-muted" aria-labelledby="negative-title"><div class="container">
+      <header class="section-head"><p class="section-label">Research boundary</p><h2 id="negative-title">The 3D Gaussian branch produced a negative method result</h2></header>
+      <div class="prose"><p>A separate StreamTalker-GS line investigated whether affine covariance transport in FLAME-bound Gaussian avatars produced a residual rendering benefit. Projected footprint conditions were measurable, but the preregistered residual-association criterion failed for all three tested identities and the causal swap was not executed. The improvement claim was frozen.</p></div>
+      <figure class="figure-standard">
+        <img src="/assets/public/figures/streamtalker-gs/covariance-audit.png" width="1774" height="887" alt="Falsification audit showing supported non-similarity and footprint checks, rejection of residual association in all three identities, and a frozen improvement claim." loading="lazy" decoding="async">
+        <figcaption>Figure 3. The audit separates geometric support from method improvement: H1 and H2 established non-similarity and projected footprint, while H3 was rejected in 0 of 3 supporting identities and H4 remained unresolved. The downstream improvement claim was therefore frozen.</figcaption>
+      </figure>
+      <p><a href="/research/archive/streamtalker-gs/">Read the complete negative-result record →</a></p>
+      <nav class="back-next" aria-label="Research pages"><a href="/research/erl/">← Previous: ERL</a><a href="/research/pneuma/">Next: PNEUMA →</a></nav>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/research/">Research</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer>
+  <script src="/assets/public/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Notes — Tanvir Ahmed Khan</title>
+  <meta name="description" content="Short research notes by Tanvir Ahmed Khan on partial observation, computational memory, representation, and learning through implementation.">
+  <link rel="canonical" href="https://tanvirahmedkhan74.github.io/notes/">
+  <meta property="og:title" content="Research Notes — Tanvir Ahmed Khan"><meta property="og:description" content="Working intuitions and questions, clearly separated from research results.">
+  <meta property="og:image" content="https://tanvirahmedkhan74.github.io/assets/public/images/tanvir-ahmed-khan-2x.webp"><meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&amp;display=swap"><link rel="stylesheet" href="/assets/public/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav" aria-label="Primary navigation">
+    <a class="nav-brand" href="/">Tanvir Ahmed Khan</a><button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation"><span class="sr-only">Menu</span><span></span><span></span><span></span></button>
+    <ul class="nav-menu" id="nav-menu"><li><a href="/research/">Research</a></li><li><a href="/#publications">Publications</a></li><li><a href="/#experience">Experience</a></li><li><a href="/notes/" aria-current="page">Notes</a></li><li><a class="nav-cv" href="/assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf">CV</a></li></ul>
+  </nav></header>
+  <main id="main">
+    <header class="page-head"><div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / Notes</nav>
+      <p class="eyebrow">Notes</p><h1>Working intuitions</h1>
+      <p class="page-deck">Short essays and open questions. These are exploratory notes, not research findings or claims of novelty.</p>
+    </div></header>
+    <section class="section"><div class="container note-list">
+      <article>
+        <p class="meta-label">Partial observation · December 2025</p>
+        <h2>The geometry of apparent chaos</h2>
+        <p>When a physical system appears to bifurcate unpredictably, the randomness may belong to the observation rather than the full dynamics. A low-dimensional trace can look discontinuous even when its higher-dimensional source is smooth.</p>
+        <blockquote>What we call noise may sometimes be geometry in coordinates we have not learned to observe.</blockquote>
+        <p>I wrote a speculative formulation using latent manifolds, Koopman structure, and conditional flow matching to make the intuition precise enough to criticize. It remains a proposal with no experimental result. <a href="/assets/public/documents/Tanvir_Ahmed_Khan_Implicit_Manifold_Entanglement_Proposal.pdf">Read the six-page working note (PDF)</a>.</p>
+      </article>
+      <article>
+        <p class="meta-label">Memory · May 2025</p>
+        <h2>One moment, several retrieval paths</h2>
+        <p>A person eating an apple can be recalled as an action, a category, a color, a shape, a place, or a neighboring event. That observation motivated PNEUMA's multi-aspect memory: one experience should remain addressable through several attributes rather than a single flattened representation.</p>
+        <p>The engineering audit later changed the question. A system that returns an answer is not necessarily a system whose memory has been evaluated. The more durable problem is how to test which stored item supplied evidence, which item routed access, and which apparent capability came from an upstream model.</p>
+      </article>
+      <article>
+        <p class="meta-label">Language models · Open question</p>
+        <h2>Must reasoning move one token at a time?</h2>
+        <p>Autoregressive decoding commits locally. An alternative could refine a latent state iteratively, allowing a representation to settle before it is rendered into tokens. The intuition is not itself a contribution; related work already explores diffusion and continuous latent reasoning. Its value here is methodological: search the literature early and keep an attractive hunch easy to discard.</p>
+      </article>
+      <article>
+        <p class="meta-label">Practice</p>
+        <h2>Understanding the substrate by rebuilding it</h2>
+        <p>Reading an architecture can create recognition without operational understanding. Reimplementing small systems from primitive tensors exposes the hidden assumptions: tensor shapes, normalization, state, numerical error, and the exact point at which an abstraction stops matching the code.</p>
+      </article>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/research/">Research</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer>
+  <script src="/assets/public/js/main.js" defer></script>
+</body>
+</html>

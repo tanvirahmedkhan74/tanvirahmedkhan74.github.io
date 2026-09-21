@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PNEUMA — Long-Video Memory Thesis · Tanvir Ahmed Khan</title>
+  <meta name="description" content="PNEUMA was a four-person undergraduate thesis on hybrid long-video memory; this dossier documents its architecture, evaluation audit, and discontinuation.">
+  <link rel="canonical" href="https://tanvirahmedkhan74.github.io/research/pneuma/">
+  <meta property="og:title" content="PNEUMA — Long-Video Memory Thesis"><meta property="og:description" content="A completed hybrid video-memory thesis, its evaluation boundary, and what carried into later retrieval research.">
+  <meta property="og:image" content="https://tanvirahmedkhan74.github.io/assets/public/figures/pneuma/hybrid-memory-overview.png"><meta property="og:type" content="article">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&amp;display=swap"><link rel="stylesheet" href="/assets/public/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav" aria-label="Primary navigation">
+    <a class="nav-brand" href="/">Tanvir Ahmed Khan</a><button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation"><span class="sr-only">Menu</span><span></span><span></span><span></span></button>
+    <ul class="nav-menu" id="nav-menu"><li><a href="/research/" aria-current="page">Research</a></li><li><a href="/#publications">Publications</a></li><li><a href="/#experience">Experience</a></li><li><a href="/notes/">Notes</a></li><li><a class="nav-cv" href="/assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf">CV</a></li></ul>
+  </nav></header>
+  <main id="main">
+    <header class="page-head"><div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/research/">Research</a> / PNEUMA</nav>
+      <p class="eyebrow">Undergraduate thesis</p><h1>PNEUMA — Video Memory for Long-Form Question Answering</h1>
+      <p class="page-deck">A training-free system that converts long video into structured, queryable memory across relational, vector, and temporal stores.</p>
+      <p class="page-meta"><span>North South University</span><span>Four-person team</span><span>Supervisor: Dr. Nabeel Mohammed</span></p>
+      <p class="status-line warning"><strong>Status:</strong> completed undergraduate thesis. The research direction was discontinued after evaluation and engineering audits exposed unresolved evidence-grounding and correctness limitations.</p>
+    </div></header>
+
+    <section class="section" aria-labelledby="motivation-title"><div class="container">
+      <header class="section-head"><p class="section-label">Thesis motivation</p><h2 id="motivation-title">One event should remain retrievable through several attributes</h2></header>
+      <div class="prose"><p>A long video can contain a single moment that is relevant as an action, an object, a place, a spoken phrase, or a temporal neighbor. PNEUMA explored whether frozen perception models could populate a persistent memory that supports several retrieval paths instead of reducing every moment to one embedding.</p><p>The resulting system segmented video into overlapping chunks, coordinated frozen action, vision-language, speech, and embedding models, and stored structured records in SQLite, five aspect-specific FAISS indices, and a temporal NetworkX graph. A custom executor decomposed questions, selected a retrieval plan, disambiguated candidates, and synthesized an answer with source chunks and confidence.</p></div>
+    </div></section>
+
+    <figure class="figure-wide">
+      <img src="/assets/public/figures/pneuma/hybrid-memory-overview.png" width="1817" height="866" alt="Long video is processed by frozen V-JEPA, InternVL, Whisper, and CLIP models into structured records stored in SQLite, five FAISS indices, and a temporal graph for a custom query executor." decoding="async">
+      <figcaption>Figure 1. PNEUMA's contribution is the integration and memory layer around frozen pretrained models: overlapping video chunks become structured records, a hybrid memory, and evidence selected by a custom query executor.</figcaption>
+    </figure>
+
+    <section class="section" aria-labelledby="architecture-title"><div class="container">
+      <header class="section-head"><p class="section-label">Architecture</p><h2 id="architecture-title">A hybrid memory with explicit planning</h2></header>
+      <div class="evidence-grid">
+        <article class="evidence-block"><h3>Structured ingestion</h3><p>Three-second chunks with one-second overlap combine action/keyframe signals, vision-language descriptions, transcripts, and normalized semantic fields.</p></article>
+        <article class="evidence-block"><h3>Tri-store memory</h3><p>Normalized SQL supports exact filters, five FAISS spaces support aspect-specific similarity, and a temporal graph represents ordering and time relations.</p></article>
+        <article class="evidence-block"><h3>Plan-selecting executor</h3><p>The system chooses SQL-first, FAISS-first, graph-first, hybrid, or recent-first retrieval, then verifies and synthesizes the evidence.</p></article>
+        <article class="evidence-block"><h3>Benchmark harness</h3><p>EgoSchema, NExT-QA, and MovieChat-1K drivers isolate memory per video and evaluate generated answers with a retrieval-aware external judge and uncertainty statistics.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section section-muted" aria-labelledby="evaluation-title"><div class="container">
+      <header class="section-head"><p class="section-label">Evaluation and audit</p><h2 id="evaluation-title">The harness existed; the final accuracy evidence did not</h2><p>The public description separates implemented evaluation machinery from unavailable aggregate outcomes.</p></header>
+      <figure class="figure-standard">
+        <img src="/assets/public/figures/pneuma/evaluation-audit-boundary.png" width="1774" height="887" alt="Benchmark drivers feed isolated per-video memories and an external judge, while an audit identifies a text-only vision path, threshold mismatch, temporal-key corruption, and persistence gap." loading="lazy" decoding="async">
+        <figcaption>Figure 2. The benchmark and uncertainty pipeline was implemented, but aggregate accuracy files are absent from the audited archive. The same audit found a text-only vision path and other correctness defects whose fix status is not evidenced.</figcaption>
+      </figure>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Evidence</th><th>Observed</th><th>Interpretation</th></tr></thead>
+        <tbody>
+          <tr><td>Small-sample query logs</td><td>Retrieval about 25–30 ms; total query time 13.9–15.3 s; LLM work 92.8–93.0% of total.</td><td>The database and vector stages were not the dominant measured latency.</td></tr>
+          <tr><td>Benchmark drivers</td><td>Per-video memory isolation, resumability, external judge rubric, Wilson intervals, bootstrap confidence intervals, and binomial tests.</td><td>Evaluation infrastructure existed, but infrastructure is not a result.</td></tr>
+          <tr><td>Aggregate accuracy</td><td>Final result files are not present in the audited copy.</td><td>No 85–95% or other aggregate accuracy is published here.</td></tr>
+          <tr><td>Engineering audit</td><td>Text-only vision path, RRF threshold mismatch, temporal-key corruption, and persistence gap.</td><td>A corrected rerun would be required before making a visual-grounding or benchmark claim.</td></tr>
+        </tbody>
+      </table></div>
+    </div></section>
+
+    <section class="section" aria-labelledby="role-title"><div class="container">
+      <header class="section-head"><p class="section-label">Role and provenance</p><h2 id="role-title">Team contribution without invented module ownership</h2></header>
+      <dl class="definition-list">
+        <dt>Team project</dt><dd>PNEUMA was completed by a four-person undergraduate thesis team. The available archive does not establish file-level individual authorship, so this page describes project-level architecture rather than assigning modules to Tanvir.</dd>
+        <dt>Project-built</dt><dd>Chunk orchestration, structured parsers, normalization, hybrid memory, query planning, benchmark drivers, product API, and the line-referenced engineering audit.</dd>
+        <dt>External / frozen</dt><dd>V-JEPA 2, InternVL 3.5, Whisper, CLIP, Qwen3-VL, and the public long-video QA benchmarks.</dd>
+        <dt>Not performed</dt><dd>No model training or fine-tuning. No verified cross-video temporal reasoning, completed real-time stream, or traceable final benchmark accuracy.</dd>
+      </dl>
+    </div></section>
+
+    <section class="section section-muted" aria-labelledby="carry-title"><div class="container">
+      <header class="section-head"><p class="section-label">What carried forward</p><h2 id="carry-title">From system ambition to stricter retrieval questions</h2></header>
+      <div class="prose"><p>PNEUMA left useful questions even though the research line stopped: what should a memory retain, how should evidence be structured, and how should retrieval be evaluated without mistaking an answer-producing pipeline for a validated memory system?</p><p>Those questions motivate the later ERL work, which replaces architecture-first evaluation with paired interventions, matched budgets, registered gates, and explicit failure analysis.</p></div>
+      <nav class="back-next" aria-label="Research pages"><a href="/research/avatar-systems/">← Previous: Avatar systems</a><a href="/research/airflow/">Next: AirFLOW →</a></nav>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/research/">Research</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer>
+  <script src="/assets/public/js/main.js" defer></script>
+</body>
+</html>

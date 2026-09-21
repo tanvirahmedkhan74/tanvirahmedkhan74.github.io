@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ERL — Evidence-Aware Retrieval and Memory · Tanvir Ahmed Khan</title>
+  <meta name="description" content="A falsification-first multi-hop QA study separating routing value from evidence value through paired interventions and prospectively gated experiments.">
+  <link rel="canonical" href="https://tanvirahmedkhan74.github.io/research/erl/">
+  <meta property="og:title" content="ERL — Evidence-Aware Retrieval and Memory"><meta property="og:description" content="Paired interventions, failed gates, controlled diagnosis, and the current limits of a multi-hop QA retrieval study.">
+  <meta property="og:image" content="https://tanvirahmedkhan74.github.io/assets/public/figures/erl/falsification-chronology.png"><meta property="og:type" content="article">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&amp;display=swap"><link rel="stylesheet" href="/assets/public/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav" aria-label="Primary navigation">
+    <a class="nav-brand" href="/">Tanvir Ahmed Khan</a><button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation"><span class="sr-only">Menu</span><span></span><span></span><span></span></button>
+    <ul class="nav-menu" id="nav-menu"><li><a href="/research/" aria-current="page">Research</a></li><li><a href="/#publications">Publications</a></li><li><a href="/#experience">Experience</a></li><li><a href="/notes/">Notes</a></li><li><a class="nav-cv" href="/assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf">CV</a></li></ul>
+  </nav></header>
+  <main id="main">
+    <header class="page-head"><div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/research/">Research</a> / ERL</nav>
+      <p class="eyebrow">Independent research</p><h1>ERL — Evidence-Aware Retrieval and Memory</h1>
+      <p class="page-deck">Can a memory item be useful because it routes retrieval, because it contains answer evidence, or because it does both?</p>
+      <p class="page-meta"><span>2026–present</span><span>Multi-hop question answering</span><span>ACL-targeted manuscript in preparation</span></p>
+      <p class="status-line"><strong>Current status:</strong> active research. The manuscript is not accepted, and the central learned-routing result is negative under the registered protocol.</p>
+    </div></header>
+
+    <section class="section" aria-labelledby="question-title"><div class="container">
+      <div class="question-block"><p class="section-label" id="question-title">Research question</p><p>Can paired interventions isolate routing utility from direct evidence utility without changing the inspection budget or silently granting the system more access?</p></div>
+      <div class="prose top-space"><p>The project began with Emergent Retrieval Landmarks: the hypothesis that intermediate memories could acquire persistent value because traversing them helped recover other evidence. A prospectively fixed comparison on LoCoMo tested learned transit routing against BM25 under the same inspection budget. The methods tied at full-support recall, and learned transit was worse at the tighter budget. The line stopped at its registered gate.</p><p>The subsequent work is therefore a controlled failure analysis, not a successful-routing claim. It decomposes evidence access into reachability, discovery, selection, and reading; tests repairs; and retains later negative results when stronger baselines erase the apparent increment.</p></div>
+    </div></section>
+
+    <figure class="figure-wide">
+      <img src="/assets/public/figures/erl/falsification-chronology.png" width="1860" height="846" alt="Chronology of the ERL study: paired intervention measurement, matched-budget routing tie and stop, selection diagnosis, and failed strong-reranker survival gate." decoding="async">
+      <figcaption>Figure 1. The research path is governed by stop conditions: learned transit tied BM25 at FSR 0.3671, redirecting the study to a scoped evidence-access audit; the later relational-selector claim was retired after failing the strong-reranker survival test.</figcaption>
+    </figure>
+
+    <section class="section" aria-labelledby="method-title"><div class="container">
+      <header class="section-head"><p class="section-label">Intervention</p><h2 id="method-title">Separating route access from context access</h2><p>CRV/DEV is a paired measurement instrument, validated synthetically. It is not evidence that learned routing works on real data.</p></header>
+      <div class="boundary-grid">
+        <div class="boundary-block custom"><h3>Route-off</h3><p>Blocks an intermediate memory's outgoing expansion while preserving its eligibility to appear in the reader context.</p></div>
+        <div class="boundary-block custom"><h3>Evidence-off</h3><p>Preserves traversal through the memory while removing its eligibility to contribute direct reader evidence.</p></div>
+        <div class="boundary-block"><h3>Matched budget</h3><p>Retrieval arms share an explicit ledger of inspected nodes, score operations, hops, and context size.</p></div>
+        <div class="boundary-block"><h3>Paired estimation</h3><p>Per-query deltas are summarized with BCa confidence intervals and bank-aware statistical checks.</p></div>
+      </div>
+      <figure class="figure-standard">
+        <img src="/assets/public/figures/erl/crv-dev-interventions.png" width="1672" height="941" alt="Four matched memory-graph scenarios illustrate baseline, route-off, evidence-off, and full deletion for estimating routing and evidence value." loading="lazy" decoding="async">
+        <figcaption>Figure 2. Route-off changes traversal but keeps evidence eligibility; evidence-off changes evidence eligibility but keeps traversal. This pairing estimates routing and evidence value under the same per-query inspection budget.</figcaption>
+      </figure>
+    </div></section>
+
+    <section class="section section-muted" aria-labelledby="evidence-title"><div class="container">
+      <header class="section-head"><p class="section-label">Evidence</p><h2 id="evidence-title">What the experiments currently establish</h2></header>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Stage</th><th>Observed result</th><th>Research decision</th></tr></thead>
+        <tbody>
+          <tr><td>Synthetic measurement validation</td><td>12 of 12 registered criteria passed on untouched confirmation seeds after a declared per-step credit repair.</td><td>CRV/DEV remained usable as a synthetic measurement instrument.</td></tr>
+          <tr><td>Matched-budget learned routing</td><td>Learned transit and BM25 both reached 0.3671 full-support recall on the held-out test; learned transit was lower at B=16.</td><td>Stop the original routing claim.</td></tr>
+          <tr><td>Post-failure oracle audit</td><td>Gold evidence was reachable within four hops; oracle traversal plus selection reached 0.961 recall. Replacing the frozen RRF selector added 0.114 within that tested pipeline.</td><td>Study selection as the proximal failure, without generalizing beyond the frozen pool.</td></tr>
+          <tr><td>Reader interaction</td><td>The same S2-to-S1 context change yielded −0.0039 F1 for SmolLM2-360M and +0.0112 F1 for SmolLM2-1.7B.</td><td>Report a checkpoint-by-context interaction, not a scale law.</td></tr>
+          <tr><td>Strong-reranker survival test</td><td>The relational residual added +0.0041 and +0.0008 in the two registered directions, failing both survival gates.</td><td>Retire the relational-selector method claim.</td></tr>
+          <tr><td>Four-encoder routing sweep</td><td>Held-out effects changed sign across MiniLM, BGE, E5, and Qwen3 embeddings.</td><td>Qualify the routing null as representation-sensitive.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout caution"><h3>Not established</h3><p>The study does not show that ERL routing improves real-data retrieval, that selection is universally the dominant bottleneck, that the selector transfers zero-shot, or that larger readers causally benefit more. End-to-end E11 and mechanism-audit E12 results do not yet exist.</p></div>
+    </div></section>
+
+    <section class="section" aria-labelledby="role-title"><div class="container">
+      <header class="section-head"><p class="section-label">Contribution</p><h2 id="role-title">Research and implementation boundary</h2></header>
+      <dl class="definition-list">
+        <dt>Designed and implemented</dt><dd>CRV/DEV interventions, the matched-budget retrieval and selector stack, statistical governance, stage runners, verifiers, and the manuscript's claim-to-evidence chain.</dd>
+        <dt>External foundations</dt><dd>LoCoMo, MuSiQue, 2WikiMultiHopQA, HotpotQA, frozen sentence encoders and readers, the BGE reranker, and standard retrieval/statistical methods.</dd>
+        <dt>Governance</dt><dd>Pre-registered gates, immutable freeze tags, result-blind amendments, independent recomputation, and transport verification for GPU runs.</dd>
+        <dt>Assistance disclosure</dt><dd>The repository records agent-assisted implementation in part of the reviewer-proofing and E0 remedial process. Scientific direction, protocols, gates, and claim decisions are documented as author-owned; the work is not described here as unaided implementation.</dd>
+      </dl>
+    </div></section>
+
+    <section class="section section-muted" aria-labelledby="current-title"><div class="container">
+      <header class="section-head"><p class="section-label">Current status</p><h2 id="current-title">What remains unresolved</h2></header>
+      <div class="prose"><p>The active manuscript treats the project as a controlled multi-hop QA failure analysis. Registered follow-ups include a shortcut/mechanism audit of the historical 2Wiki result and a same-dataset end-to-end chain; neither is currently reported as complete. A separate prospective direction is to apply CRV/DEV to an existing graph-RAG system, where routing value could be tested on real data rather than only in synthetic validation.</p><p>No public paper link is provided because the manuscript remains an anonymous draft and the target cycle is unresolved.</p></div>
+      <nav class="back-next" aria-label="Research pages"><a href="/research/">← Research index</a><a href="/research/avatar-systems/">Next: Speech-Driven Avatar Systems →</a></nav>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/research/">Research</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer>
+  <script src="/assets/public/js/main.js" defer></script>
+</body>
+</html>

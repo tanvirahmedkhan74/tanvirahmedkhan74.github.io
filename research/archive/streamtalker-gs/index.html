@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StreamTalker-GS — Negative-Result Archive · Tanvir Ahmed Khan</title>
+  <meta name="description" content="A completed speech-driven 3D Gaussian avatar study whose covariance-transport hypothesis failed its registered residual-association gate.">
+  <link rel="canonical" href="https://tanvirahmedkhan74.github.io/research/archive/streamtalker-gs/">
+  <meta property="og:title" content="StreamTalker-GS — Speech-Driven 3DGS Experiments"><meta property="og:description" content="Hypothesis, ablation, negative result, interpretation, and the decision to freeze the method claim.">
+  <meta property="og:image" content="https://tanvirahmedkhan74.github.io/assets/public/figures/streamtalker-gs/covariance-audit.png"><meta property="og:type" content="article">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&amp;display=swap"><link rel="stylesheet" href="/assets/public/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav" aria-label="Primary navigation">
+    <a class="nav-brand" href="/">Tanvir Ahmed Khan</a><button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation"><span class="sr-only">Menu</span><span></span><span></span><span></span></button>
+    <ul class="nav-menu" id="nav-menu"><li><a href="/research/" aria-current="page">Research</a></li><li><a href="/#publications">Publications</a></li><li><a href="/#experience">Experience</a></li><li><a href="/notes/">Notes</a></li><li><a class="nav-cv" href="/assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf">CV</a></li></ul>
+  </nav></header>
+  <main id="main">
+    <header class="page-head"><div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/research/">Research</a> / Archive / StreamTalker-GS</nav>
+      <p class="eyebrow">Negative-result archive</p><h1>StreamTalker-GS — Speech-Driven 3DGS Experiments</h1>
+      <p class="page-deck">A controlled study of whether FLAME-driven affine covariance transport created a measurable rendering improvement in person-specific Gaussian avatars.</p>
+      <p class="page-meta"><span>Completed experimental study</span><span>Three tested identities</span><span>1.04M supported observations</span></p>
+      <p class="status-line warning"><strong>Status:</strong> original hypothesis not supported. The method-improvement claim was frozen; this is not presented as a successful new 3DGS method.</p>
+    </div></header>
+
+    <section class="section" aria-labelledby="hypothesis-title"><div class="container">
+      <header class="section-head"><p class="section-label">Hypothesis</p><h2 id="hypothesis-title">Could affine transport matter beyond similarity transport?</h2></header>
+      <div class="prose"><p>FLAME-bound Gaussian avatars deform local surface geometry as the face moves. The tested hypothesis was that transporting Gaussian covariance with the local affine deformation—rather than a similarity-only approximation—would create a detectable residual association with rendering error and justify a causal renderer swap.</p><p>The audit separated four gates: non-similarity of the deformation, a projected footprint large enough to matter, residual association after controlling the tested factors, and a causal swap. Passing an early geometry gate was not treated as proof of downstream image improvement.</p></div>
+    </div></section>
+
+    <figure class="figure-wide">
+      <img src="/assets/public/figures/streamtalker-gs/covariance-audit.png" width="1774" height="887" alt="Covariance audit from similarity and affine transport through four gates: non-similarity and footprint supported, residual association rejected for all three identities, causal swap unresolved, and the claim frozen." decoding="async">
+      <figcaption>Figure 1. H1 and H2 showed that the deformation was non-similar and could create a projected footprint. H3 failed in all three identities, H4 was not executed, and the improvement claim was frozen. The lower path validates the audit machinery, not the method claim.</figcaption>
+    </figure>
+
+    <section class="section" aria-labelledby="design-title"><div class="container">
+      <header class="section-head"><p class="section-label">Experimental design</p><h2 id="design-title">Support, association, then intervention</h2></header>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Gate</th><th>Question</th><th>Observed result</th></tr></thead>
+        <tbody>
+          <tr><td>H1</td><td>Does local deformation depart from similarity transport?</td><td>Supported in the screened identities.</td></tr>
+          <tr><td>H2</td><td>Is the projected covariance difference large enough to affect the rasterizer footprint?</td><td>At least 0.5 px in 31.669%, 37.731%, and 39.493% of supported visible observations.</td></tr>
+          <tr><td>H3</td><td>Does the residual geometry signal associate with the tested rendering residual?</td><td>Rejected in 0 of 3 identities; reported Spearman values −0.8971, +0.3212, and −0.1594 did not satisfy the gate.</td></tr>
+          <tr><td>H4</td><td>Does a causal renderer swap improve the outcome?</td><td>Unexecuted because the preceding gate failed.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout"><h3>Control evidence</h3><p>Separate analytic-to-rasterizer checks reached a maximum radial RMS difference of 5.02×10<sup>−7</sup> px and responded monotonically to filter and overlap controls. These results support the measurement implementation; they do not rescue the failed improvement hypothesis.</p></div>
+    </div></section>
+
+    <section class="section section-muted" aria-labelledby="interpretation-title"><div class="container">
+      <header class="section-head"><p class="section-label">Interpretation</p><h2 id="interpretation-title">Why the original claim was retired</h2></header>
+      <div class="evidence-grid">
+        <article class="evidence-block"><h3>What remains valid</h3><p>The live Moshi-to-GaussianTalker bridge, training-matched Mimi latent path, controlled ablation infrastructure, geometric audit, and renderer-identifiability checks remain substantive systems and measurement work.</p></article>
+        <article class="evidence-block"><h3>What failed</h3><p>Measured geometric non-similarity did not translate into the registered residual association required to justify an improvement claim.</p></article>
+        <article class="evidence-block"><h3>What was not run</h3><p>The causal H4 renderer swap, the full supervision-transfer program, and several later research plans remained unexecuted or inconclusive.</p></article>
+        <article class="evidence-block"><h3>Decision</h3><p>Freeze the covariance-transport improvement claim and preserve the work as an archived negative-result study rather than describing it as ongoing positive 3DGS research.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section" aria-labelledby="provenance-title"><div class="container">
+      <header class="section-head"><p class="section-label">Provenance</p><h2 id="provenance-title">Upstream, custom, and uncertain</h2></header>
+      <dl class="definition-list">
+        <dt>Upstream</dt><dd>Moshi/Mimi, GaussianTalker, FLAME 2020, Pixel3DMM, HuBERT, and the Gaussian rasterizer foundations.</dd>
+        <dt>Custom project work</dt><dd>The streaming bridge, Mimi conditioning, controlled training runs, FLAME replay, DINA-S supervision studies, covariance transport implementations, preregistered gates, and verification tooling.</dd>
+        <dt>Attribution caution</dt><dd>The archive documents multiple assistant-authored audit materials and does not permit a precise human-versus-agent file split. This page attributes the program to Tanvir without claiming sole manual authorship of every artifact.</dd>
+        <dt>Relationship to systems work</dt><dd>The streaming and deployment components belong to the broader speech-avatar trajectory; this page isolates the academic hypothesis and its negative result.</dd>
+      </dl>
+      <nav class="back-next" aria-label="Research pages"><a href="/research/airflow/">← Previous: AirFLOW</a><a href="/research/">Research index →</a></nav>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/research/">Research</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer>
+  <script src="/assets/public/js/main.js" defer></script>
+</body>
+</html>
