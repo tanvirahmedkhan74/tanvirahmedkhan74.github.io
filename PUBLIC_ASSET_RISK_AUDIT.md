@@ -33,10 +33,10 @@ Important distinction: an ignored file is protected from accidental Git publicat
 | `assets/Project_DOCS/Academic_Resume.zip` | Archive can contain multiple source documents and metadata that are easy to publish accidentally | No | No | Move to private storage outside the repository. |
 | `Master Agentic Prompt — Academic GitHub Portfolio.md` | Internal execution instructions and repository map | No | No | Keep ignored; it is not website content. |
 | `WEBSITE_ACADEMIC_AUDIT_2026-09.md` | Internal editorial audit and unresolved factual questions | No | No | Keep ignored; use this public risk register for publishable operational guidance. |
-| `assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf` | Intentionally public CV; contains contact, education, work history, and a project/status summary | Yes | Yes | Owner should review before merge: it does not yet foreground ERL and still describes older research directions as current. Replace only with an approved revision. |
-| `assets/public/documents/Tanvir_Ahmed_Khan_Implicit_Manifold_Entanglement_Proposal.pdf` | Intentionally public but speculative unpublished note with strong novelty language and no results | Yes | Yes | Retain only if the owner wants it public. The Notes page labels it as a speculative working proposal; consider revising the PDF's claim language. |
+| `assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf` | Intentionally public CV; contains contact, education, work history, and a project/status summary | Yes | Yes | The Overleaf source has been revised to foreground ERL and correct project statuses, but the public PDF remains the older build because the local TeX bundle was unavailable. Regenerate in Overleaf and replace this PDF before merge. |
+| `assets/public/documents/Tanvir_Ahmed_Khan_Implicit_Manifold_Entanglement_Proposal.pdf` | Intentionally public but speculative unpublished note with strong novelty language and no results | Yes | Yes | Owner approved continued publication only as a hypothesis. The Notes page states that implementation, experiments, and validation remain incomplete; align the PDF's internal wording at its next revision. |
 | `assets/public/images/tanvir-ahmed-khan*.webp` | Public portrait | Yes | Yes | Confirm the owner consents to continued public use. |
-| `assets/public/figures/**` | Selected research diagrams copied from ignored internal records | Yes after this redesign | Yes after merge | Keep only the reviewed subset; captions must preserve custom/upstream boundaries and negative-result wording. |
+| `assets/public/figures/**` | Selected research diagrams copied from ignored internal records | Yes after this redesign | Yes after merge | Owner confirmed that the reviewed subset contains no confidential client or collaborator information. Keep captions that preserve custom/upstream boundaries and negative-result wording. |
 
 ## Pages exposure assessment
 
@@ -48,11 +48,10 @@ Important distinction: an ignored file is protected from accidental Git publicat
 
 ## Required owner actions before merge
 
-1. Review the public CV for alignment with the new research taxonomy and statuses.
-2. Decide whether the speculative manifold proposal should remain publicly downloadable.
+1. Compile the revised Overleaf CV source and replace the older public PDF after checking its pagination and typography.
+2. When revising the manifold proposal PDF, align its internal language with its hypothesis-only status and pending implementation and validation.
 3. Move the identity document, transcript, SOP, interview-preparation folder, and archive ZIP outside the Pages repository working tree for defense in depth.
-4. Confirm that the selected diagrams contain no confidential client or collaborator information.
-5. Re-run `git ls-files` and a secret scan immediately before merging to `main`.
+4. Re-run `git ls-files` and a secret scan immediately before merging to `main`.
 
 ## What this audit did not do
 
