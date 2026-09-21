@@ -2,6 +2,8 @@
 (function () {
   "use strict";
 
+  document.documentElement.classList.add("js");
+
   var toggle = document.getElementById("nav-toggle");
   var menu = document.getElementById("nav-menu");
 
