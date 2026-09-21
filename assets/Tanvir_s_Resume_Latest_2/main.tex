@@ -100,12 +100,11 @@ Dhaka, Bangladesh
 
 \section{Research Interests}
 
-Multimodal learning and optimization;
-machine memory, retrieval, and evidence-aware reasoning;
-predictive representation learning and long-video understanding;
-3D computer vision and neural rendering;
-speech-driven visual systems and efficient inference;
-low-resource NLP and context-aware language understanding.
+\textbf{Primary:} machine memory, retrieval, and evidence-aware reasoning.
+Additional interests include multimodal learning; predictive representation
+learning for long-video understanding; prior and applied work in 3D vision,
+neural rendering, and speech-driven visual systems; efficient inference; and
+low-resource NLP.
 
 
 %=========================================================
@@ -116,11 +115,12 @@ low-resource NLP and context-aware language understanding.
 
 \projHeading
     {ERL --- Evidence-Aware Retrieval and Memory}
-    {Active independent research using paired interventions and
-     matched-budget evaluation to distinguish routing utility from
-     direct evidence utility in multi-hop question answering.
-     The original learned-routing result did not pass its registered gate;
-     the current manuscript is a controlled failure analysis.}
+    {Active research; manuscript in preparation. Uses
+     \textbf{paired interventions} and \textbf{matched-budget evaluation}
+     to distinguish \textbf{routing utility} from
+     \textbf{direct evidence utility} in multi-hop question answering.
+     The current work is a controlled, falsification-oriented analysis after
+     learned routing did not pass its registered gate.}
     {2026 -- Present}
     {\href{https://tanvirahmedkhan74.github.io/research/erl/}
            {Research dossier}}
@@ -239,41 +239,26 @@ pp.~413--418, IEEE, 2025.
 \itemListStart
 
     \myItem{
-        \textbf{Research Assistant}.
-        Advisors:
+        \textbf{Research Assistant} under
         \href{https://scholar.google.com/citations?user=w5djOYsAAAAJ\&hl=en}
              {Dr.~Nabeel Mohammed}
         and
         \href{https://scholar.google.com/citations?user=Pe8C-SUAAAAJ\&hl=en}
-             {Dr.~Shafin Rahman}.
+             {Dr.~Shafin Rahman}, working on \textbf{multimodal systems},
+        low-resource NLP, and speech-driven visual systems.
     }
 
     \myItem{
-        Conduct research in multimodal learning,
-        low-resource natural language processing,
-        and speech-driven visual systems,
-        contributing to the journal and conference work listed above.
+        Built and evaluated streaming conversational-avatar pipelines,
+        including \textbf{representation bridges}, synchronized multi-GPU
+        execution, facial-motion recovery, and \textbf{renderer distillation}.
     }
 
     \myItem{
-        Developed distributed multi-GPU inference and chunked execution
-        for collaborative talking-avatar systems; investigated
-        NVIDIA Audio2Face--Three.js integration and ARKit blend-shape
-        recovery through linear optimization.
-    }
-
-    \myItem{
-        Contributed to representation bridges, synchronized streaming,
-        renderer distillation, TensorRT validation, and Jetson profiling.
-        Upstream speech and rendering models were external, and portions
-        of the work are closed source.
-    }
-
-    \myItem{
-        Profiling showed that renderer acceleration shifted the bottleneck
-        to upstream speech generation; end-to-end real-time operation was
-        not established. A separate 3D Gaussian method hypothesis failed
-        its registered residual-association gate and was archived.
+        Performed \textbf{TensorRT} validation and \textbf{Jetson AGX Orin}
+        profiling; renderer acceleration shifted the measured bottleneck to
+        upstream speech generation. Upstream models were external, portions
+        are closed source, and end-to-end real-time operation was not established.
     }
 
 \itemListEnd
@@ -292,27 +277,26 @@ pp.~413--418, IEEE, 2025.
 
 \projHeading
     {PNEUMA --- Video Memory for Long-Form Question Answering}
-    {Completed four-person undergraduate thesis integrating frozen
-     perception models with SQL, vector, and temporal-graph memory.
-     The research direction was discontinued after the evaluation audit
-     exposed unresolved grounding and correctness limitations.}
-    {Completed thesis}
+    {Undergraduate thesis integrating SQL, vector, and temporal-graph retrieval
+     for long-video memory. Discontinued after an audit exposed unresolved
+     grounding and correctness limits.}
+    {Completed thesis / discontinued}
     {\href{https://tanvirahmedkhan74.github.io/research/pneuma/}
            {Research dossier}}
 
 
 % --------------------------------------------------------
-% Saliency Detection
+% AirFLOW
 % --------------------------------------------------------
 
 \projHeading
-    {Saliency Detection via Knowledge Distillation}
-    {Knowledge-distillation prototype using a
-     Peekaboo/DINO teacher and UKAN student with
-     mask-supervised and teacher--student objectives.}
-    {Aug 2024 -- Dec 2024}
-    {\href{https://github.com/tanvirahmedkhan74/Periphery.git}
-           {GitHub}}
+    {AirFLOW --- Auditable Aerodynamic Analysis Workbench}
+    {Early-stage collaboration with an aerospace practitioner and MIST graduate:
+     STL and lifting-surface audit, standard horseshoe VLM, and an OpenFOAM
+     case handoff without CFD physics validation.}
+    {Recent / early-stage}
+    {\href{https://tanvirahmedkhan74.github.io/research/airflow/}
+           {Research dossier}}
 
 
 % --------------------------------------------------------
@@ -321,10 +305,9 @@ pp.~413--418, IEEE, 2025.
 
 \projHeading
     {DynApex: Dynamic CPU/GPU Parallelization}
-    {C++ prototype for dependency and cycle analysis,
-     pragma injection, and OpenMP-based CPU and
-     target execution.}
-    {Aug 2024 -- Dec 2024}
+    {Engineering prototype for dependency-aware workload partitioning and
+     OpenMP-based CPU/GPU target execution.}
+    {Prototype / 2024}
     {\href{https://github.com/tanvirahmedkhan74/DynApex.git}
            {GitHub}}
 
@@ -356,6 +339,7 @@ pp.~413--418, IEEE, 2025.
 % TECHNICAL SKILLS
 %=========================================================
 
+\Needspace{11\baselineskip}
 \section{Technical Skills}
 
 \skillListStart
@@ -364,8 +348,6 @@ pp.~413--418, IEEE, 2025.
     \textbf{Machine Learning \& Deep Learning:}
     PyTorch,
     Hugging Face Transformers,
-    Diffusion Models,
-    Variational Autoencoders,
     Knowledge Distillation,
     PEFT/LoRA
 
@@ -373,47 +355,26 @@ pp.~413--418, IEEE, 2025.
     \textbf{3D Vision \& Neural Rendering:}
     3D Gaussian Splatting,
     FLAME,
-    3D Morphable Models (3DMM),
-    Talking-Head Generation,
-    Facial Motion Modeling
+    3D Morphable Models,
+    facial motion modeling
 
     \item
-    \textbf{Multimodal \& Video Learning:}
-    Vision-Language Models,
-    CLIP,
-    Multimodal Fusion,
-    Video Representation Learning,
-    Predictive Representation Learning
-
-    \item
-    \textbf{NLP, Retrieval \& Memory:}
-    Large Language Models,
-    Retrieval-Augmented Generation,
+    \textbf{Multimodal, Retrieval \& NLP:}
+    vision-language models,
+    predictive video learning,
+    retrieval-augmented generation,
     FAISS,
     Knowledge Graphs,
-    SQL,
-    Sentiment Analysis,
-    Topic Modeling
-
-    \item
-    \textbf{Speech \& Avatar Systems:}
-    Speech-to-Speech Models,
-    Text-to-Speech,
-    Mel-Spectrogram Analysis,
-    NVIDIA Audio2Face,
-    ARKit Blend Shapes,
-    Lip-Synchronization Systems
+    SQL
 
     \item
     \textbf{Systems \& Deployment:}
-    Multi-GPU Inference,
+    multi-GPU inference,
     CUDA,
     Docker,
     Linux,
-    RunPod,
-    NVIDIA Jetson AGX Orin,
-    FastAPI,
-    Git
+    TensorRT,
+    NVIDIA Jetson AGX Orin
 
     \item
     \textbf{Programming:}
@@ -422,29 +383,26 @@ pp.~413--418, IEEE, 2025.
     JavaScript,
     React Native
 
-    \item
-    \textbf{Languages:}
-    Bangla (Native),
-    English
-
 \skillListEnd
 
 
 %=========================================================
-% AWARDS & HONORS
+% LANGUAGES, HONORS & ACTIVITIES
 %=========================================================
 
-\section{Awards \& Honors}
+\Needspace{5\baselineskip}
+\section{Languages, Honors \& Activities}
 
 \cvEntry
-    {\textbf{Academic Scholarship}, North South University}
-    {2023}
+    {Bangla --- Native \enspace\textbar\enspace
+     English --- C1 (IELTS Academic 7.0)}
+    {July 2026}
 
-\vspace{2pt}
-
-\cvEntry
-    {\textbf{Participant}, ICPC Asia Dhaka Preliminary Contest}
-    {2021}
+{\small
+\textbf{Academic Scholarship}, North South University (2023)
+\enspace\textbullet\enspace
+\textbf{Participant}, ICPC Asia Dhaka Preliminary Contest (2021)
+\par}
 
 
 %=========================================================

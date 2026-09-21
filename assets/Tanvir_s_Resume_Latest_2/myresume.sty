@@ -37,8 +37,22 @@
 % TeX Gyre Heros:
 %   Helvetica-style sans serif for restrained headings.
 
-\setmainfont{TeX Gyre Termes}
-\setsansfont{TeX Gyre Heros}
+% Use file names instead of system font-family lookup so the same bundled
+% TeX Gyre faces resolve consistently in Tectonic and full TeX Live builds.
+\setmainfont{texgyretermes}[
+    Extension=.otf,
+    UprightFont=*-regular,
+    BoldFont=*-bold,
+    ItalicFont=*-italic,
+    BoldItalicFont=*-bolditalic
+]
+\setsansfont{texgyreheros}[
+    Extension=.otf,
+    UprightFont=*-regular,
+    BoldFont=*-bold,
+    ItalicFont=*-italic,
+    BoldItalicFont=*-bolditalic
+]
 
 \RequirePackage{microtype}
 \RequirePackage{setspace}
@@ -60,6 +74,7 @@
 \RequirePackage{tabularx}
 \RequirePackage{array}
 \RequirePackage{ragged2e}
+\RequirePackage{needspace}
 \RequirePackage{hyperref}
 \RequirePackage{fancyhdr}
 
@@ -140,7 +155,7 @@
 
 \titlespacing*{\section}
     {0pt}
-    {9pt}
+    {7.5pt}
     {5pt}
 
 
@@ -174,7 +189,7 @@
         label={[\arabic*]},
         leftmargin=2.25em,
         labelsep=0.55em,
-        itemsep=7pt,
+        itemsep=5.5pt,
         topsep=3pt,
         parsep=0pt,
         partopsep=0pt
@@ -194,7 +209,7 @@
     \begin{itemize}[
         leftmargin=1.35em,
         label=\textbullet,
-        itemsep=2.5pt,
+        itemsep=2pt,
         topsep=3pt,
         parsep=0pt,
         partopsep=0pt
@@ -223,7 +238,8 @@
         itemsep=3pt,
         topsep=3pt,
         parsep=0pt,
-        partopsep=0pt
+        partopsep=0pt,
+        before=\raggedright
     ]
 }
 
@@ -313,7 +329,7 @@
     \renewcommand{\arraystretch}{1.08}%
     \begin{tabularx}
         {\textwidth}
-        {@{}X>{\raggedleft\arraybackslash}p{3.3cm}@{}}
+        {@{}>{\RaggedRight\arraybackslash}X>{\raggedleft\arraybackslash}p{3.3cm}@{}}
 
         \textbf{#1}
         &
@@ -326,7 +342,7 @@
 
     \end{tabularx}
     \endgroup
-    \vspace{5pt}%
+    \vspace{3.5pt}%
 }
 
 
