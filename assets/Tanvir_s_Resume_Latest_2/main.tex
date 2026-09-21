@@ -1,0 +1,104 @@
+% !TEX program = xelatex
+% Academic CV; compile with XeLaTeX in Overleaf or Tectonic locally.
+\documentclass[a4paper,11pt]{article}
+\usepackage{myresume}
+\hypersetup{pdftitle={Tanvir Ahmed Khan - Academic CV},pdfauthor={Tanvir Ahmed Khan}}
+\begin{document}
+\begin{center}
+{\sffamily\bfseries\fontsize{24pt}{27pt}\selectfont Tanvir Ahmed Khan}\par
+\vspace{4pt}
+{\small Dhaka, Bangladesh \enspace\textbullet\enspace
+\href{mailto:tanvirahmedkhan74@gmail.com}{tanvirahmedkhan74@gmail.com}}\par
+\vspace{2pt}
+{\small
+\href{https://tanvirahmedkhan74.github.io/}{Research portfolio}
+\enspace\textbullet\enspace
+\href{https://scholar.google.com/citations?user=Q5rEac8AAAAJ\&hl=en}{Google Scholar}
+\enspace\textbullet\enspace
+\href{https://orcid.org/0009-0009-0519-8021}{ORCID}
+\enspace\textbullet\enspace
+\href{https://github.com/tanvirahmedkhan74}{GitHub}}
+\end{center}
+
+\section{Research Interests}
+Machine memory, retrieval, and evidence-aware reasoning; multimodal learning; speech-driven visual systems and efficient inference. Current independent research investigates how to separate routing utility from direct evidence utility in multi-hop question answering.
+
+\section{Education}
+\eduHeading{North South University}{Dhaka, Bangladesh}
+{B.Sc. in Computer Science and Engineering}{2021 -- 2025}
+\textbf{CGPA: 3.80/4.00} \enspace\textbar\enspace \textit{Summa Cum Laude}\par
+Academic Scholarship, North South University, 2023.
+
+\section{Active Research}
+\cvEntry{\textbf{ERL --- Evidence-Aware Retrieval and Memory}}{2026 -- Present}
+Independent research; \textit{manuscript in preparation (ACL-targeted)}.
+\itemListStart
+\myItem{Designed paired route-off and evidence-off interventions, matched-budget retrieval comparisons, and statistical checks to distinguish memory's routing and evidence roles.}
+\myItem{Evaluated learned routing against BM25 on LoCoMo; a held-out tie stopped the original routing claim. Current work analyzes evidence-access failures; a later relational-selector claim was also retired after stronger-baseline tests.}
+\itemListEnd
+\href{https://tanvirahmedkhan74.github.io/research/erl/}{Research dossier and contribution boundaries}.
+
+\section{Publications and Accepted Work}
+\pubListStart
+\item Mahir Shahriar Tamim, Md. Samiul Alim, \textbf{Tanvir Ahmed Khan}, Maisha Rahman, and Md Musfique Anwar.
+``Ensemble and temporal feature-based framework for rainfall classification in Bangladesh.''
+\textit{PLOS ONE}, 21(3): e0342646, 2026.
+\href{https://doi.org/10.1371/journal.pone.0342646}{DOI}.\par
+{\small Contribution: Conceptualization, temporal-feature methodology, and writing--review/editing.}
+
+\item Mahir Shahriar Tamim, Sharjil Khan, Md. Samiul Alim, \textbf{Tanvir Ahmed Khan}, Shafin Rahman, and Nabeel Mohammed.
+``CAT-GS: Balanced Multimodal Learning via Calibrated Gating and Fusion Surgery.''
+\textit{Neurocomputing}, 2026; accepted as reported in arXiv v3.
+\href{https://arxiv.org/abs/2608.24947}{arXiv}.\par
+{\small Contribution: Comparative evaluation protocols, audio--visual baseline analysis, and pipeline-level optimization experiments.}
+
+\item Md. Samiul Alim, Mahir Shahriar Tamim, \textbf{Tanvir Ahmed Khan}, Sharjil Khan, Rafia Ferdous Duti, Shahriyar Zaman Ridoy, and Mohammad Ali Moni.
+``Can LLMs Follow the Pulse of a Crisis? Evaluating Crisis Sentiment in Bangladesh's July Uprising.''
+\textit{AACL-IJCNLP 2026}, Main Conference; accepted.
+\href{https://arxiv.org/abs/2609.16997}{arXiv}.\par
+{\small Contribution: Corpus phase partitioning, LoRA/SFT experiments, parent-post context ablation, and topic and temporal analyses.}
+
+\item Md. Samiul Alim, Mahir Shahriar Tamim, Maisha Rahman, \textbf{Tanvir Ahmed Khan}, and Md Mushfique Anwar.
+``When a Nation Speaks: Machine Learning and NLP in People's Sentiment Analysis During Bangladesh's 2024 Mass Uprising.''
+In \textit{2025 28th International Conference on Computer and Information Technology (ICCIT)}, pp.~413--418. IEEE, 2025.
+\href{https://arxiv.org/abs/2512.15547}{arXiv}.\par
+{\small Contribution: Data collection/filtering, LDA topic modeling, classical and transformer baseline evaluation, and dataset/correlation figures.}
+\pubListEnd
+
+\newpage
+\section{Research Experience}
+\internHeading{Research Assistant, Machine Intelligence Lab}{NSU}{Mar 2025 -- Present}
+Advisors: Dr.~Nabeel Mohammed and Dr.~Shafin Rahman.
+\itemListStart
+\myItem{Research in multimodal learning, low-resource NLP, and speech-driven visual systems, with contributions to evaluation protocols and journal and conference papers listed above.}
+\myItem{Contributed to the UnrestSent200K context ablation: adding parent-post context increased BanglaBERT accuracy from 64.19\% to 74.72\% under otherwise fixed training settings. Temporal evaluation exposed degradation on future crisis phases.}
+\itemListEnd
+
+\cvSubsection{Speech-Driven Avatar Systems --- MILab / industry collaboration}
+\itemListStart
+\myItem{Developed distributed multi-GPU inference pipelines for talking-avatar generation, including chunked execution. Investigated NVIDIA Audio2Face--Three.js integration and ARKit blendshape recovery through linear optimization.}
+\myItem{Contributed to a collaborative program spanning speech-to-renderer representation bridges, audio/video synchronization, interruption handling, renderer distillation, and TensorRT validation and Jetson profiling. Upstream speech and rendering models were external; portions of the work are closed source.}
+\myItem{The program's profiling identified a shift from renderer cost to upstream speech generation after renderer acceleration; end-to-end real-time operation was not established. Detailed module ownership and measurement limits are documented in the \href{https://tanvirahmedkhan74.github.io/research/avatar-systems/}{systems dossier}.}
+\itemListEnd
+
+\section{Completed Research}
+\cvSubsection{PNEUMA --- Long-Video Memory (Undergraduate Thesis)}
+North South University; four-person team. Supervisor: Dr.~Nabeel Mohammed.
+\itemListStart
+\myItem{Contributed as a thesis team member to a training-free video-memory system combining frozen perception models with SQL, aspect-specific vector retrieval, and a temporal graph for long-form question answering. Architecture and evaluation infrastructure are team contributions; individual module ownership is not established by the archive.}
+\myItem{Completed thesis; research direction discontinued after audits exposed grounding and correctness limitations. Final aggregate benchmark accuracy is not evidenced. The work informed subsequent questions about memory and retrieval evaluation.}
+\itemListEnd
+\href{https://tanvirahmedkhan74.github.io/research/pneuma/}{Thesis dossier}.
+
+\section{Industry Experience}
+\internHeading{Junior Software Engineer, Tuctuc}{Spain (remote)}{Jan 2022 -- Jun 2026}
+Maintained and extended Odoo-based ERP systems and developed cross-platform mobile applications using React Native.
+
+\section{Technical Competencies}
+\skillListStart
+\item \textbf{Research methods:} Controlled ablations, retrieval evaluation, multimodal baseline comparison, temporal generalization, statistical uncertainty, and inference profiling.
+\item \textbf{ML and retrieval:} PyTorch, Hugging Face Transformers, LoRA/SFT, knowledge distillation, FAISS, SQL, and graph-based memory.
+\item \textbf{Systems and programming:} Python, C++, JavaScript; multi-GPU inference, CUDA/TensorRT, Linux, Docker, and Git.
+\item \textbf{Languages:} Bangla (native); English.
+\skillListEnd
+\end{document}
