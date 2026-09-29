@@ -1,63 +1,60 @@
 <!doctype html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ERL — Emergent Retrieval Landmark · Tanvir Ahmed Khan</title>
-  <meta name="description" content="Ongoing research on graph routing, evidence selection, and reader sensitivity in multi-hop question answering, with scoped findings and independently checked results.">
-  <link rel="canonical" href="https://tanvirahmedkhan74.github.io/research/erl/">
-  <meta property="og:title" content="ERL — Emergent Retrieval Landmark"><meta property="og:description" content="Ongoing multi-hop QA research: a held-out routing tie, conditional evidence-selection gains, and reader-dependent outcomes.">
-  <meta property="og:type" content="article">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&amp;display=swap"><link rel="stylesheet" href="/assets/public/css/main.css?v=20260928-2">
-</head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ERL — Emergent Retrieval Landmark · Tanvir Ahmed Khan</title>
+<meta content="Ongoing research on graph routing, evidence selection, and reader sensitivity in multi-hop question answering, with scoped findings and independently checked results." name="description"/>
+<link href="https://tanvirahmedkhan74.github.io/research/erl/" rel="canonical"/>
+<meta content="ERL — Emergent Retrieval Landmark" property="og:title"/><meta content="Ongoing multi-hop QA research: a held-out routing tie, conditional evidence-selection gains, and reader-dependent outcomes." property="og:description"/>
+<meta content="article" property="og:type"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/assets/public/css/main.css?v=20260930" rel="stylesheet"/>
+<meta content="https://tanvirahmedkhan74.github.io/research/erl/" property="og:url"/><meta content="https://tanvirahmedkhan74.github.io/assets/public/images/tanvir-ahmed-khan-2x.webp" property="og:image"/></head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><nav class="nav" aria-label="Primary navigation">
-    <a class="nav-brand" href="/">Tanvir Ahmed Khan</a><button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation"><span class="sr-only">Menu</span><span></span><span></span><span></span></button>
-    <ul class="nav-menu" id="nav-menu"><li><a href="/research/" aria-current="page">Research</a></li><li><a href="/#publications">Publications</a></li><li><a href="/#experience">Experience</a></li><li><a href="/#recent">News</a></li><li><a href="/notes/">Notes</a></li><li><a class="nav-cv" href="/cv/">CV</a></li></ul>
-  </nav></header>
-  <main id="main">
-    <header class="page-head"><div class="container">
-      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/research/">Research</a> / ERL</nav>
-      <p class="eyebrow">Ongoing independent research</p><h1>ERL — Emergent Retrieval Landmark</h1>
-      <p class="page-deck">Studying where multi-hop question answering loses useful evidence: graph routing, evidence selection, and the reader.</p>
-      <p class="page-meta"><span>2026–present</span><span>Multi-hop question answering</span><span>Manuscript in preparation</span></p>
-      <p class="status-line"><strong>Current status:</strong> ongoing evaluation and manuscript revision. The initial routing experiment did not establish an improvement over BM25.</p>
-    </div></header>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav aria-label="Primary navigation" class="nav">
+<a class="nav-brand" href="/">Tanvir Ahmed Khan</a>
+<ul class="nav-menu" id="nav-menu"><li><a aria-current="location" href="/research/">Research</a></li><li><a href="/#publications">Publications</a></li><li><a href="/notes/">Notes</a></li><li><a href="/cv/">CV</a></li></ul>
+</nav></header>
+<main id="main" tabindex="-1">
+<header class="page-head"><div class="container">
+<nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a> / <a href="/research/">Research</a> / ERL</nav>
+<p class="eyebrow">Ongoing independent research</p><h1>ERL — Emergent Retrieval Landmark</h1>
+<p class="page-deck">Studying where multi-hop question answering loses useful evidence: graph routing, evidence selection, and the reader.</p>
+<p class="page-meta"><span>2026–present</span><span>Multi-hop question answering</span><span>Manuscript in preparation</span></p>
+<p class="status-line"><strong>Current status:</strong> ongoing evaluation and manuscript revision. The initial routing experiment did not establish an improvement over BM25.</p>
+</div></header>
+<section aria-labelledby="question-title" class="section"><div class="container">
+<div class="question-block"><h2 id="question-title">Research question</h2><p>When does better evidence access improve answers, and which gains survive a change of selector, representation, or reader?</p></div>
+<div class="prose top-space"><p>ERL began with the hypothesis that intermediate memories could gain persistent value by routing retrieval toward other evidence. Learned transit routing and BM25 tied on the held-out LoCoMo test under the same inspection budget. That result motivated a controlled failure analysis across LoCoMo, MuSiQue, and 2WikiMultihopQA.</p><p>The study separates candidate discovery, evidence selection, and reading. Learned selectors improve support recall in some fixed candidate pools, but comparison questions regress and downstream answer gains depend on the reader checkpoint.</p></div>
+</div></section>
+<section aria-labelledby="evidence-title" class="section"><div class="container">
+<header class="section-head"><h2 id="evidence-title">Selected findings and their limits</h2><p>Results are specific to the tested datasets, candidate pools, and reader checkpoints.</p></header>
+<p class="table-hint" id="table-hint-1">On a small screen, scroll the table horizontally or focus it and use the arrow keys.</p><div aria-describedby="table-hint-1" aria-label="Selected findings and their limits — table" class="table-wrap" role="region" tabindex="0"><table>
+<thead><tr><th scope="col">Stage</th><th scope="col">Observed result</th><th scope="col">Research decision</th></tr></thead>
+<tbody>
+<tr><td>Matched-budget routing</td><td>Learned transit and BM25 each reached 0.3671 full-support recall on the held-out LoCoMo test, inspecting 34 items.</td><td>No demonstrated routing advantage in this setting.</td></tr>
+<tr><td>Fixed-pool evidence selection</td><td>On 2Wiki official development data, relational S2 support recall was 0.9459 versus 0.9042 for S1. Both models were trained on a fixed 20,000-question target-data subset.</td><td>A scoped selection gain: five selected paragraphs from a supplied ten-paragraph pool.</td></tr>
+<tr><td>Question-type sensitivity</td><td>S2 improved recall for four-support/bridge questions by 0.1078, while comparison questions regressed by 0.0278.</td><td>Retain the regression; investigate dataset and lexical-overlap dependence.</td></tr>
+<tr><td>Reader sensitivity</td><td>S2 minus S1 answer F1 was −0.0039 for SmolLM2-360M-Instruct and +0.0112 for SmolLM2-1.7B-Instruct on 2Wiki.</td><td>Checkpoint-specific outcomes; no general reader-scaling claim.</td></tr>
+</tbody>
+</table></div>
+<div class="callout caution"><h3>Scope of the evidence</h3><p>Fixed-pool selection gains do not establish end-to-end retrieval improvements or zero-shot transfer. The study also leaves open whether gains survive strong rerankers and mechanism controls. LoCoMo findings require caution because evaluation spans only ten conversation banks.</p></div>
+</div></section>
+<section aria-labelledby="role-title" class="section"><div class="container">
+<header class="section-head"><h2 id="role-title">Contributions and evaluation practice</h2></header>
+<dl class="definition-list">
+<dt>Research and implementation</dt><dd>Matched-budget retrieval experiments, pointwise and relational evidence selectors, reader-context comparisons, result verification, and claim-to-evidence tracking.</dd>
+<dt>External foundations</dt><dd>LoCoMo, MuSiQue, 2WikiMultihopQA, pretrained encoders and readers, and established retrieval and statistical methods.</dd>
+<dt>Evaluation practice</dt><dd>Prospectively specified protocols, frozen artifacts, independent metric recomputation, and explicit retention of negative and conditional results.</dd>
+<dt>Assistance disclosure</dt><dd>Parts of the implementation and verification used agent assistance. Scientific direction, protocols, evaluation criteria, and claim decisions are documented as author-owned.</dd>
+</dl>
+<div class="prose top-space"><p><strong>Next research questions:</strong> test stronger reranking and reader baselines, examine representation and dataset dependence, and connect discovery, selection, and answer quality on the same questions. The manuscript remains in preparation.</p></div>
+<nav aria-label="Research pages" class="back-next"><a href="/research/">← Research index</a><a href="/research/rift/">Next: RIFT →</a></nav>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/research/">Research</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer>
 
-    <section class="section" aria-labelledby="question-title"><div class="container">
-      <div class="question-block"><p class="section-label" id="question-title">Research question</p><p>When does better evidence access improve answers, and which gains survive a change of selector, representation, or reader?</p></div>
-      <div class="prose top-space"><p>ERL began with the hypothesis that intermediate memories could gain persistent value by routing retrieval toward other evidence. Learned transit routing and BM25 tied on the held-out LoCoMo test under the same inspection budget. That result motivated a controlled failure analysis across LoCoMo, MuSiQue, and 2WikiMultihopQA.</p><p>The study separates candidate discovery, evidence selection, and reading. Learned selectors improve support recall in some fixed candidate pools, but comparison questions regress and downstream answer gains depend on the reader checkpoint.</p></div>
-    </div></section>
-
-    <section class="section section-muted" aria-labelledby="evidence-title"><div class="container">
-      <header class="section-head"><p class="section-label">Evidence</p><h2 id="evidence-title">Selected findings and their limits</h2><p>Results are specific to the tested datasets, candidate pools, and reader checkpoints.</p></header>
-      <div class="table-wrap"><table>
-        <thead><tr><th>Stage</th><th>Observed result</th><th>Research decision</th></tr></thead>
-        <tbody>
-          <tr><td>Matched-budget routing</td><td>Learned transit and BM25 each reached 0.3671 full-support recall on the held-out LoCoMo test, inspecting 34 items.</td><td>No demonstrated routing advantage in this setting.</td></tr>
-          <tr><td>Fixed-pool evidence selection</td><td>On 2Wiki official development data, relational S2 support recall was 0.9459 versus 0.9042 for S1. Both models were trained on a fixed 20,000-question target-data subset.</td><td>A scoped selection gain: five selected paragraphs from a supplied ten-paragraph pool.</td></tr>
-          <tr><td>Question-type sensitivity</td><td>S2 improved recall for four-support/bridge questions by 0.1078, while comparison questions regressed by 0.0278.</td><td>Retain the regression; investigate dataset and lexical-overlap dependence.</td></tr>
-          <tr><td>Reader sensitivity</td><td>S2 minus S1 answer F1 was −0.0039 for SmolLM2-360M-Instruct and +0.0112 for SmolLM2-1.7B-Instruct on 2Wiki.</td><td>Checkpoint-specific outcomes; no general reader-scaling claim.</td></tr>
-        </tbody>
-      </table></div>
-      <div class="callout caution"><h3>Scope of the evidence</h3><p>Fixed-pool selection gains do not establish end-to-end retrieval improvements or zero-shot transfer. The study also leaves open whether gains survive strong rerankers and mechanism controls. LoCoMo findings require caution because evaluation spans only ten conversation banks.</p></div>
-    </div></section>
-
-    <section class="section" aria-labelledby="role-title"><div class="container">
-      <header class="section-head"><p class="section-label">Contribution</p><h2 id="role-title">Research and implementation boundary</h2></header>
-      <dl class="definition-list">
-        <dt>Research and implementation</dt><dd>Matched-budget retrieval experiments, pointwise and relational evidence selectors, reader-context comparisons, result verification, and claim-to-evidence tracking.</dd>
-        <dt>External foundations</dt><dd>LoCoMo, MuSiQue, 2WikiMultihopQA, pretrained encoders and readers, and established retrieval and statistical methods.</dd>
-        <dt>Evaluation practice</dt><dd>Prospectively specified protocols, frozen artifacts, independent metric recomputation, and explicit retention of negative and conditional results.</dd>
-        <dt>Assistance disclosure</dt><dd>The repository records agent-assisted implementation in part of the reviewer-proofing and E0 remedial process. Scientific direction, protocols, gates, and claim decisions are documented as author-owned; the work is not described here as unaided implementation.</dd>
-      </dl>
-      <div class="prose top-space"><p><strong>Next research questions:</strong> test stronger reranking and reader baselines, examine representation and dataset dependence, and connect discovery, selection, and answer quality on the same questions. The manuscript remains in preparation.</p></div>
-      <nav class="back-next" aria-label="Research pages"><a href="/research/">← Research index</a><a href="/research/rift/">Next: RIFT →</a></nav>
-    </div></section>
-  </main>
-  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/research/">Research</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer>
-  <script src="/assets/public/js/main.js" defer></script>
 </body>
 </html>
