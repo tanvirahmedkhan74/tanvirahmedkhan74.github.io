@@ -65,7 +65,7 @@ The browser check covers all 12 pages at 320, 390, 430, 768, 1024, 1440, and 192
 
 ## Content rules
 
-- ERL is a controlled evidence-loss study with a manuscript submitted to ACL Rolling Review on 5 October 2026. Submission does not imply acceptance. RIFT is an active exploratory measurement study (RIFT-M), and RSI is an engineering pilot whose growth hypothesis remains untested. Distinguish completed work from proposed experiments.
+- ERL is an ongoing controlled evidence-loss study. Further research and evaluation are in progress, and the manuscript is in preparation. RIFT is an active exploratory measurement study (RIFT-M), and RSI is an engineering pilot whose growth hypothesis remains untested. Distinguish completed work from proposed experiments.
 - Keep PNEUMA labeled as discontinued thesis work.
 - CAT-GS is published in Neurocomputing, article 135392 (2026), DOI 10.1016/j.neucom.2026.135392; the owner confirms acceptance on 12 October. The accepted AACL-IJCNLP paper links to its public OpenReview record.
 - Keep StreamTalker-GS labeled as an archived negative-result study.

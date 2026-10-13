@@ -1,9 +1,13 @@
 # Portfolio and CV revision record
 
+## 14 October 2026: ERL status correction
+
+The owner clarified that ERL research is ongoing and its manuscript is in preparation. The project descriptions, page metadata, web CV, LaTeX source, downloadable PDF, and source handoff now use that status. The erroneous submission news item was removed. Additional experiments and analysis remain in progress. Static validation passed for 12 pages and 221 local links; the corrected two-page PDF was rendered and reviewed.
+
 ## October 2026 publication and research update
 
 - CAT-GS is published in *Neurocomputing*, article 135392 (2026), DOI [10.1016/j.neucom.2026.135392](https://doi.org/10.1016/j.neucom.2026.135392). Publisher-deposited Crossref metadata confirms the article and author order; the owner confirms acceptance on 12 October 2026. The homepage news, bibliography, web CV, and LaTeX CV now reflect publication.
-- ERL is presented as a controlled evidence-loss study with a manuscript submitted to ACL Rolling Review on 5 October 2026. The public overview reflects the diagnostic contribution and qualified outcomes without exposing detailed unpublished results or follow-up protocols.
+- ERL is presented as an ongoing controlled evidence-loss study with further research in progress and a manuscript in preparation, as clarified by the owner on 14 October 2026. The public overview reflects the diagnostic contribution and qualified outcomes without exposing detailed unpublished results or follow-up protocols.
 - RIFT is presented as active exploratory measurement research (RIFT-M), following the negative predictive pilot. No improved generation or cross-identity transfer is claimed.
 - Added RSI as an engineering pilot investigating capacity growth in verified self-improvement. Its growth hypothesis remains untested. It appears on the homepage, research index, web CV, downloadable CV, and a new `/research/rsi/` overview.
 - Public summaries retain the research questions, contributions, status, and limitations. Internal experiment inventories, thresholds, budgets, review assessments, and operational plans are omitted.
