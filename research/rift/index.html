@@ -3,14 +3,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>RIFT — Implicit Facial Dynamics · Tanvir Ahmed Khan</title>
-<meta content="Ongoing RIFT research on recoverable motion and residual uncertainty in IMTalker's implicit motion space, with a negative pilot and prospective evaluation plan." name="description"/>
+<title>RIFT — Recoverability-Gated Implicit Facial Dynamics · Tanvir Ahmed Khan</title>
+<meta content="An exploratory measurement study of speech-predictable facial motion and rendered articulation in a frozen talking-head representation." name="description"/>
 <link href="https://tanvirahmedkhan74.github.io/research/rift/" rel="canonical"/>
-<meta content="RIFT — Recoverability-Gated Implicit Facial Dynamics" property="og:title"/><meta content="Ongoing research on representation fidelity and residual dynamics for audio-driven talking heads." property="og:description"/>
-<meta content="article" property="og:type"/><meta content="https://tanvirahmedkhan74.github.io/assets/public/images/tanvir-ahmed-khan-2x.webp" property="og:image"/>
+<meta content="RIFT — Recoverability-Gated Implicit Facial Dynamics" property="og:title"/><meta content="An exploratory measurement study of speech-predictable facial motion and rendered articulation in a frozen talking-head representation." property="og:description"/>
+<meta content="article" property="og:type"/>
 <link href="/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="/assets/public/css/main.css?v=20260930" rel="stylesheet"/>
-<meta content="https://tanvirahmedkhan74.github.io/research/rift/" property="og:url"/></head>
+<meta content="https://tanvirahmedkhan74.github.io/research/rift/" property="og:url"/><meta content="https://tanvirahmedkhan74.github.io/assets/public/images/tanvir-ahmed-khan-2x.webp" property="og:image"/></head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><nav aria-label="Primary navigation" class="nav">
@@ -21,33 +21,14 @@
 <header class="page-head"><div class="container">
 <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a> / <a href="/research/">Research</a> / RIFT</nav>
 <p class="eyebrow">Ongoing research</p><h1>RIFT — Recoverability-Gated Implicit Facial Dynamics</h1>
-<p class="page-deck">Which parts of facial motion can be recovered from audio and motion history, and how should a talking-head model represent the uncertainty that remains?</p>
-<p class="page-meta"><span>2026–present</span><span>Audio-driven talking heads</span><span>Updated 28 September 2026</span></p>
-<p class="status-line"><strong>Current status:</strong> ongoing research. The completed 36-fit temporal pilot did not support the tested configuration. The central hypothesis remains unvalidated; the revised experiment plan is prospective.</p>
+<p class="page-deck">How much facial motion does speech determine, and how does that predictability relate to visible articulation?</p>
+<p class="page-meta"><span>September 2026–present</span><span>Audio-driven talking heads</span><span>RIFT-M measurement study</span><span>Updated 13 October 2026</span></p>
+<p class="status-line"><strong>Current status:</strong> active exploratory research. The project has narrowed to RIFT-M, a measurement study; the original generative hypothesis remains unvalidated.</p>
 </div></header>
-<section aria-labelledby="question-title" class="section"><div class="container">
-<header class="section-head"><h2 id="question-title">Separate recoverable motion from residual uncertainty</h2></header>
-<div class="prose"><p>RIFT investigates motion in the implicit representation of the frozen IMTalker system. The proposal asks whether predictable components can be separated from uncertain residual variation, and whether that separation can guide stochastic motion generation across identities.</p><p>The current plan first tests representation fidelity, predictive recoverability, and the way residual errors propagate through rendered motion. Improved generation remains a hypothesis to test after these measurements.</p></div>
-</div></section>
-<section aria-labelledby="evidence-title" class="section"><div class="container">
-<header class="section-head"><h2 id="evidence-title">Completed pilot and planned experiments</h2></header>
-<div class="evidence-grid">
-<article class="evidence-block"><h3>Completed pilot</h3><p>A 36-fit temporal study failed its frozen criteria. The summary arithmetic was independently checked, but per-fit trajectories and the full remote report were missing from the locally reviewed record. The cause of failure has not been isolated.</p></article>
-<article class="evidence-block"><h3>Representation fidelity · planned</h3><p>Compare source video with oracle renders from frozen motion latents; test measurement repeatability, reference-image robustness, articulation, and identity preservation.</p></article>
-<article class="evidence-block"><h3>Residual dynamics · planned</h3><p>Distinguish temporal dependence in prediction residuals, the effect of latent perturbations on rendered motion, and error accumulation when generated history is fed back.</p></article>
-<article class="evidence-block"><h3>Controlled generation · conditional</h3><p>After adequate measurement and transferable structure are established, compare allocation-based generation with matched covariance, history-aware, smoothing, and shuffled-allocation controls.</p></article>
-</div>
-</div></section>
-<section aria-labelledby="boundary-title" class="section"><div class="container">
-<header class="section-head"><h2 id="boundary-title">Contributions and open questions</h2></header>
-<dl class="definition-list">
-<dt>Research work</dt><dd>Hypothesis formulation, temporal-pilot evaluation, failure analysis, and a prospective measurement and residual-dynamics protocol.</dd>
-<dt>External foundation</dt><dd>IMTalker's pretrained encoder, motion representation, and renderer are upstream components.</dd>
-<dt>Still unresolved</dt><dd>Transferable recoverability, useful stochastic allocation, better generation, and stable deployment rollouts have not been demonstrated.</dd>
-<dt>Evidence date</dt><dd>The proposal and 27 September 2026 implementation-and-experiment plan inform this summary. The plan reports no new implementation or experiments executed under it.</dd>
-</dl>
-<nav aria-label="Research pages" class="back-next"><a href="/research/erl/">← Previous: ERL</a><a href="/research/avatar-systems/">Next: Avatar systems →</a></nav>
-</div></section>
+<section aria-labelledby="overview-title" class="section"><div class="container"><header class="section-head"><h2 id="overview-title">Research overview</h2></header><div class="prose"><p>RIFT investigates predictable motion and residual uncertainty in a frozen talking-head representation. The current RIFT-M study examines the relationship between motion that audio can predict and motion that changes rendered mouth articulation.</p><p>The emphasis is on reliable measurement before proposing a generative method. IMTalker provides the upstream representation and renderer.</p></div></div></section>
+<section aria-labelledby="findings-title" class="section"><div class="container"><header class="section-head"><h2 id="findings-title">Evidence to date</h2></header><div class="prose"><p>An initial predictive pilot did not support the tested formulation. Subsequent calibration work exposed limits in the precision of standard landmark-based measurements, motivating a closer examination of the measurement instrument.</p><p>These observations motivate the current study; they do not establish improved generation, useful recoverability, or transfer across identities.</p></div></div></section>
+<section aria-labelledby="contribution-title" class="section"><div class="container"><header class="section-head"><h2 id="contribution-title">Research contribution and current work</h2></header><div class="prose"><p>My work includes hypothesis formulation, controlled predictive experiments, failure analysis, and measurement design. Current work qualifies the measurement setup before broader empirical evaluation.</p><p>The project remains exploratory. No improved talking-head generation method or submitted paper is claimed.</p></div></div></section>
+<div class="container"><nav aria-label="Research pages" class="back-next"><a href="/research/erl/">← Previous: ERL</a><a href="/research/rsi/">Next: RSI →</a></nav></div>
 </main>
 <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/research/">Research</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer>
 

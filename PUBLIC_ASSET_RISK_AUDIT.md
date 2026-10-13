@@ -8,6 +8,10 @@
 
 **Purpose:** identify local material that must not be mistaken for private merely because it is absent from navigation
 
+## October 2026 update
+
+The public CV PDF has been regenerated from the revised LaTeX source for the CAT-GS publication and ERL/RIFT/RSI status update. Both pages were visually checked. The new RSI page and revised research overviews contain concise public summaries; private research records, review assessments, operational plans, and application material remain outside the public asset tree. Historical findings below retain their original dates.
+
 ## 28 September 2026 update
 
 The owner-supplied two-page Overleaf CV has replaced the older public PDF and is linked from `/cv/`. The PDF-regeneration action below is therefore complete; the remaining September 21 findings are retained as a historical audit. No raw transcript, unpublished research record, or private source ZIP has been added to the public asset tree.

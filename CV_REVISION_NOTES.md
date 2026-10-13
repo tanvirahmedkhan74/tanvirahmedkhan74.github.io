@@ -1,4 +1,16 @@
-# Portfolio and CV revision — 28 September 2026
+# Portfolio and CV revision record
+
+## October 2026 publication and research update
+
+- CAT-GS is published in *Neurocomputing*, article 135392 (2026), DOI [10.1016/j.neucom.2026.135392](https://doi.org/10.1016/j.neucom.2026.135392). Publisher-deposited Crossref metadata confirms the article and author order; the owner confirms acceptance on 12 October 2026. The homepage news, bibliography, web CV, and LaTeX CV now reflect publication.
+- ERL is presented as a controlled evidence-loss study with a manuscript submitted to ACL Rolling Review on 5 October 2026. The public overview reflects the diagnostic contribution and qualified outcomes without exposing detailed unpublished results or follow-up protocols.
+- RIFT is presented as active exploratory measurement research (RIFT-M), following the negative predictive pilot. No improved generation or cross-identity transfer is claimed.
+- Added RSI as an engineering pilot investigating capacity growth in verified self-improvement. Its growth hypothesis remains untested. It appears on the homepage, research index, web CV, downloadable CV, and a new `/research/rsi/` overview.
+- Public summaries retain the research questions, contributions, status, and limitations. Internal experiment inventories, thresholds, budgets, review assessments, and operational plans are omitted.
+- Regenerated the public two-page PDF from the synchronized LaTeX source. The existing typefaces remain; explicit TeX font filenames make the source portable on Ubuntu. Project headings and section pagination were refined to keep both pages readable, with no isolated section heading.
+- Validation: 12 HTML pages and 222 local links/assets/fragments passed the static checker. The six changed public pages passed layout checks at 390 and 1440 pixels, with no horizontal overflow, broken images, or hidden navigation. Both PDF pages were rendered and visually reviewed; publication, status, and destination links were checked. No new full axe-core run is claimed.
+
+## Historical record: 28 September 2026
 
 ## Content synchronized
 

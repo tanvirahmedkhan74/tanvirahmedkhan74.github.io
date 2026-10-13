@@ -16,6 +16,7 @@ The September 2026 renovation uses a narrow reading column, system serif typogra
 │   ├── index.html
 │   ├── erl/
 │   ├── rift/
+│   ├── rsi/
 │   ├── avatar-systems/
 │   ├── pneuma/
 │   ├── airflow/
@@ -60,13 +61,13 @@ npm install --prefix .cache/renovation --no-save --package-lock=false playwright
 
 Point `PLAYWRIGHT_MODULE` and `AXE_MODULE` at those installed packages, then run `node tools/check_browser.cjs`. `PREVIEW_URL` defaults to `http://127.0.0.1:8080`; `BROWSER_EXECUTABLE` can point to an existing Chromium headless executable. If no browser is installed, use Playwright's browser installer. Reports and screenshots are written under `.cache/renovation/` and are not published.
 
-The browser check covers all 11 pages at 320, 390, 430, 768, 1024, 1440, and 1920 pixels; accessibility at mobile and desktop widths; native disclosures; keyboard navigation; table scrolling; operation without JavaScript; printable news; PDF/figure delivery; and custom 404 behavior. There is no separate application lint or type-check pipeline because the site contains no application JavaScript or TypeScript.
+The browser check covers all 12 pages at 320, 390, 430, 768, 1024, 1440, and 1920 pixels; accessibility at mobile and desktop widths; native disclosures; keyboard navigation; table scrolling; operation without JavaScript; printable news; PDF/figure delivery; and custom 404 behavior. There is no separate application lint or type-check pipeline because the site contains no application JavaScript or TypeScript.
 
 ## Content rules
 
-- Keep ERL (Emergent Retrieval Landmark) and RIFT (Recoverability-Gated Implicit Facial Dynamics) labeled as ongoing research. Distinguish completed evaluations from proposed experiments; do not imply venue acceptance.
+- ERL is a controlled evidence-loss study with a manuscript submitted to ACL Rolling Review on 5 October 2026. Submission does not imply acceptance. RIFT is an active exploratory measurement study (RIFT-M), and RSI is an engineering pilot whose growth hypothesis remains untested. Distinguish completed work from proposed experiments.
 - Keep PNEUMA labeled as discontinued thesis work.
-- Keep CAT-GS under minor revision at Neurocomputing until a final decision is confirmed. The accepted AACL-IJCNLP paper links to its public OpenReview record.
+- CAT-GS is published in Neurocomputing, article 135392 (2026), DOI 10.1016/j.neucom.2026.135392; the owner confirms acceptance on 12 October. The accepted AACL-IJCNLP paper links to its public OpenReview record.
 - Keep StreamTalker-GS labeled as an archived negative-result study.
 - Treat speech-avatar work as one collaborative applied-research trajectory.
 - State upstream, inherited, collaborative, custom, and incomplete work separately.
@@ -77,7 +78,7 @@ The browser check covers all 11 pages at 320, 390, 430, 768, 1024, 1440, and 192
 
 ### CV synchronization
 
-`/cv/` contains the current web CV and a download link to `assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf`. The public PDF is the owner-supplied two-page Overleaf build received on 28 September 2026, copied without modification.
+`/cv/` contains the current web CV and a download link to `assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf`. The public two-page PDF was regenerated from the synchronized LaTeX source for the October 2026 publication and research-status update. The September owner-supplied build remains the historical baseline.
 
 The editable source is `assets/Tanvir_s_Resume_Latest_2/main.tex` with `myresume.sty`. Upload the accompanying `Tanvir_Ahmed_Khan_CV_Overleaf.zip` to Overleaf, select XeLaTeX, and inspect the compiled PDF. For future revisions, replace the public PDF only with the reviewed output and update its download-link version. Keep the web CV and source in sync on future edits. The source ZIP is a local handoff, not a public website asset.
 

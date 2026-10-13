@@ -3,10 +3,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>ERL — Emergent Retrieval Landmark · Tanvir Ahmed Khan</title>
-<meta content="Ongoing research on graph routing, evidence selection, and reader sensitivity in multi-hop question answering, with scoped findings and independently checked results." name="description"/>
+<title>ERL — Evidence Loss in Multi-Hop QA · Tanvir Ahmed Khan</title>
+<meta content="A controlled study of evidence access, selection, and reading in multi-hop question answering. Manuscript submitted to ACL Rolling Review." name="description"/>
 <link href="https://tanvirahmedkhan74.github.io/research/erl/" rel="canonical"/>
-<meta content="ERL — Emergent Retrieval Landmark" property="og:title"/><meta content="Ongoing multi-hop QA research: a held-out routing tie, conditional evidence-selection gains, and reader-dependent outcomes." property="og:description"/>
+<meta content="ERL — Evidence Loss in Multi-Hop QA" property="og:title"/><meta content="A controlled study of evidence access, selection, and reading in multi-hop question answering. Manuscript submitted to ACL Rolling Review." property="og:description"/>
 <meta content="article" property="og:type"/>
 <link href="/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="/assets/public/css/main.css?v=20260930" rel="stylesheet"/>
@@ -20,39 +20,15 @@
 <main id="main" tabindex="-1">
 <header class="page-head"><div class="container">
 <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a> / <a href="/research/">Research</a> / ERL</nav>
-<p class="eyebrow">Ongoing independent research</p><h1>ERL — Emergent Retrieval Landmark</h1>
-<p class="page-deck">Studying where multi-hop question answering loses useful evidence: graph routing, evidence selection, and the reader.</p>
-<p class="page-meta"><span>2026–present</span><span>Multi-hop question answering</span><span>Manuscript in preparation</span></p>
-<p class="status-line"><strong>Current status:</strong> ongoing evaluation and manuscript revision. The initial routing experiment did not establish an improvement over BM25.</p>
+<p class="eyebrow">Ongoing research</p><h1>ERL — Evidence Loss in Multi-Hop QA</h1>
+<p class="page-deck">Where does useful evidence disappear between retrieval and a final answer?</p>
+<p class="page-meta"><span>2026–present</span><span>Multi-hop question answering</span><span>Submitted manuscript</span><span>Updated 13 October 2026</span></p>
+<p class="status-line"><strong>Current status:</strong> manuscript submitted to ACL Rolling Review on 5 October 2026. Follow-up evaluation is ongoing.</p>
 </div></header>
-<section aria-labelledby="question-title" class="section"><div class="container">
-<div class="question-block"><h2 id="question-title">Research question</h2><p>When does better evidence access improve answers, and which gains survive a change of selector, representation, or reader?</p></div>
-<div class="prose top-space"><p>ERL began with the hypothesis that intermediate memories could gain persistent value by routing retrieval toward other evidence. Learned transit routing and BM25 tied on the held-out LoCoMo test under the same inspection budget. That result motivated a controlled failure analysis across LoCoMo, MuSiQue, and 2WikiMultihopQA.</p><p>The study separates candidate discovery, evidence selection, and reading. Learned selectors improve support recall in some fixed candidate pools, but comparison questions regress and downstream answer gains depend on the reader checkpoint.</p></div>
-</div></section>
-<section aria-labelledby="evidence-title" class="section"><div class="container">
-<header class="section-head"><h2 id="evidence-title">Selected findings and their limits</h2><p>Results are specific to the tested datasets, candidate pools, and reader checkpoints.</p></header>
-<p class="table-hint" id="table-hint-1">On a small screen, scroll the table horizontally or focus it and use the arrow keys.</p><div aria-describedby="table-hint-1" aria-label="Selected findings and their limits — table" class="table-wrap" role="region" tabindex="0"><table>
-<thead><tr><th scope="col">Stage</th><th scope="col">Observed result</th><th scope="col">Research decision</th></tr></thead>
-<tbody>
-<tr><td>Matched-budget routing</td><td>Learned transit and BM25 each reached 0.3671 full-support recall on the held-out LoCoMo test, inspecting 34 items.</td><td>No demonstrated routing advantage in this setting.</td></tr>
-<tr><td>Fixed-pool evidence selection</td><td>On 2Wiki official development data, relational S2 support recall was 0.9459 versus 0.9042 for S1. Both models were trained on a fixed 20,000-question target-data subset.</td><td>A scoped selection gain: five selected paragraphs from a supplied ten-paragraph pool.</td></tr>
-<tr><td>Question-type sensitivity</td><td>S2 improved recall for four-support/bridge questions by 0.1078, while comparison questions regressed by 0.0278.</td><td>Retain the regression; investigate dataset and lexical-overlap dependence.</td></tr>
-<tr><td>Reader sensitivity</td><td>S2 minus S1 answer F1 was −0.0039 for SmolLM2-360M-Instruct and +0.0112 for SmolLM2-1.7B-Instruct on 2Wiki.</td><td>Checkpoint-specific outcomes; no general reader-scaling claim.</td></tr>
-</tbody>
-</table></div>
-<div class="callout caution"><h3>Scope of the evidence</h3><p>Fixed-pool selection gains do not establish end-to-end retrieval improvements or zero-shot transfer. The study also leaves open whether gains survive strong rerankers and mechanism controls. LoCoMo findings require caution because evaluation spans only ten conversation banks.</p></div>
-</div></section>
-<section aria-labelledby="role-title" class="section"><div class="container">
-<header class="section-head"><h2 id="role-title">Contributions and evaluation practice</h2></header>
-<dl class="definition-list">
-<dt>Research and implementation</dt><dd>Matched-budget retrieval experiments, pointwise and relational evidence selectors, reader-context comparisons, result verification, and claim-to-evidence tracking.</dd>
-<dt>External foundations</dt><dd>LoCoMo, MuSiQue, 2WikiMultihopQA, pretrained encoders and readers, and established retrieval and statistical methods.</dd>
-<dt>Evaluation practice</dt><dd>Prospectively specified protocols, frozen artifacts, independent metric recomputation, and explicit retention of negative and conditional results.</dd>
-<dt>Assistance disclosure</dt><dd>Parts of the implementation and verification used agent assistance. Scientific direction, protocols, evaluation criteria, and claim decisions are documented as author-owned.</dd>
-</dl>
-<div class="prose top-space"><p><strong>Next research questions:</strong> test stronger reranking and reader baselines, examine representation and dataset dependence, and connect discovery, selection, and answer quality on the same questions. The manuscript remains in preparation.</p></div>
-<nav aria-label="Research pages" class="back-next"><a href="/research/">← Research index</a><a href="/research/rift/">Next: RIFT →</a></nav>
-</div></section>
+<section aria-labelledby="overview-title" class="section"><div class="container"><header class="section-head"><h2 id="overview-title">Research overview</h2></header><div class="prose"><p>ERL (Emergent Retrieval Landmark) studies evidence loss across retrieval, selection, and reading. The work began with a graph-routing hypothesis and developed into a controlled failure analysis across conversational memory and multi-hop question-answering benchmarks.</p><p>The manuscript, <em>From Transit Routing to Evidence Selection: A Controlled Multi-Hop QA Failure Analysis</em>, evaluates whether local improvements survive stronger baselines and translate into better final answers.</p></div></div></section>
+<section aria-labelledby="findings-title" class="section"><div class="container"><header class="section-head"><h2 id="findings-title">Findings and interpretation</h2></header><div class="prose"><p>The initial routing study did not establish an advantage over a matched retrieval baseline. Selection improvements against simpler comparators were substantially limited by stronger rerankers, while answer-level effects depended on the evaluation setting and reader. The tested closed-corpus pipeline did not show an end-to-end benefit.</p><p>The contribution is a bounded diagnostic study: identifying where a proposed repair stops helping, while retaining negative results and distinguishing evidence recall from answer quality.</p></div></div></section>
+<section aria-labelledby="contribution-title" class="section"><div class="container"><header class="section-head"><h2 id="contribution-title">Research contribution and current work</h2></header><div class="prose"><p>My work covers the research questions, controlled evaluation design, implementation, and analysis. It builds on established datasets, retrieval methods, pretrained models, and statistical tools; parts of the implementation and verification used agent assistance.</p><p>Current work focuses on reproducibility and broader evaluation. The submitted manuscript remains under review; its findings do not establish a general retrieval or question-answering improvement.</p></div></div></section>
+<div class="container"><nav aria-label="Research pages" class="back-next"><a href="/research/">← Research index</a><a href="/research/rift/">Next: RIFT →</a></nav></div>
 </main>
 <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/research/">Research</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer>
 

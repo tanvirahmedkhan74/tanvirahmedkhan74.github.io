@@ -8,7 +8,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const { default: AxeBuilder } = require(process.env.AXE_MODULE || '@axe-core/playwright');
 const base = process.env.PREVIEW_URL || 'http://127.0.0.1:8080';
 const out = path.resolve(__dirname, '../.cache/renovation');
-const routes = ['/', '/research/', '/research/erl/', '/research/rift/',
+const routes = ['/', '/research/', '/research/erl/', '/research/rift/', '/research/rsi/',
   '/research/avatar-systems/', '/research/pneuma/', '/research/airflow/',
   '/research/archive/streamtalker-gs/', '/notes/', '/cv/', '/404.html'];
 const widths = [320, 390, 430, 768, 1024, 1440, 1920];
@@ -81,8 +81,8 @@ const widths = [320, 390, 430, 768, 1024, 1440, 1920];
     assert.equal(new URL(page.url()).hash,'#publications');
     await page.locator('.nav-menu a').filter({hasText:'Research',exact:true}).click();
     assert.equal(new URL(page.url()).pathname,'/research/');
-    await page.goto(base+'/research/erl/');
-    const table = page.locator('.table-wrap');
+    await page.goto(base+'/research/avatar-systems/');
+    const table = page.locator('.table-wrap').first();
     await table.focus();
     await page.keyboard.press('ArrowRight');
     await page.waitForTimeout(200);

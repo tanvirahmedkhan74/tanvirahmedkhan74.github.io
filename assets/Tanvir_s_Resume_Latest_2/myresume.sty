@@ -37,8 +37,18 @@
 % TeX Gyre Heros:
 %   Helvetica-style sans serif for restrained headings.
 
-\setmainfont{TeX Gyre Termes}
-\setsansfont{TeX Gyre Heros}
+% Resolve the TeX-distributed files directly, including on Linux systems
+% without these font families registered in the system font catalogue.
+\setmainfont{texgyretermes-regular.otf}[
+    BoldFont=texgyretermes-bold.otf,
+    ItalicFont=texgyretermes-italic.otf,
+    BoldItalicFont=texgyretermes-bolditalic.otf
+]
+\setsansfont{texgyreheros-regular.otf}[
+    BoldFont=texgyreheros-bold.otf,
+    ItalicFont=texgyreheros-italic.otf,
+    BoldItalicFont=texgyreheros-bolditalic.otf
+]
 
 \RequirePackage{microtype}
 \RequirePackage{setspace}
@@ -312,17 +322,14 @@
 \newcommand{\projHeading}[4]{%
     \par\Needspace{4\baselineskip}%
     \begingroup
-    \renewcommand{\arraystretch}{1.08}%
-    \begin{tabularx}
-        {\textwidth}
-        {@{}X>{\raggedleft\arraybackslash}p{3.3cm}@{}}
-
-        \textbf{#1}
-        &
-        #3
-
-    \end{tabularx}
-    \par\nobreak
+    \noindent
+    \begin{minipage}[t]{\dimexpr\textwidth-3.9cm\relax}
+        \raggedright\textbf{#1}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{3.8cm}
+        \raggedleft #3
+    \end{minipage}%
+    \par\nobreak\vspace{2pt}%
     {\small #2\enspace #4\par}%
     \endgroup
     \vspace{4pt}%
@@ -342,15 +349,7 @@
 %=========================================================
 
 \newcommand{\cvEntry}[2]{%
-    \begin{tabularx}
-        {\textwidth}
-        {@{}X>{\raggedleft\arraybackslash}p{2.4cm}@{}}
-
-        #1
-        &
-        #2
-
-    \end{tabularx}
+    \noindent #1\hfill #2\par
 }
 
 
