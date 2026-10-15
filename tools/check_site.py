@@ -11,7 +11,7 @@ from xml.etree import ElementTree
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://tanvirahmedkhan74.github.io'
 PAGES = [ROOT/'index.html', ROOT/'404.html', ROOT/'cv/index.html',
-         ROOT/'notes/index.html', *sorted((ROOT/'research').rglob('index.html'))]
+         *sorted((ROOT/'notes').rglob('index.html')), *sorted((ROOT/'research').rglob('index.html'))]
 VOID = set('area base br col embed hr img input link meta param source track wbr'.split())
 
 

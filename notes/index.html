@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Research Notes — Tanvir Ahmed Khan</title>
-<meta content="Short research notes by Tanvir Ahmed Khan on partial observation, computational memory, representation, and learning through implementation." name="description"/>
+<meta content="Personal essays and research questions by Tanvir Ahmed Khan on understanding, perception, memory, representation, and learning through implementation." name="description"/>
 <link href="https://tanvirahmedkhan74.github.io/notes/" rel="canonical"/>
 <meta content="Research Notes — Tanvir Ahmed Khan" property="og:title"/><meta content="Working intuitions and questions, clearly separated from research results." property="og:description"/>
 <meta content="https://tanvirahmedkhan74.github.io/assets/public/images/tanvir-ahmed-khan-2x.webp" property="og:image"/><meta content="website" property="og:type"/>
@@ -21,26 +21,33 @@
 <header class="page-head"><div class="container">
 <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a> / Notes</nav>
 <p class="eyebrow">Notes</p><h1>Research notes</h1>
-<p class="page-deck">Short essays and open questions. These are exploratory notes, not research findings or claims of novelty.</p>
+<p class="page-deck">Personal reflections, research intuitions, and questions I am still learning how to investigate.</p>
+<div class="prose"><p>Many of my research intuitions begin as thoughts that arrive unexpectedly, sometimes while I am working on something entirely different. I try to develop them into questions I can investigate. I also recognize that intuition is limited by what I understand. The more I learn, the wider that horizon becomes, and the more critically I can examine my own ideas.</p></div>
 </div></header>
 <section class="section"><div class="container note-list">
+<article>
+<p class="meta-label">Understanding and perception · <time datetime="2026-10-06">6 October 2026</time></p>
+<h2><a href="/notes/appearance-of-wisdom/">The Appearance of Wisdom</a></h2>
+<p>A late-night reflection after negative findings in my representation-learning research: on Plato, the difference between knowing and comprehending, and whether increasingly convincing answers make understanding easier to judge.</p>
+<p><a href="/notes/appearance-of-wisdom/">Read the essay</a></p>
+</article>
 <article>
 <p class="meta-label">Partial observation · December 2025</p>
 <h2>The geometry of apparent chaos</h2>
 <p>When a physical system appears to bifurcate unpredictably, the randomness may belong to the observation rather than the full dynamics. A low-dimensional trace can look discontinuous even when its higher-dimensional source is smooth.</p>
 <blockquote>What we call noise may sometimes be geometry in coordinates we have not learned to observe.</blockquote>
-<p>I wrote a speculative formulation using latent manifolds, Koopman structure, and conditional flow matching to make the intuition precise enough to criticize. It is a hypothesis-only proposal: implementation, experiments, and validation have not yet been completed. <a href="/assets/public/documents/Tanvir_Ahmed_Khan_Implicit_Manifold_Entanglement_Proposal.pdf">Read the six-page working note (PDF)</a>.</p>
+<p>I wrote a speculative formulation using latent manifolds, Koopman structure, and conditional flow matching to make the intuition precise enough to criticize. I have not yet implemented or tested the proposal. <a href="/assets/public/documents/Tanvir_Ahmed_Khan_Implicit_Manifold_Entanglement_Proposal.pdf">Read the six-page working note (PDF)</a>.</p>
 </article>
 <article>
 <p class="meta-label">Memory · May 2025</p>
 <h2>One moment, several retrieval paths</h2>
 <p>A person eating an apple can be recalled as an action, a category, a color, a shape, a place, or a neighboring event. That observation motivated PNEUMA's multi-aspect memory: one experience should remain addressable through several attributes rather than a single flattened representation.</p>
-<p>The engineering audit later changed the question. A system that returns an answer is not necessarily a system whose memory has been evaluated. The more durable problem is how to test which stored item supplied evidence, which item routed access, and which apparent capability came from an upstream model.</p>
+<p>Building PNEUMA made me ask how to test that intuition: which stored item supplied the evidence, which helped us reach it, and which apparent capability came from an upstream model? These questions now inform my work on <a href="/research/erl/">evidence selection in ERL</a>.</p>
 </article>
 <article>
 <p class="meta-label">Language models · Open question</p>
 <h2>Must reasoning move one token at a time?</h2>
-<p>Autoregressive decoding commits locally. An alternative could refine a latent state iteratively, allowing a representation to settle before it is rendered into tokens. The intuition is not itself a contribution; related work already explores diffusion and continuous latent reasoning. Its value here is methodological: search the literature early and keep an attractive hunch easy to discard.</p>
+<p>Autoregressive decoding commits locally. An alternative could refine a latent state iteratively, allowing a representation to settle before it is rendered into tokens. Related work on diffusion and continuous latent reasoning gives me a starting point. I want to understand when that extra refinement helps, and what would make me abandon the idea.</p>
 </article>
 <article>
 <p class="meta-label">Practice</p>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+<title id="title">Covariance transport: geometric difference without supported residual association</title>
+<desc id="desc">The affine-versus-similarity comparison found geometric differences across three identities and 1.04 million supported observations. None of the three identities met the required association with rendering residuals. The causal renderer swap was not executed. Separate analytic-to-rasterizer controls supported the geometric measurement implementation.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#586575"/></marker></defs>
+<rect width="1200" height="620" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#253444">
+<text x="48" y="49" font-size="25" font-weight="600">Does a geometric difference explain the rendering error?</text>
+<text x="48" y="83" font-size="18" fill="#586575">Three identities · approximately 1.04 million supported observations</text>
+<g fill="none" stroke-width="2">
+<ellipse cx="145" cy="175" rx="76" ry="32" transform="rotate(-20 145 175)" stroke="#687786" fill="#edf0f3"/>
+<ellipse cx="145" cy="295" rx="86" ry="22" transform="rotate(-32 145 295)" stroke="#396586" fill="#dce9f3"/>
+</g>
+<text x="145" y="231" text-anchor="middle" font-size="18">Similarity transport</text>
+<text x="145" y="377" text-anchor="middle" font-size="18">Affine transport</text>
+<path d="M247 175h28v120h-28 M275 235h40" fill="none" stroke="#586575" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="332" y="154" width="237" height="173" rx="7" fill="#e7f0f6" stroke="#7898b0"/>
+<text x="450" y="192" text-anchor="middle" font-size="20" font-weight="600">Geometric difference</text>
+<text x="450" y="231" text-anchor="middle" font-size="18">Projected covariance</text>
+<text x="450" y="258" text-anchor="middle" font-size="18">differences measured</text>
+<text x="450" y="299" text-anchor="middle" font-size="18" fill="#315c7a">Observed</text>
+<path d="M579 238h32" stroke="#586575" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="630" y="154" width="237" height="173" rx="7" fill="#fcf0ed" stroke="#c38b7c"/>
+<text x="748" y="192" text-anchor="middle" font-size="20" font-weight="600">Residual association</text>
+<text x="748" y="231" text-anchor="middle" font-size="18">Required criterion met</text>
+<text x="748" y="258" text-anchor="middle" font-size="18">in 0 of 3 identities</text>
+<text x="748" y="299" text-anchor="middle" font-size="18" fill="#8a4336">Not supported</text>
+<path d="M877 238h32" stroke="#586575" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+<rect x="928" y="154" width="225" height="173" rx="7" fill="#f6f7f8" stroke="#8b969f" stroke-dasharray="5 5"/>
+<text x="1040" y="192" text-anchor="middle" font-size="20" font-weight="600">Renderer intervention</text>
+<text x="1040" y="231" text-anchor="middle" font-size="18">Causal H4 swap</text>
+<text x="1040" y="299" text-anchor="middle" font-size="18" fill="#586575">Not executed</text>
+<rect x="48" y="407" width="1105" height="106" rx="7" fill="#f2f5f8"/>
+<text x="72" y="445" font-size="20" font-weight="600">Separate measurement controls</text>
+<text x="72" y="481" font-size="18">Analytic-to-rasterizer radial RMS ≤ 5.02 × 10⁻⁷ px; monotonic filter and overlap response.</text>
+<text x="48" y="564" font-size="21" font-weight="600" fill="#8a4336">No rendering improvement established; the hypothesis was set aside.</text>
+<text x="48" y="596" font-size="18" fill="#586575">The controls support the geometric measurements, rather than a rendering benefit.</text>
+</g></svg>

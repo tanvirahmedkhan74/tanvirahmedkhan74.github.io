@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+<title id="title">Renderer acceleration shifts the Jetson bottleneck upstream</title>
+<desc id="desc">Historical relative component comparison on a fixed visual identity. Renderer share changes from 74 percent for the teacher to 9.3 percent after Student 2; PersonaPlex then accounts for 85.9 percent. Absolute timings attributed to 30 watts are invalid.</desc>
+<rect width="1200" height="560" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#253444">
+<text x="48" y="48" font-size="25" font-weight="600">Renderer speed and the remaining system cost</text>
+<text x="48" y="82" font-size="18" fill="#586575">Earlier Jetson AGX Orin study · fixed visual identity · component shares</text>
+<text x="48" y="156" font-size="21" font-weight="600">Teacher</text>
+<rect x="235" y="125" width="666" height="58" fill="#e8ab70"/>
+<rect x="901" y="125" width="234" height="58" fill="#e1e5e9"/>
+<text x="568" y="161" text-anchor="middle" font-size="21">Renderer 74%</text>
+<text x="1018" y="161" text-anchor="middle" font-size="18">Other stages 26%</text>
+<text x="48" y="265" font-size="21" font-weight="600">Student 2</text>
+<rect x="235" y="228" width="773.1" height="58" fill="#8aa9c3"/>
+<rect x="1008.1" y="228" width="83.7" height="58" fill="#e8ab70"/>
+<rect x="1091.8" y="228" width="43.2" height="58" fill="#e1e5e9"/>
+<text x="621" y="265" text-anchor="middle" font-size="21">PersonaPlex 85.9%</text>
+<path d="M1050 288v20h-40" fill="none" stroke="#586575" stroke-width="1.5"/>
+<text x="1000" y="315" text-anchor="end" font-size="18">Renderer 9.3%</text>
+<text x="1135" y="343" text-anchor="end" font-size="17" fill="#586575">Other stages 4.8%</text>
+<rect x="48" y="374" width="1087" height="71" rx="6" fill="#f2f5f8"/>
+<text x="72" y="405" font-size="18">Renderer-only speedup over teacher</text>
+<text x="535" y="417" font-size="24" font-weight="600" fill="#315c7a">Student 1: 19.84×</text>
+<text x="855" y="417" font-size="24" font-weight="600" fill="#315c7a">Student 2: 27.62×</text>
+<text x="48" y="491" font-size="19">Absolute 30 W timings were invalidated by a power-mode configuration error.</text>
+<text x="48" y="523" font-size="18" fill="#586575">These relative comparisons do not measure the later deployed pipeline’s end-to-end latency.</text>
+</g></svg>

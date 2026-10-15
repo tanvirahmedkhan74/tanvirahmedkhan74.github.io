@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>AirFLOW — Aerodynamic Analysis Workbench · Tanvir Ahmed Khan</title>
-<meta content="AirFLOW is a browser-based numerical-methods workbench for auditable STL geometry, horseshoe-VLM analysis, and gated OpenFOAM case generation." name="description"/>
+<meta content="A collaborative browser workbench for geometry inspection, VLM analysis, and OpenFOAM case preparation." name="description"/>
 <link href="https://tanvirahmedkhan74.github.io/research/airflow/" rel="canonical"/>
-<meta content="AirFLOW — Aerodynamic Analysis Workbench" property="og:title"/><meta content="A browser workbench for STL geometry, preliminary VLM analysis, and OpenFOAM case generation." property="og:description"/>
+<meta content="AirFLOW — Aerodynamic Analysis Workbench" property="og:title"/><meta content="A collaborative browser workbench for geometry inspection, VLM analysis, and OpenFOAM case preparation." property="og:description"/>
 <meta content="https://tanvirahmedkhan74.github.io/assets/public/figures/airflow/stl-analysis-workbench.png" property="og:image"/><meta content="article" property="og:type"/>
 <link href="/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="/assets/public/css/main.css?v=20260930" rel="stylesheet"/>
@@ -20,53 +20,27 @@
 <main id="main" tabindex="-1">
 <header class="page-head"><div class="container">
 <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a> / <a href="/research/">Research</a> / AirFLOW</nav>
-<p class="eyebrow">Academic engineering · numerical methods</p><h1>AirFLOW — Browser-Based Aerodynamic Analysis Workbench</h1>
-<p class="page-deck">A browser workbench for inspecting STL geometry, testing aerodynamic assumptions, and preparing an OpenFOAM case.</p>
-<p class="page-meta"><span>Early-stage collaboration</span><span>Browser MVP</span><span>VLM and OpenFOAM preprocessing</span></p>
-<p class="status-line"><strong>Status:</strong> early-stage collaborative engineering developed with an aerospace practitioner and MIST graduate. The current browser workbench is a preliminary MVP; OpenFOAM case files were generated, but no solver run or CFD physics validation occurred. This wording does not imply official institutional sponsorship.</p>
+<p class="eyebrow">Research &amp; engineering</p><h1>AirFLOW — Browser-Based Aerodynamic Analysis</h1>
+<p class="page-deck">A collaborative browser workbench for geometry inspection, VLM analysis, and OpenFOAM case preparation.</p>
+<p class="page-meta"><span>Early-stage collaboration</span><span>Preliminary browser MVP</span><span>Numerical methods</span><span>Updated 15 October 2026</span></p>
+<p class="status-line"><strong>Early-stage engineering.</strong> VLM implementation and CFD preprocessing; generated OpenFOAM cases have not been simulated.</p>
 </div></header>
-<section aria-labelledby="problem-title" class="section"><div class="container">
-<header class="section-head"><h2 id="problem-title">From raw geometry to explicit assumptions</h2></header>
-<div class="prose"><p>AirFLOW treats a raw aircraft-like STL as uncertain geometry rather than a validated airframe. Axis mapping, units, mass assumptions, center of gravity, topology, and lifting-surface selection remain visible and editable before the numerical method runs.</p><p>The browser workbench then compiles manually selected surfaces into an idealized lifting surface, solves a standard horseshoe Vortex Lattice Method formulation through a custom implementation, derives longitudinal stability quantities, and prepares an OpenFOAM case using the same reference conventions.</p></div>
-</div></section>
+<section aria-labelledby="overview-title" class="section"><div class="container"><header class="section-head"><h2 id="overview-title">From geometry to an aerodynamic model</h2></header><div class="prose">
+<p>I am developing AirFLOW with technical input from an aerospace practitioner and MIST graduate. The preliminary browser workbench lets us inspect an aircraft-like STL, make modeling assumptions explicit, and turn selected geometry into an idealized lifting-surface analysis.</p>
+<p>The workflow begins with units, axes, mass, center of gravity, topology, and manual surface selection. A custom horseshoe Vortex Lattice Method (VLM) implementation then estimates aerodynamic forces and longitudinal stability quantities. The same reference conventions can be exported into an OpenFOAM case for subsequent CFD work.</p>
+</div></div></section>
 <figure class="figure-wide">
 <a aria-label="Figure 1 — open full-size image" class="figure-link" href="/assets/public/figures/airflow/stl-analysis-workbench.png"><img alt="Raw STL geometry passes through visible assumptions and manual surface assignment into a custom horseshoe-VLM implementation, stability analysis, and an OpenFOAM case handoff that stops without a solver result." decoding="async" height="887" loading="lazy" src="/assets/public/figures/airflow/stl-analysis-workbench.webp" width="1774"/></a>
-<figcaption>Figure 1. AirFLOW keeps assumptions and external boundaries visible. The project implements geometry handling, VLM, stability, validation, and case generation; OpenFOAM remains an external solver, and no CFD result was generated. <a class="figure-original" href="/assets/public/figures/airflow/stl-analysis-workbench.png">View full-size figure</a></figcaption>
-</figure>
-<section aria-labelledby="implementation-title" class="section"><div class="container">
-<header class="section-head"><h2 id="implementation-title">Custom code around standard aerodynamic methods</h2></header>
-<div class="boundary-grid">
-<article class="boundary-block custom"><h3>Geometry and selection</h3><p>Signed-tetrahedron mass properties, topology auditing, welded-edge adjacency, dual normal-angle flood selection, chord-envelope planform extraction, and a custom triangle BVH.</p></article>
-<article class="boundary-block custom"><h3>VLM and stability</h3><p>Quarter-chord bound vortices, three-quarter-chord collocation, finite-segment Biot–Savart influence, partial-pivot solution diagnostics, Kutta–Joukowski forces, trim, and a linearized pitch demonstrator.</p></article>
-<article class="boundary-block custom"><h3>CFD handoff</h3><p>A typed boundary manifest and generated blockMesh, snappyHexMesh, simpleFoam, k-ω SST, and forceCoeffs case files, plus a job API that refuses to report a run when solver binaries are absent.</p></article>
-<article class="boundary-block"><h3>External and standard</h3><p>VLM, Biot–Savart, Kutta–Joukowski, ISA, Sutherland, flat-plate drag estimates, and RK4 are standard theory. Three.js is vendored; OpenFOAM is external; XFLR5 is reference-only.</p></article>
-</div>
-</div></section>
-<section aria-labelledby="evidence-title" class="section"><div class="container">
-<header class="section-head"><h2 id="evidence-title">Tests support the implementation, not a real-aircraft claim</h2></header>
-<p class="table-hint" id="table-hint-1">On a small screen, scroll the table horizontally or focus it and use the arrow keys.</p><div aria-describedby="table-hint-1" aria-label="Tests support the implementation, not a real-aircraft claim — table" class="table-wrap" role="region" tabindex="0"><table>
-<thead><tr><th scope="col">Check</th><th scope="col">Observed</th><th scope="col">Boundary</th></tr></thead>
-<tbody>
-<tr><td>Automated test suite</td><td>63 of 63 tests passed in the repository audit.</td><td>Covers numerical and engineering contracts, not CFD physics.</td></tr>
-<tr><td>Finite-wing lift slope</td><td>Rectangular-wing test remained within a 16% tolerance of lifting-line theory.</td><td>The documented 5% AVL/OpenVSP target was not met.</td></tr>
-<tr><td>Induced drag and numerical solve</td><td>Quadratic induced-drag trend and residual below 1e−7 in the controlled tests.</td><td>Preliminary inviscid VLM behavior only.</td></tr>
-<tr><td>Demo STL</td><td>197,772 triangles; topology audit found 8 boundary and 85 non-manifold edges.</td><td>Third-party geometry with unresolved provenance; not a validated aircraft model.</td></tr>
-<tr><td>OpenFOAM</td><td>Case generator produced the expected file set and dependency-gated API behavior.</td><td>No OpenFOAM binary was available; no mesh or CFD solution was executed.</td></tr>
-</tbody>
-</table></div>
-<div class="callout caution"><h3>Model limitations</h3><p>The workbench does not report stall CLmax from an inviscid VLM, does not claim automatic surface recognition, does not present the unstable demo configuration as aircraft truth, and does not fabricate a CFD result when the external solver is unavailable.</p></div>
-</div></section>
-<section aria-labelledby="provenance-title" class="section"><div class="container">
-<header class="section-head"><h2 id="provenance-title">Attribution and unresolved items</h2></header>
-<dl class="definition-list">
-<dt>Collaboration context</dt><dd>The project receives technical input from an aerospace practitioner and MIST graduate; it is not presented as an official Bangladesh Air Force or MIST program.</dd>
-<dt>Repository ownership</dt><dd>The audited repository is associated with Tanvir's GitHub identity and implements the full browser workbench without importing XFLR5 application code.</dd>
-<dt>Assistance boundary</dt><dd>The CFD extension exists in an uncommitted working-tree record and the documentation suggests agent-assisted tooling. This page therefore avoids “solely hand-written” language.</dd>
-<dt>License caution</dt><dd>The demo STL has uncertain provenance and should not be redistributed as a validated or authored asset. It is not copied into this website.</dd>
-<dt>Open question</dt><dd>A real OpenFOAM run, mesh-quality audit, and controlled VLM-to-CFD comparison remain necessary before any CFD validation claim.</dd>
-</dl>
-<nav aria-label="Research pages" class="back-next"><a href="/research/pneuma/">← Previous: PNEUMA</a><a href="/research/archive/streamtalker-gs/">Next: StreamTalker-GS archive →</a></nav>
-</div></section>
+<figcaption>Figure 1. The browser workflow connects geometry inspection and explicit assumptions to VLM analysis and OpenFOAM case generation. The external CFD solver has not been run. <a class="figure-original" href="/assets/public/figures/airflow/stl-analysis-workbench.png">View full-size figure</a></figcaption>
+</figure><section aria-labelledby="methods-title" class="section"><div class="container"><header class="section-head"><h2 id="methods-title">Implementation and preliminary checks</h2></header><div class="prose">
+<p>The workbench combines geometry processing, lifting-surface extraction, and numerical diagnostics in a Three.js interface. The solver uses standard quarter-chord bound vortices, three-quarter-chord collocation, Biot–Savart influence calculations, and Kutta–Joukowski forces. These are established numerical methods; XFLR5 is a reference, while OpenFOAM remains a separate external solver.</p>
+<p>In controlled rectangular-wing tests, the lift slope fell within a 16% tolerance of lifting-line theory, and the linear-system residual was below 10<sup>−7</sup>. The induced-drag tests showed the expected quadratic trend. These are preliminary implementation checks; a closer comparison against established aerodynamic solvers remains necessary. An inviscid VLM also cannot establish stall behavior.</p>
+</div></div></section>
+<section aria-labelledby="status-title" class="section"><div class="container"><header class="section-head"><h2 id="status-title">Current development stage</h2></header><div class="prose">
+<p>The browser MVP generates OpenFOAM case files, including mesh and solver configuration. No OpenFOAM mesh or CFD simulation has been executed, so there is no CFD result to report. The next substantive step is to run a suitable case, inspect mesh quality, and compare the resulting forces with the VLM estimates.</p>
+<p>The collaboration is independent of official institutional sponsorship. Third-party demonstration geometry is not included in this portfolio.</p>
+</div></div></section>
+<div class="container"><nav aria-label="Research pages" class="back-next"><a href="/research/pneuma/">← Previous: PNEUMA</a><a href="/research/archive/streamtalker-gs/">Next: StreamTalker-GS →</a></nav></div>
 </main>
 <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/research/">Research</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer>
 

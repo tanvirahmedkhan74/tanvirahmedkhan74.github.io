@@ -6,7 +6,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = [ROOT / 'index.html', ROOT / '404.html', ROOT / 'cv/index.html',
-         ROOT / 'notes/index.html', *sorted((ROOT / 'research').rglob('index.html'))]
+         *sorted((ROOT / 'notes').rglob('index.html')), *sorted((ROOT / 'research').rglob('index.html'))]
 
 
 class PortfolioHandler(SimpleHTTPRequestHandler):

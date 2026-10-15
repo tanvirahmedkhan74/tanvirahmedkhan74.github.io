@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>ERL — Evidence Loss in Multi-Hop QA · Tanvir Ahmed Khan</title>
-<meta content="A controlled study of evidence access, selection, and reading in multi-hop question answering. Research ongoing; manuscript in preparation." name="description"/>
+<meta content="Where does useful evidence disappear between retrieval and a final answer?" name="description"/>
 <link href="https://tanvirahmedkhan74.github.io/research/erl/" rel="canonical"/>
-<meta content="ERL — Evidence Loss in Multi-Hop QA" property="og:title"/><meta content="A controlled study of evidence access, selection, and reading in multi-hop question answering. Research ongoing; manuscript in preparation." property="og:description"/>
+<meta content="ERL — Evidence Loss in Multi-Hop QA" property="og:title"/><meta content="Where does useful evidence disappear between retrieval and a final answer?" property="og:description"/>
 <meta content="article" property="og:type"/>
 <link href="/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="/assets/public/css/main.css?v=20260930" rel="stylesheet"/>
@@ -20,14 +20,24 @@
 <main id="main" tabindex="-1">
 <header class="page-head"><div class="container">
 <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a> / <a href="/research/">Research</a> / ERL</nav>
-<p class="eyebrow">Ongoing research</p><h1>ERL — Evidence Loss in Multi-Hop QA</h1>
+<p class="eyebrow">Research &amp; engineering</p><h1>ERL — Emergent Retrieval Landmark</h1>
 <p class="page-deck">Where does useful evidence disappear between retrieval and a final answer?</p>
-<p class="page-meta"><span>2026–present</span><span>Multi-hop question answering</span><span>Manuscript in preparation</span><span>Updated 14 October 2026</span></p>
-<p class="status-line"><strong>Current status:</strong> active research, with further experiments and analysis in progress. The manuscript is in preparation.</p>
+<p class="page-meta"><span>2026–present</span><span>Evidence selection and multi-hop QA</span><span>Manuscript in preparation</span><span>Updated 15 October 2026</span></p>
+<p class="status-line"><strong>Active research.</strong> Preliminary experiments completed; further evaluation and manuscript preparation ongoing.</p>
 </div></header>
-<section aria-labelledby="overview-title" class="section"><div class="container"><header class="section-head"><h2 id="overview-title">Research overview</h2></header><div class="prose"><p>ERL (Emergent Retrieval Landmark) studies evidence loss across retrieval, selection, and reading. The work began with a graph-routing hypothesis and developed into a controlled failure analysis across conversational memory and multi-hop question-answering benchmarks.</p><p>The manuscript in preparation, <em>From Transit Routing to Evidence Selection: A Controlled Multi-Hop QA Failure Analysis</em>, evaluates whether local improvements survive stronger baselines and translate into better final answers.</p></div></div></section>
-<section aria-labelledby="findings-title" class="section"><div class="container"><header class="section-head"><h2 id="findings-title">Preliminary findings and interpretation</h2></header><div class="prose"><p>The initial routing study did not establish an advantage over a matched retrieval baseline. Selection improvements against simpler comparators were substantially limited by stronger rerankers, while answer-level effects depended on the evaluation setting and reader. The tested closed-corpus pipeline did not show an end-to-end benefit.</p><p>The ongoing work develops a bounded diagnostic study: identifying where a proposed repair stops helping, while retaining negative results and distinguishing evidence recall from answer quality.</p></div></div></section>
-<section aria-labelledby="contribution-title" class="section"><div class="container"><header class="section-head"><h2 id="contribution-title">Research contribution and current work</h2></header><div class="prose"><p>My work covers the research questions, controlled evaluation design, implementation, and analysis. It builds on established datasets, retrieval methods, pretrained models, and statistical tools; parts of the implementation and verification used agent assistance.</p><p>Current work includes further experiments, broader evaluation, and manuscript development. The manuscript is in preparation. Preliminary findings do not establish a general retrieval or question-answering improvement.</p></div></div></section>
+<section aria-labelledby="question-title" class="section"><div class="container"><header class="section-head"><h2 id="question-title">From routing memory to selecting evidence</h2></header><div class="prose">
+<p>ERL asks where useful evidence is lost between retrieval and a final answer. The project began with a graph-routing hypothesis: could intermediate memory items help a system reach evidence that direct retrieval would miss? Working on <a href="/research/pneuma/">PNEUMA</a> had made this distinction between storing information and recovering usable evidence particularly important to me.</p>
+<p>I designed and implemented controlled comparisons that separate access to candidate evidence, selection within a candidate pool, and the reader’s use of the selected context. The work spans conversational memory and multi-hop question answering, using LoCoMo, MuSiQue, and 2WikiMultihopQA in distinct experimental settings. Matched inspection budgets and paired comparisons help isolate what a proposed change actually improves.</p>
+</div></div></section>
+<section aria-labelledby="findings-title" class="section"><div class="container"><header class="section-head"><h2 id="findings-title">What the preliminary findings changed</h2></header><div class="prose">
+<p>In the initial LoCoMo comparison, learned routing and BM25 both reached full-support recall of 0.3671 at an inspection budget of 34. That result did not support the expected routing advantage and shifted my attention toward evidence selection.</p>
+<p>Selection changes improved support recall against simpler comparators, but much of the gain diminished against a reranker fine-tuned on the target dataset. Some settings left very little room for further improvement, making the strength of the baseline and the available room for improvement central to interpretation. The same selection strategy could also hurt particular question types.</p>
+<p>Better evidence recall did not translate consistently into better answers. Effects depended on the reader and context, and the tested closed-corpus pipeline showed no end-to-end benefit. Candidate pools often lacked required support in that setup; changing selection alone could not recover absent evidence. These observations are specific to the tested systems and do not establish a general limitation of retrieval.</p>
+</div></div></section>
+<section aria-labelledby="current-title" class="section"><div class="container"><header class="section-head"><h2 id="current-title">Current research and manuscript</h2></header><div class="prose">
+<p>My role covers the research questions, experimental design, implementation, and analysis. The study builds on established datasets, retrieval methods, and pretrained models. I am now examining how the findings depend on retrieval strength, scorer supervision, and the reader’s ability to use evidence.</p>
+<p>Further experiments and manuscript development are ongoing. The planned broader evaluation has not yet been executed, and reader-output accounting needs correction before stronger answer-level conclusions can be drawn. ERL’s manuscript is <strong>in preparation</strong>.</p>
+</div></div></section>
 <div class="container"><nav aria-label="Research pages" class="back-next"><a href="/research/">← Research index</a><a href="/research/rift/">Next: RIFT →</a></nav></div>
 </main>
 <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/research/">Research</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer>
