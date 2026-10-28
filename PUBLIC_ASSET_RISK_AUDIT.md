@@ -8,6 +8,15 @@
 
 **Purpose:** identify local material that must not be mistaken for private merely because it is absent from navigation
 
+## 28 October 2026 update
+
+ERL and RIFT remain active, unsubmitted research. Their public overviews and CV entries now give high-level research questions and contributions without detailed unpublished results, methods, venue plans, or follow-up protocols. The supplied draft PDFs were read outside the repository and are not publication assets.
+
+Two unused ERL experiment figures were removed from the current public asset tree and preserved in an ignored local archive. Removal from the current tree does not erase previously published copies in Git history or change an existing deployment. No Git history rewrite was performed. Future releases should review both linked and unlinked assets.
+
+The CV source and public PDF are synchronized for this update. Existing unrelated local changes remain outside the revision commit.
+
+
 ## October 2026 update
 
 The public CV PDF has been regenerated from the revised LaTeX source for the CAT-GS publication and ERL/RIFT/RSI status update. Both pages were visually checked. The new RSI page and revised research overviews contain concise public summaries; private research records, review assessments, operational plans, and application material remain outside the public asset tree. Historical findings below retain their original dates.

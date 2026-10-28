@@ -37,6 +37,8 @@ The September 2026 renovation uses a narrow reading column, system serif typogra
 
 Only `assets/public/**` is intended for publication as website assets. The rest of the local `assets/` tree contains research records, source PDFs, academic material, and working files. `.gitignore` excludes new files there, but does not untrack existing files; check the tracked file list before publication. Hiding a file from site navigation is not a privacy control.
 
+The two unused ERL experiment figures were removed from the current public asset tree on 28 October 2026 and preserved in an ignored local archive. Previously published versions remain in Git history; this update does not rewrite that history. Supplied manuscript PDFs are reference inputs and must not be copied into the public tree.
+
 See `PUBLIC_ASSET_RISK_AUDIT.md` before adding or moving any asset.
 
 ## Local preview
@@ -65,7 +67,7 @@ The browser check covers all 13 pages at 320, 390, 430, 768, 1024, 1440, and 192
 
 ## Content rules
 
-- ERL is an ongoing controlled evidence-loss study. Further research and evaluation are in progress, and the manuscript is in preparation. RIFT is an active exploratory measurement study (RIFT-M), and RSI is an engineering pilot whose growth hypothesis remains untested. Distinguish completed work from proposed experiments.
+- ERL is active research on evidence loss across retrieval, selection, and reading in multi-hop QA. RIFT studies audio-driven facial motion and neural-renderer measurement reliability; its methodology continues to develop. Both manuscripts are in preparation and neither has been submitted. Keep venue plans, detailed unpublished methods, numerical results, and follow-up protocols private. RSI is an engineering pilot whose growth hypothesis remains untested. Distinguish completed work from proposed experiments.
 - PNEUMA is a completed four-person undergraduate thesis under Dr. Nabeel Mohammed (December 2025). Architectural renovation and renewed evaluation are prospective subsequent work; no reliable aggregate QA accuracy is established.
 - CAT-GS is published in Neurocomputing, article 135392 (2026), DOI 10.1016/j.neucom.2026.135392; the owner confirms acceptance on 12 October. The accepted AACL-IJCNLP paper links to its public OpenReview record.
 - Keep StreamTalker-GS labeled as an archived negative-result study.

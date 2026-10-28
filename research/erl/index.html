@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>ERL — Evidence Loss in Multi-Hop QA · Tanvir Ahmed Khan</title>
-<meta content="Where does useful evidence disappear between retrieval and a final answer?" name="description"/>
+<meta content="Controlled research on evidence loss across retrieval, evidence selection, and reading in multi-hop question answering. Active research; manuscript in preparation, not submitted." name="description"/>
 <link href="https://tanvirahmedkhan74.github.io/research/erl/" rel="canonical"/>
-<meta content="ERL — Evidence Loss in Multi-Hop QA" property="og:title"/><meta content="Where does useful evidence disappear between retrieval and a final answer?" property="og:description"/>
+<meta content="ERL — Evidence Loss in Multi-Hop QA" property="og:title"/><meta content="Controlled research on evidence loss across retrieval, evidence selection, and reading in multi-hop question answering. Active research; manuscript in preparation, not submitted." property="og:description"/>
 <meta content="article" property="og:type"/>
 <link href="/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="/assets/public/css/main.css?v=20260930" rel="stylesheet"/>
@@ -20,23 +20,22 @@
 <main id="main" tabindex="-1">
 <header class="page-head"><div class="container">
 <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a> / <a href="/research/">Research</a> / ERL</nav>
-<p class="eyebrow">Research &amp; engineering</p><h1>ERL — Emergent Retrieval Landmark</h1>
-<p class="page-deck">Where does useful evidence disappear between retrieval and a final answer?</p>
-<p class="page-meta"><span>2026–present</span><span>Evidence selection and multi-hop QA</span><span>Manuscript in preparation</span><span>Updated 15 October 2026</span></p>
-<p class="status-line"><strong>Active research.</strong> Preliminary experiments completed; further evaluation and manuscript preparation ongoing.</p>
+<p class="eyebrow">Ongoing research</p><h1>ERL — Emergent Retrieval Landmark</h1>
+<p class="page-deck">Where is useful evidence lost between retrieval and a final answer?</p>
+<p class="page-meta"><span>2026–present</span><span>Retrieval and multi-hop question answering</span><span>Updated 28 October 2026</span></p>
+<p class="status-line"><strong>Active research · Manuscript in preparation · Not submitted.</strong> Experiments, analysis, and manuscript development are ongoing.</p>
 </div></header>
-<section aria-labelledby="question-title" class="section"><div class="container"><header class="section-head"><h2 id="question-title">From routing memory to selecting evidence</h2></header><div class="prose">
-<p>ERL asks where useful evidence is lost between retrieval and a final answer. The project began with a graph-routing hypothesis: could intermediate memory items help a system reach evidence that direct retrieval would miss? Working on <a href="/research/pneuma/">PNEUMA</a> had made this distinction between storing information and recovering usable evidence particularly important to me.</p>
-<p>I designed and implemented controlled comparisons that separate access to candidate evidence, selection within a candidate pool, and the reader’s use of the selected context. The work spans conversational memory and multi-hop question answering, using LoCoMo, MuSiQue, and 2WikiMultihopQA in distinct experimental settings. Matched inspection budgets and paired comparisons help isolate what a proposed change actually improves.</p>
+<section aria-labelledby="question-title" class="section"><div class="container"><header class="section-head"><h2 id="question-title">The research question</h2></header><div class="prose">
+<p>Multi-hop question answering requires a system to find and combine several pieces of evidence. A wrong answer can reflect different problems: necessary information may never be retrieved, useful passages may be discarded, or the reader may fail to use the context it receives. ERL studies how to distinguish these failures.</p>
+<p>The project grew out of questions about memory retrieval in <a href="/research/pneuma/">PNEUMA</a>. It began with graph-based access to evidence and has developed into a controlled failure analysis of retrieval, evidence selection, and reading.</p>
 </div></div></section>
-<section aria-labelledby="findings-title" class="section"><div class="container"><header class="section-head"><h2 id="findings-title">What the preliminary findings changed</h2></header><div class="prose">
-<p>In the initial LoCoMo comparison, learned routing and BM25 both reached full-support recall of 0.3671 at an inspection budget of 34. That result did not support the expected routing advantage and shifted my attention toward evidence selection.</p>
-<p>Selection changes improved support recall against simpler comparators, but much of the gain diminished against a reranker fine-tuned on the target dataset. Some settings left very little room for further improvement, making the strength of the baseline and the available room for improvement central to interpretation. The same selection strategy could also hurt particular question types.</p>
-<p>Better evidence recall did not translate consistently into better answers. Effects depended on the reader and context, and the tested closed-corpus pipeline showed no end-to-end benefit. Candidate pools often lacked required support in that setup; changing selection alone could not recover absent evidence. These observations are specific to the tested systems and do not establish a general limitation of retrieval.</p>
+<section aria-labelledby="approach-title" class="section"><div class="container"><header class="section-head"><h2 id="approach-title">Research approach</h2></header><div class="prose">
+<p>I design comparisons that examine the stages separately and then check how they interact. The central question is when a change that improves evidence availability or selection also improves the final answer, and how that conclusion depends on the baseline and reader.</p>
+<p>The work emphasizes controlled evaluation and careful interpretation of negative and conditional findings. The current study does not establish an end-to-end method improvement; further research and analysis remain in progress.</p>
 </div></div></section>
-<section aria-labelledby="current-title" class="section"><div class="container"><header class="section-head"><h2 id="current-title">Current research and manuscript</h2></header><div class="prose">
-<p>My role covers the research questions, experimental design, implementation, and analysis. The study builds on established datasets, retrieval methods, and pretrained models. I am now examining how the findings depend on retrieval strength, scorer supervision, and the reader’s ability to use evidence.</p>
-<p>Further experiments and manuscript development are ongoing. The planned broader evaluation has not yet been executed, and reader-output accounting needs correction before stronger answer-level conclusions can be drawn. ERL’s manuscript is <strong>in preparation</strong>.</p>
+<section aria-labelledby="current-title" class="section"><div class="container"><header class="section-head"><h2 id="current-title">My contribution and current status</h2></header><div class="prose">
+<p>My work covers research-question formulation, experimental design, implementation, and analysis, building on established datasets, retrieval methods, and pretrained models.</p>
+<p>ERL is active research with a manuscript in preparation. Detailed methods and unpublished results are being kept private while the work continues.</p>
 </div></div></section>
 <div class="container"><nav aria-label="Research pages" class="back-next"><a href="/research/">← Research index</a><a href="/research/rift/">Next: RIFT →</a></nav></div>
 </main>

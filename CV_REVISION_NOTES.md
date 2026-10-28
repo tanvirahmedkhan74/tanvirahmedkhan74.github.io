@@ -1,5 +1,15 @@
 # Portfolio and CV revision record
 
+## 28 October 2026: active research and public disclosure update
+
+- Reviewed the owner's current RIFT and ERL drafts, existing profile, and prior portfolio decisions. The owner's clarification governs status: neither manuscript has been submitted, regardless of template labels in the supplied drafts.
+- Updated the homepage, research index, project pages, web CV, and LaTeX CV. ERL is framed around controlled failure analysis across evidence access, selection, and reading. RIFT reflects continued facial-motion research, renderer measurement reliability, and methodology development. Neither is listed as a published or accepted paper.
+- Public descriptions explain the research questions and the owner's contributions. Venue plans, exact unpublished results, internal experiment names, intervention details, and follow-up protocols are omitted. Source manuscripts remain outside the public repository.
+- Removed two unused ERL experiment figures from the current public asset tree after preserving ignored local copies. Previously published files and text remain recoverable in Git history; no history rewrite or live deployment is part of this revision.
+- Rebuilt the two-page public CV from the existing XeLaTeX source and synchronized the local Overleaf handoff. Preserved the established biography, education, publication record, and collaborator attribution.
+- Validation: 13 HTML pages and 239 local links/assets/fragments passed static checks. All five changed pages passed browser layout checks at seven widths (320–1920 px), with working navigation and images. PDF delivery, no-JavaScript CV content, and 404 responses for removed/private figures passed. Both CV pages were rendered and visually reviewed; the PDF contains both unsubmitted statuses and working project links. The local source ZIP matches the edited source. No full axe-core accessibility audit was rerun.
+
+
 ## 14 October 2026: ERL status correction
 
 The owner clarified that ERL research is ongoing and its manuscript is in preparation. The project descriptions, page metadata, web CV, LaTeX source, downloadable PDF, and source handoff now use that status. The erroneous submission news item was removed. Additional experiments and analysis remain in progress. Static validation passed for 12 pages and 221 local links; the corrected two-page PDF was rendered and reviewed.
