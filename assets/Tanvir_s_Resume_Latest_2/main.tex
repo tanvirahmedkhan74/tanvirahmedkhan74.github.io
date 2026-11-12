@@ -2,12 +2,11 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage{myresume}
 \hypersetup{pdftitle={Tanvir Ahmed Khan - Academic CV},pdfauthor={Tanvir Ahmed Khan}}
-\newcommand{\study}[4]{\par\Needspace{6\baselineskip}\textbf{#1}\par
-{\small\textit{#2}}\par\vspace{2pt}#3\par
-{\small\href{#4}{Project overview}}\par\vspace{7pt}}
-\newcommand{\workstream}[3]{\par\Needspace{3\baselineskip}\textbf{#1}\enspace
-\href{https://tanvirahmedkhan74.github.io/milab/\##2}{Project}\par
-#3\par\vspace{5pt}}
+
+% MILab workstream: a linked run-in title and a one-sentence scope.
+\newcommand{\workstream}[3]{%
+\runinEntry{\href{https://tanvirahmedkhan74.github.io/milab/\##2}{#1}.}{#3}}
+
 \begin{document}
 \begin{center}
 {\sffamily\bfseries\fontsize{24pt}{27pt}\selectfont Tanvir Ahmed Khan}\par
@@ -22,6 +21,7 @@
 \href{https://github.com/tanvirahmedkhan74}{GitHub}\enspace\textbullet\enspace
 \href{https://orcid.org/0009-0009-0519-8021}{ORCID}}
 \end{center}
+
 \section{Research Interests}
 Multimodal representation learning; evidence selection and memory for question answering;
 long-video understanding; neural-renderer measurement; speech-driven visual interaction.
@@ -35,38 +35,57 @@ Degree requirements completed December 2025.\par
 Numerical Methods; Introduction to Linear Algebra; Design and Analysis of Algorithms.}
 
 \section{First-Author Manuscripts in Preparation}
-\study{ERL: Evidence selection in multi-hop question answering}
-{First author; manuscript in preparation. Planned target: ACL.}
-{\textit{From Transit Routing to Evidence Selection: Conditional Audits of Multi-Hop QA Failures.}
-Design controlled studies tracing support loss through evidence access, selection and reading.
-The work tests a routing hypothesis, qualifies stronger selection baselines and examines when
-readers use the supplied support.}
+{\small\textit{Each project title links to its project page.}\par}
+\vspace{4pt}
+
+\researchEntry{ERL --- Evidence selection in multi-hop question answering}
+{First author\enspace\textperiodcentered\enspace In preparation}
+{\textit{From Transit Routing to Evidence Selection: Conditional Audits of Multi-Hop QA
+Failures.}\enspace Planned target: ACL.}
 {https://tanvirahmedkhan74.github.io/research/erl/}
+\begin{points}
+\item Trace where supporting evidence is lost across candidate access, selection and reading,
+using controlled studies rather than end-to-end accuracy alone.
+\item Lead the research design, implementation and analysis. Selection gains are qualified
+against stronger baselines and reader controls, and negative routing findings are retained.
+\end{points}
 
-\study{RIFT: Finite-difference probes across hard feature selection}
-{First author; manuscript in preparation. Planned target: TMLR.}
-{\textit{A frozen-index audit of one released talking-head renderer.}
-Study when finite-difference probes reflect local response as discrete feature choices change.
-Fixed-selection controls separate measurement effects from the renderer's response, retaining
-negative and ambiguous findings within the one-renderer scope.}
+\researchEntry{RIFT --- Reliability of finite-difference probes in a released renderer}
+{First author\enspace\textperiodcentered\enspace In preparation}
+{\textit{Finite-difference probes across hard feature selection: a frozen-index audit of one
+released talking-head renderer.}\enspace Planned target: TMLR.}
 {https://tanvirahmedkhan74.github.io/research/rift/}
+\begin{points}
+\item Hold feature selections fixed so that a measured difference separates a change of discrete
+choice from the renderer's local response.
+\item Lead the experimental design, implementation and interpretation within a single-renderer
+scope, retaining negative and ambiguous findings.
+\end{points}
 
-\study{Deadline-Available Speech States for Full-Duplex Avatar Articulation}
-{First author; work in progress. Alternative planned targets: NeurIPS 2027 or ICCV 2027.}
-{Study what articulation-relevant information streaming speech-model states contain at a
-playback deadline, and what additional waiting contributes. A completed pilot diagnostic
-motivates an expanded study of trained readouts and timing schedules; the expanded programme
-remains in development.}
+\researchEntry{Deadline-available speech states for full-duplex avatar articulation}
+{First author\enspace\textperiodcentered\enspace Work in progress}
+{Alternative planned targets: NeurIPS 2027 or ICCV 2027.}
 {https://tanvirahmedkhan74.github.io/research/deadline-articulation/}
+\begin{points}
+\item Examine what articulation-relevant information streaming speech-model states carry at a
+playback deadline, and what additional waiting contributes.
+\item A completed pilot diagnostic motivates an expanded study of trained readouts and timing
+schedules; that expanded programme remains in development.
+\end{points}
 
 \section{Independent Research in Progress}
-\study{CG-SWR: Capacity-Gated Sparse Weight Repair for Multi-Hop Evidence Reranking}
-{Independent research; active experimental study.}
-{Investigate the gap between support-selection information encoded in a frozen reranker and
-information used by its scoring head. Controlled comparisons examine supervised readouts and
-constrained parameter edits; the current experimental programme is underway.}
-{https://tanvirahmedkhan74.github.io/research/cg-swr/}
 
+\researchEntry{CG-SWR --- Capacity-gated sparse weight repair for evidence reranking}
+{Independent\enspace\textperiodcentered\enspace Active study}
+{Controlled comparison of supervised readouts and constrained parameter edits in multi-hop
+evidence reranking.}
+{https://tanvirahmedkhan74.github.io/research/cg-swr/}
+\begin{points}
+\item Investigate the gap between support-selection information encoded in a frozen reranker and
+the information its scoring head uses.
+\item Design and implement the controlled comparisons, evaluation infrastructure and
+constrained-editing experiments; the experimental programme is underway.
+\end{points}
 
 \newpage
 \section{Published Collaborative Research}
@@ -105,12 +124,15 @@ baseline evaluation and visualizations.}
 \pubListEnd
 
 \section{Undergraduate Thesis}
-\textbf{PNEUMA: Video Memory for Long-Form Question Answering}\hfill Completed Dec 2025\par
-Four-person thesis under Dr.~Nabeel Mohammed. Carried out the core technical implementation
-over six months; teammates contributed to the real-time JavaScript application.
-The training-free system combines pretrained perception, structured storage,
-multi-aspect text retrieval and temporal organization.
-\href{https://tanvirahmedkhan74.github.io/research/pneuma/}{Project overview}.
+\entryHeading{\href{https://tanvirahmedkhan74.github.io/research/pneuma/}{PNEUMA --- Video memory for long-form question answering}}{Completed Dec 2025}
+\nobreak\vspace{1.5pt}
+{\small\RaggedRight Four-person thesis under Dr.~Nabeel Mohammed.\par}
+\begin{points}
+\item Carried out the core technical implementation over six months; teammates contributed to the
+real-time JavaScript application.
+\item The training-free system combines pretrained perception, structured storage, multi-aspect
+text retrieval and temporal organization.
+\end{points}
 
 \section{Software Engineering Experience}
 \internHeading{Tuctuc}{Spain (Remote)}{Jan 2022 -- Jun 2026}
@@ -118,13 +140,14 @@ multi-aspect text retrieval and temporal organization.
 and developed cross-platform mobile applications using React Native.
 
 \section{Additional Engineering Projects}
-\textbf{Saliency detection via knowledge distillation.}
-Peekaboo/DINO teacher and UKAN student prototype with mask-supervised and
-teacher--student objectives.
-\href{https://github.com/tanvirahmedkhan74/Periphery}{Code}.\par
-\textbf{DynApex.} C++ dependency and cycle analysis, pragma injection, and
-OpenMP-based CPU/GPU execution prototype.
-\href{https://github.com/tanvirahmedkhan74/DynApex}{Code}.
+\runinEntry{Saliency detection via knowledge distillation.}
+{Peekaboo/DINO teacher and UKAN student prototype with mask-supervised and
+teacher--student objectives.\enspace
+\href{https://github.com/tanvirahmedkhan74/Periphery}{Code}}
+\runinEntry{DynApex.}
+{C++ dependency and cycle analysis, pragma injection, and OpenMP-based CPU/GPU
+execution prototype.\enspace
+\href{https://github.com/tanvirahmedkhan74/DynApex}{Code}}
 
 \section{Technical Skills and Languages}
 \textbf{Machine learning:} PyTorch, Hugging Face Transformers, multimodal fusion,
@@ -137,38 +160,52 @@ streaming pipelines, Docker, Linux, FastAPI, SQL and FAISS.\par
 \newpage
 \section{Applied Research Experience: MILab}
 \internHeading{Machine Intelligence Lab}{North South University}{Mar 2025 -- Present}
+\begingroup\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax
 \textbf{Research Assistant}. Advisors: Dr.~Nabeel Mohammed and Dr.~Shafin Rahman.\par
 Our work spans conversational avatars, 3D representation and embedded inference.
 Held primary technical responsibility in earlier integration and investigation work;
 contributed within the team to the later real-time Orin customization and RAG/tool integration.
-These systems investigations inform my independent research on representation, measurement and timing.\par
-\vspace{5pt}
+These systems investigations inform my independent research on representation, measurement
+and timing.\par
+\endgroup
+\vspace{3pt}
+{\small\textit{Thirteen separate workstreams, in order; each title links to its project page.}\par}
+\vspace{6pt}
 \workstream{MuseTalk 512$\times$512 training and high-resolution development}{musetalk-high-resolution}
 {Developed training and high-resolution avatar workflows around upstream MuseTalk components.}
 \workstream{MuseTalk / LatentSync conversational pipelines}{conversational-server}
 {Worked on speech, generation and playback queues, chunked execution and server-side multi-GPU
 latency engineering within our conversational-avatar development.}
 \workstream{Gaussian avatar--Moshi integration}{gaussian-moshi}
-{Integrated GaussianTalker-based avatars with Moshi/Mimi speech representations and streaming execution.}
+{Integrated GaussianTalker-based avatars with Moshi/Mimi speech representations and streaming
+execution.}
 \workstream{Head-wobble stabilization investigations}{head-wobble}
-{Investigated unwanted head motion through controlled avatar training and motion/rendering analyses.}
+{Investigated unwanted head motion through controlled avatar training and motion/rendering
+analyses.}
 \workstream{Pixel3DMM fitting and stabilization}{pixel3dmm}
-{Explored upstream Pixel3DMM fitting as a route to more stable facial representation and motion estimation.}
+{Explored upstream Pixel3DMM fitting as a route to more stable facial representation and motion
+estimation.}
 \workstream{Custom FLAME articulation}{flame}
-{Developed custom FLAME integration and articulation investigations, separating fitting, motion and rendering.}
+{Developed custom FLAME integration and articulation investigations, separating fitting, motion
+and rendering.}
 \workstream{Moshi--MuseTalk integration}{moshi-musetalk}
-{Built streaming adapters and execution infrastructure connecting Moshi speech generation to MuseTalk.}
+{Built streaming adapters and execution infrastructure connecting Moshi speech generation to
+MuseTalk.}
 \workstream{Moshi--IMTalker integration}{moshi-imtalker}
-{Developed the feature-to-motion bridge and chunk contracts for streaming IMTalker avatar generation.}
+{Developed the feature-to-motion bridge and chunk contracts for streaming IMTalker avatar
+generation.}
 \workstream{PersonaPlex--IMTalker integration}{personaplex-imtalker}
-{Worked on the speech-to-motion interface and streaming integration, preceding later device customization.}
+{Worked on the speech-to-motion interface and streaming integration, preceding later device
+customization.}
 \workstream{IMTalker renderer distillation}{renderer-distillation}
-{Developed fixed-identity teacher--student renderer work and profiling to study the rendering bottleneck.}
+{Developed fixed-identity teacher--student renderer work and profiling to study the rendering
+bottleneck.}
 \workstream{Jetson AGX Orin export and optimization}{orin-optimization}
-{Worked on TensorRT/export tooling, precision and graph checks, and component-level performance profiling.}
+{Worked on TensorRT/export tooling, precision and graph checks, and component-level performance
+profiling.}
 \workstream{Real-time PersonaPlex--IMTalker customization on Orin}{orin-real-time}
-{Contributed to our team-developed real-time system on Jetson AGX Orin; integration,
-renderer studies and device constraints formed part of this collaborative work.}
+{Contributed to our team-developed real-time system on Jetson AGX Orin; integration, renderer
+studies and device constraints formed part of this collaborative work.}
 \workstream{RAG and tool calling in the avatar pipeline}{rag-tools}
 {Participated in our team's retrieval and tool-augmentation work connecting external information
 with the conversational-avatar pipeline.}
