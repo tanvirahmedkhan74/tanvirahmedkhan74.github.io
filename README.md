@@ -45,7 +45,7 @@ The coordinated illustrations are in `assets/public/figures/refresh-2026/`. Publ
 
 ## Content and CV maintenance
 
-ERL and deadline articulation are first-author work in preparation. ACL, TMLR, and the alternative NeurIPS 2027 or ICCV 2027 plans are targets, not submissions or acceptances. RIFT uses a project-level lead-research label. CG-SWR is active experimental work on representation/readout gaps and constrained weight repair. Keep these separate from the four published collaborative papers. Preserve upstream model attribution and the distinction between primary earlier MILab work and major team contributions to the final Orin and RAG stages.
+ERL, RIFT and deadline articulation are first-author work in preparation. ACL, TMLR, and the alternative NeurIPS 2027 or ICCV 2027 plans are targets, not submissions or acceptances. RIFT’s first-author role is stated without exposing its full author list. CG-SWR is active experimental work on representation/readout gaps and constrained weight repair. Keep these separate from the four published collaborative papers. Preserve upstream model attribution and the distinction between primary earlier MILab work and major team contributions to the final Orin and RAG stages.
 
 AACL links to its official 2026 main long-paper proceedings. CAT-GS retains the distinction between online publication in 2026 and January 2027 assignment. Private manuscripts, raw records, internal protocols, credentials and source ZIPs are not public downloads.
 
