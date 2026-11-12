@@ -1,30 +1,17 @@
 <!doctype html>
-
-<html lang="en">
-<head>
-<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>AirFLOW — Aerodynamic Analysis Workbench · Tanvir Ahmed Khan</title>
-<meta content="A collaborative browser workbench for geometry inspection, VLM analysis, and OpenFOAM case preparation." name="description"/>
-<link href="https://tanvirahmedkhan74.github.io/research/airflow/" rel="canonical"/>
-<meta content="AirFLOW — Aerodynamic Analysis Workbench" property="og:title"/><meta content="A collaborative browser workbench for geometry inspection, VLM analysis, and OpenFOAM case preparation." property="og:description"/>
-<meta content="https://tanvirahmedkhan74.github.io/assets/public/figures/airflow/stl-analysis-workbench.png" property="og:image"/><meta content="article" property="og:type"/>
-<link href="/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
-<link href="/assets/public/css/main.css?v=20260930" rel="stylesheet"/>
-<meta content="https://tanvirahmedkhan74.github.io/research/airflow/" property="og:url"/></head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><nav aria-label="Primary navigation" class="nav">
-<a class="nav-brand" href="/">Tanvir Ahmed Khan</a>
-<ul class="nav-menu" id="nav-menu"><li><a aria-current="location" href="/research/">Research</a></li><li><a href="/#publications">Publications</a></li><li><a href="/notes/">Notes</a></li><li><a href="/cv/">CV</a></li></ul>
-</nav></header>
-<main id="main" tabindex="-1">
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AirFLOW — Aerodynamic Analysis Workbench · Tanvir Ahmed Khan · Tanvir Ahmed Khan</title><meta name="description" content="A collaborative browser workbench for geometry inspection, VLM analysis, and OpenFOAM case preparation."/><meta name="author" content="Tanvir Ahmed Khan"/>
+<link rel="canonical" href="https://tanvirahmedkhan74.github.io/research/airflow/"/><meta property="og:title" content="AirFLOW — Aerodynamic Analysis Workbench · Tanvir Ahmed Khan"/><meta property="og:description" content="A collaborative browser workbench for geometry inspection, VLM analysis, and OpenFOAM case preparation."/><meta property="og:url" content="https://tanvirahmedkhan74.github.io/research/airflow/"/><meta property="og:type" content="article"/><meta property="og:image" content="https://tanvirahmedkhan74.github.io/assets/public/images/tanvir-ahmed-khan-2x.webp"/><meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><link rel="stylesheet" href="/assets/public/css/main.css?v=20261112"/>
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><nav class="nav" aria-label="Primary navigation"><a class="nav-brand" href="/">Tanvir Ahmed Khan</a><ul class="nav-menu"><li><a href="/">Home</a></li><li><a href="/research/" aria-current="location">Research</a></li><li><a href="/publications/">Publications</a></li><li><a href="/milab/">MILab Projects</a></li><li><a href="/cv/">CV</a></li><li><a href="/notes/">Notes</a></li></ul></nav></header><div class="site-layout"><aside class="profile" aria-label="Profile and contact links"><img class="portrait" src="/assets/public/images/tanvir-ahmed-khan.webp" srcset="/assets/public/images/tanvir-ahmed-khan-2x.webp 2x" width="640" height="800" alt="Tanvir Ahmed Khan" decoding="async"/><div class="profile-text"><p class="profile-name">Tanvir Ahmed Khan</p><p class="affiliation">Research Assistant<br/><a href="https://milab-nsu.github.io/">Machine Intelligence Lab</a><br/>North South University<br/>Dhaka, Bangladesh</p><ul class="profile-links"><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li><li><a href="https://scholar.google.com/citations?user=Q5rEac8AAAAJ&amp;hl=en">Google Scholar</a></li><li><a href="https://github.com/tanvirahmedkhan74">GitHub</a></li><li><a href="/cv/">Academic CV</a></li><li><a href="https://orcid.org/0009-0009-0519-8021">ORCID</a></li></ul></div></aside><main id="main" tabindex="-1"><div class="page-location" aria-label="Current location"><a href="/research/">← Research</a><span>AirFLOW</span><a href="#contents">Contents ↓</a></div>
 <header class="page-head"><div class="container">
-<nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a> / <a href="/research/">Research</a> / AirFLOW</nav>
+
 <p class="eyebrow">Research &amp; engineering</p><h1>AirFLOW — Browser-Based Aerodynamic Analysis</h1>
 <p class="page-deck">A collaborative browser workbench for geometry inspection, VLM analysis, and OpenFOAM case preparation.</p>
 <p class="page-meta"><span>Early-stage collaboration</span><span>Preliminary browser MVP</span><span>Numerical methods</span><span>Updated 15 October 2026</span></p>
 <p class="status-line"><strong>Early-stage engineering.</strong> VLM implementation and CFD preprocessing; generated OpenFOAM cases have not been simulated.</p>
-</div></header>
+</div></header><nav class="page-contents" id="contents" aria-label="On this page"><p class="meta-label">On this page</p><ul class="section-links"><li><a href="#overview-title">From geometry to an aerodynamic model</a></li><li><a href="#methods-title">Implementation and preliminary checks</a></li><li><a href="#status-title">Current development stage</a></li></ul></nav>
 <section aria-labelledby="overview-title" class="section"><div class="container"><header class="section-head"><h2 id="overview-title">From geometry to an aerodynamic model</h2></header><div class="prose">
 <p>I am developing AirFLOW with technical input from an aerospace practitioner and MIST graduate. The preliminary browser workbench lets us inspect an aircraft-like STL, make modeling assumptions explicit, and turn selected geometry into an idealized lifting-surface analysis.</p>
 <p>The workflow begins with units, axes, mass, center of gravity, topology, and manual surface selection. A custom horseshoe Vortex Lattice Method (VLM) implementation then estimates aerodynamic forces and longitudinal stability quantities. The same reference conventions can be exported into an OpenFOAM case for subsequent CFD work.</p>
@@ -34,15 +21,11 @@
 <figcaption>Figure 1. The browser workflow connects geometry inspection and explicit assumptions to VLM analysis and OpenFOAM case generation. The external CFD solver has not been run. <a class="figure-original" href="/assets/public/figures/airflow/stl-analysis-workbench.png">View full-size figure</a></figcaption>
 </figure><section aria-labelledby="methods-title" class="section"><div class="container"><header class="section-head"><h2 id="methods-title">Implementation and preliminary checks</h2></header><div class="prose">
 <p>The workbench combines geometry processing, lifting-surface extraction, and numerical diagnostics in a Three.js interface. The solver uses standard quarter-chord bound vortices, three-quarter-chord collocation, Biot–Savart influence calculations, and Kutta–Joukowski forces. These are established numerical methods; XFLR5 is a reference, while OpenFOAM remains a separate external solver.</p>
-<p>In controlled rectangular-wing tests, the lift slope fell within a 16% tolerance of lifting-line theory, and the linear-system residual was below 10<sup>−7</sup>. The induced-drag tests showed the expected quadratic trend. These are preliminary implementation checks; a closer comparison against established aerodynamic solvers remains necessary. An inviscid VLM also cannot establish stall behavior.</p>
+<p>Preliminary rectangular-wing checks examine lift trends, induced drag and numerical residuals. Comparison against established aerodynamic solvers remains part of the validation programme. An inviscid vortex-lattice model does not establish stall behavior.</p>
 </div></div></section>
 <section aria-labelledby="status-title" class="section"><div class="container"><header class="section-head"><h2 id="status-title">Current development stage</h2></header><div class="prose">
 <p>The browser MVP generates OpenFOAM case files, including mesh and solver configuration. No OpenFOAM mesh or CFD simulation has been executed, so there is no CFD result to report. The next substantive step is to run a suitable case, inspect mesh quality, and compare the resulting forces with the VLM estimates.</p>
 <p>The collaboration is independent of official institutional sponsorship. Third-party demonstration geometry is not included in this portfolio.</p>
 </div></div></section>
 <div class="container"><nav aria-label="Research pages" class="back-next"><a href="/research/pneuma/">← Previous: PNEUMA</a><a href="/research/archive/streamtalker-gs/">Next: StreamTalker-GS →</a></nav></div>
-</main>
-<footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/research/">Research</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer>
-
-</body>
-</html>
+</main></div><footer class="site-footer"><div class="footer-inner"><p>© 2026 Tanvir Ahmed Khan</p><ul class="footer-links"><li><a href="/research/">Research</a></li><li><a href="/milab/">MILab Projects</a></li><li><a href="/cv/">CV</a></li><li><a href="mailto:tanvirahmedkhan74@gmail.com">Email</a></li></ul></div></footer></body></html>

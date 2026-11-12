@@ -8,6 +8,14 @@
 
 **Purpose:** identify local material that must not be mistaken for private merely because it is absent from navigation
 
+## 12 November 2026 update
+
+The current public set contains the synchronized three-page academic CV and conceptual publication/research illustrations. Dense legacy avatar and PNEUMA figures have been retired from the current public tree, with local historical copies retained privately. Existing Git history and deployments are unchanged.
+
+The site distinguishes published collaborative work, manuscripts in preparation, active independent studies and the thirteen MILab workstreams. Venue plans are explicitly identified as plans. No private manuscript, evidence report, internal protocol, credential, contract or CV source ZIP is part of the public asset set. RSI is an archived, non-indexed compatibility page rather than current research.
+
+The dated sections below remain historical records of earlier revisions.
+
 ## 28 October 2026 update
 
 ERL and RIFT remain active, unsubmitted research. Their public overviews and CV entries now give high-level research questions and contributions without detailed unpublished results, methods, venue plans, or follow-up protocols. The supplied draft PDFs were read outside the repository and are not publication assets.

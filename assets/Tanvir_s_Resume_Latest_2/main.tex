@@ -1,446 +1,172 @@
-%=========================================================
-% Academic CV
-% Tanvir Ahmed Khan
-%
-% Compiler: XeLaTeX
-% Style: myresume.sty
-%=========================================================
-
+% Academic CV. Compile with XeLaTeX and myresume.sty.
 \documentclass[a4paper,11pt]{article}
-
 \usepackage{myresume}
-
-% --------------------------------------------------------
-% PDF METADATA
-% --------------------------------------------------------
-
-\hypersetup{
-    pdftitle={Tanvir Ahmed Khan - Academic CV},
-    pdfauthor={Tanvir Ahmed Khan}
-}
-
+\hypersetup{pdftitle={Tanvir Ahmed Khan - Academic CV},pdfauthor={Tanvir Ahmed Khan}}
+\newcommand{\study}[4]{\par\Needspace{6\baselineskip}\textbf{#1}\par
+{\small\textit{#2}}\par\vspace{2pt}#3\par
+{\small\href{#4}{Project overview}}\par\vspace{7pt}}
+\newcommand{\workstream}[3]{\par\Needspace{3\baselineskip}\textbf{#1}\enspace
+\href{https://tanvirahmedkhan74.github.io/milab/\##2}{Project}\par
+#3\par\vspace{5pt}}
 \begin{document}
-
-
-%=========================================================
-% HEADER
-%=========================================================
-
 \begin{center}
-
-{\sffamily
- \bfseries
- \fontsize{24pt}{27pt}\selectfont
- Tanvir Ahmed Khan}
-
-\vspace{5pt}
-
-{\small
-Dhaka, Bangladesh
-\enspace\textbullet\enspace
-\href{mailto:tanvirahmedkhan74@gmail.com}
-     {tanvirahmedkhan74@gmail.com}
-}
-
-\vspace{2pt}
-
-{\small
-\href{https://tanvirahmedkhan74.github.io/}
-     {Research Portfolio}
-\enspace\textbullet\enspace
-\href{https://scholar.google.com/citations?user=Q5rEac8AAAAJ\&hl=en}
-     {Google Scholar}
-\enspace\textbullet\enspace
-\href{https://github.com/tanvirahmedkhan74}
-     {GitHub}
-\enspace\textbullet\enspace
-\href{https://orcid.org/0009-0009-0519-8021}
-     {ORCID}
-}
-
-\end{center}
-
+{\sffamily\bfseries\fontsize{24pt}{27pt}\selectfont Tanvir Ahmed Khan}\par
+\vspace{4pt}
+{\small Dhaka, Bangladesh\enspace\textbullet\enspace
+\href{mailto:tanvirahmedkhan74@gmail.com}{tanvirahmedkhan74@gmail.com}}\par
 \vspace{3pt}
-
-
-%=========================================================
-% EDUCATION
-%=========================================================
+{\small\href{https://tanvirahmedkhan74.github.io/}{Portfolio}\enspace\textbullet\enspace
+\href{https://scholar.google.com/citations?user=Q5rEac8AAAAJ\&hl=en}{Google Scholar}\enspace\textbullet\enspace
+\href{https://github.com/tanvirahmedkhan74}{GitHub}\enspace\textbullet\enspace
+\href{https://orcid.org/0009-0009-0519-8021}{ORCID}}
+\end{center}
+\section{Research Interests}
+Multimodal representation learning; evidence selection and memory for question answering;
+long-video understanding; neural-renderer measurement; speech-driven visual interaction.
 
 \section{Education}
+\eduHeading{North South University}{Dhaka, Bangladesh}
+{B.Sc. in Computer Science and Engineering}{2021 -- Dec 2025}
+\textbf{CGPA: 3.80/4.00}\enspace\textbar\enspace\textit{Summa Cum Laude}.
+Degree requirements completed December 2025.\par
+{\small Selected coursework: Pattern Recognition; Machine Learning; Probability and Statistics;
+Numerical Methods; Introduction to Linear Algebra; Design and Analysis of Algorithms.}
 
-\eduHeading
-    {North South University}
-    {Dhaka, Bangladesh}
-    {Bachelor of Science in Computer Science and Engineering}
-    {2021 -- Dec 2025}
+\section{First-Author Manuscripts in Preparation}
+\study{ERL: Evidence selection in multi-hop question answering}
+{First author; manuscript in preparation. Planned target: ACL.}
+{\textit{From Transit Routing to Evidence Selection: Conditional Audits of Multi-Hop QA Failures.}
+I design controlled studies that trace support loss through evidence access, selection and reading.
+The work tests a routing hypothesis, qualifies stronger selection baselines and examines when
+readers use the supplied support.}
+{https://tanvirahmedkhan74.github.io/research/erl/}
 
-\itemListStart
+\study{Deadline-Available Speech States for Full-Duplex Avatar Articulation}
+{First author; work in progress. Alternative planned targets: NeurIPS 2027 or ICCV 2027.}
+{I study what articulation-relevant information streaming speech-model states contain at a
+playback deadline, and what additional waiting contributes. A completed pilot diagnostic
+motivates an expanded study of trained readouts and timing schedules; the expanded programme
+remains in development.}
+{https://tanvirahmedkhan74.github.io/research/deadline-articulation/}
 
-    \myItem{
-        \textbf{CGPA: 3.80/4.00}
-        \enspace\textbar\enspace
-        \textit{Summa Cum Laude}
-    }
+\section{Independent Research in Progress}
+\study{CG-SWR: Capacity-Gated Sparse Weight Repair for Multi-Hop Evidence Reranking}
+{Independent research; active experimental study.}
+{I investigate the gap between support-selection information encoded in a frozen reranker and
+information used by its scoring head. Controlled comparisons examine supervised readouts and
+constrained parameter edits; the current experimental programme is underway.}
+{https://tanvirahmedkhan74.github.io/research/cg-swr/}
 
-    \myItem{
-        Degree requirements completed December 2025.
-    }
+\study{RIFT: Finite-difference probes across hard feature selection}
+{Independent / lead research; manuscript in preparation. Planned target: TMLR.}
+{\textit{A frozen-index audit of one released talking-head renderer.}
+I study when finite-difference probes reflect local response as discrete feature choices change.
+Fixed-selection controls separate measurement effects from the renderer's response, retaining
+negative and ambiguous findings within the one-renderer scope.}
+{https://tanvirahmedkhan74.github.io/research/rift/}
 
-    \myItem{
-        Relevant Coursework:
-        Machine Learning,
-        Pattern Recognition,
-        Numerical Methods,
-        Probability and Statistics,
-        Introduction to Linear Algebra,
-        Design and Analysis of Algorithms
-    }
-
-\itemListEnd
-
-
-%=========================================================
-% RESEARCH INTERESTS
-%=========================================================
-
-\section{Research Interests}
-
-Multimodal learning; retrieval, memory, and evidence-aware reasoning;
-video understanding; 3D vision and neural rendering;
-audio-driven facial animation; low-resource natural language processing.
-
-
-%=========================================================
-% CURRENT RESEARCH
-%=========================================================
-
-\section{Ongoing Research}
-
-\projHeading
-    {ERL --- Emergent Retrieval Landmark}
-    {Design controlled experiments on evidence access, selection, and
-     reading in multi-hop QA; analyze retrieval and answer quality.
-     Research ongoing; manuscript in preparation, not submitted.}
-    {2026 -- Present}
-    {\href{https://tanvirahmedkhan74.github.io/research/erl/}
-           {Research overview}}
-
-\projHeading
-    {RIFT --- Recoverability-Gated Implicit Facial Dynamics}
-    {Study audio-driven facial motion and neural-renderer measurement
-     reliability through controlled experiments and failure analysis.
-     Methodology and manuscript in development; not submitted.}
-    {Sep 2026 -- Present}
-    {\href{https://tanvirahmedkhan74.github.io/research/rift/}
-           {Research overview}}
-
-\projHeading
-    {RSI --- Capacity Growth in Verified Self-Improvement}
-    {Investigating model expansion during verified self-training.
-     Current work establishes reliable training data and experiment
-     recovery; the growth hypothesis remains untested.}
-    {Oct 2026 -- Present}
-    {\href{https://tanvirahmedkhan74.github.io/research/rsi/}
-           {Research overview}}
-
-
-%=========================================================
-% PUBLICATIONS
-%=========================================================
-
-\section{Publications and Accepted Papers}
-
+\newpage
+\section{Published Collaborative Research}
 \pubListStart
-
-
-% --------------------------------------------------------
-% PLOS ONE
-% Third author
-% --------------------------------------------------------
-
-\item
-Mahir Shahriar Tamim,
-Md. Samiul Alim,
-\textbf{Tanvir Ahmed Khan},
-Maisha Rahman,
-and Md Musfique Anwar.
-``Ensemble and Temporal Feature-Based Framework for
-Rainfall Classification in Bangladesh.''
-\textit{PLOS ONE},
-21(3): e0342646, 2026.
-\href{https://doi.org/10.1371/journal.pone.0342646}
-     {DOI}.
-
-
-% --------------------------------------------------------
-% CAT-GS
-% Fourth author
-% Published in Neurocomputing
-% --------------------------------------------------------
-
-\item
-Mahir Shahriar Tamim,
-Sharjil Khan,
-Md. Samiul Alim,
-\textbf{Tanvir Ahmed Khan},
-Shafin Rahman,
-and Nabeel Mohammed.
-``CAT-GS: Balanced Multimodal Learning via
-Calibrated Gating and Fusion Surgery.''
-\mbox{\textit{Neurocomputing}}, article 135392, 2026.
-\href{https://doi.org/10.1016/j.neucom.2026.135392}
-     {DOI};
-\href{https://www.sciencedirect.com/science/article/pii/S0925231226027906}
-     {Publisher}.
-
-
-% --------------------------------------------------------
-% AACL-IJCNLP 2026 Main Conference
-% Third author
-%
-% Public paper record: OpenReview. No ACL Anthology link asserted.
-% --------------------------------------------------------
-
-\item
-Md. Samiul Alim,
-Mahir Shahriar Tamim,
-\textbf{Tanvir Ahmed Khan},
-Sharjil Khan,
-Rafia Ferdous Duti,
-Shahriyar Zaman Ridoy,
-and Mohammad Ali Moni.
-``Can LLMs Follow the Pulse of a Crisis?
-Evaluating Crisis Sentiment in Bangladesh's July Uprising.''
-\textit{AACL-IJCNLP 2026},
-Main Conference, accepted, 2026.
-\href{https://openreview.net/forum?id=Gx8z5eYyVx}
-     {OpenReview};
-\href{https://arxiv.org/abs/2609.16997}
-     {arXiv}.
-
-
-% --------------------------------------------------------
-% IEEE ICCIT 2025
-% Fourth author
-% --------------------------------------------------------
-
-\item
-Md. Samiul Alim,
-Mahir Shahriar Tamim,
-Maisha Rahman,
-\textbf{Tanvir Ahmed Khan},
-and Md Mushfique Anwar.
-``When a Nation Speaks:
-Machine Learning and NLP in People's Sentiment Analysis
-During Bangladesh's 2024 Mass Uprising.''
-In \textit{2025 28th International Conference on
-Computer and Information Technology (ICCIT)},
-pp.~413--418, IEEE, 2025.
-\href{https://doi.org/10.1109/ICCIT68739.2025.11491343}
-     {DOI}.
-
-
+\item Mahir Shahriar Tamim, Sharjil Khan, Md. Samiul Alim,
+\textbf{Tanvir Ahmed Khan}, Shafin Rahman, and Nabeel Mohammed.
+``CAT-GS: Balanced Multimodal Learning via Calibrated Gating and Fusion Surgery.''
+\mbox{\textit{Neurocomputing}}, article 135392, published online 2026; assigned January 2027.
+\href{https://doi.org/10.1016/j.neucom.2026.135392}{DOI};
+\href{https://arxiv.org/abs/2608.24947}{arXiv}.\par
+{\small\textit{Contribution:} data curation, validation, visualization and manuscript review;
+comparative evaluation and baseline analysis.}
+\item Md. Samiul Alim, Mahir Shahriar Tamim, \textbf{Tanvir Ahmed Khan}, Sharjil Khan,
+Rafia Ferdous Duti, Shahriyar Zaman Ridoy, and Mohammad Ali Moni.
+``Can LLMs Follow the Pulse of a Crisis? Evaluating Crisis Sentiment in Bangladesh's July Uprising.''
+\textit{AACL-IJCNLP 2026}, main long-paper proceedings, pp.~1688--1708.
+\href{https://aclanthology.org/2026.aacl-long.77/}{ACL Anthology};
+\href{https://arxiv.org/abs/2609.16997}{arXiv}.\par
+{\small\textit{Contribution:} corpus phase partitioning, LoRA/SFT experiments,
+parent-post context ablations, and topic and temporal analyses.}
+\item Mahir Shahriar Tamim, Md. Samiul Alim, \textbf{Tanvir Ahmed Khan},
+Maisha Rahman, and Md Musfique Anwar.
+``Ensemble and temporal feature-based framework for rainfall classification in Bangladesh.''
+\textit{PLOS ONE} 21(3): e0342646, 2026.
+\href{https://doi.org/10.1371/journal.pone.0342646}{DOI}.\par
+{\small\textit{Contribution:} conceptualization, methodology including temporal features,
+and manuscript review and editing.}
+\item Md. Samiul Alim, Mahir Shahriar Tamim, Maisha Rahman,
+\textbf{Tanvir Ahmed Khan}, and Md Mushfique Anwar.
+``When a Nation Speaks: Machine Learning and NLP in People's Sentiment Analysis During
+Bangladesh's 2024 Mass Uprising.'' \textit{IEEE ICCIT 2025}.
+\href{https://doi.org/10.1109/ICCIT68739.2025.11491343}{DOI};
+\href{https://arxiv.org/abs/2512.15547}{arXiv}.\par
+{\small\textit{Contribution:} data collection and filtering, LDA topic modelling,
+baseline evaluation and visualizations.}
 \pubListEnd
 
+\section{Undergraduate Thesis}
+\textbf{PNEUMA: Video Memory for Long-Form Question Answering}\hfill Completed Dec 2025\par
+Four-person thesis under Dr.~Nabeel Mohammed. I carried out the core technical implementation
+over six months, with teammates contributing to the real-time JavaScript application.
+The training-free system combines pretrained perception, structured storage,
+multi-aspect text retrieval and temporal organization.
+\href{https://tanvirahmedkhan74.github.io/research/pneuma/}{Project overview}.
 
-%=========================================================
-% RESEARCH EXPERIENCE
-%=========================================================
+\section{Software Engineering Experience}
+\internHeading{Tuctuc}{Spain (Remote)}{Jan 2022 -- Jun 2026}
+\textbf{Junior Software Engineer}. Maintained and extended Odoo-based ERP systems
+and developed cross-platform mobile applications using React Native.
 
-\Needspace{8\baselineskip}
-\section{Research Experience}
+\section{Additional Engineering Projects}
+\textbf{Saliency detection via knowledge distillation.}
+Peekaboo/DINO teacher and UKAN student prototype with mask-supervised and
+teacher--student objectives.
+\href{https://github.com/tanvirahmedkhan74/Periphery}{Code}.\par
+\textbf{DynApex.} C++ dependency and cycle analysis, pragma injection, and
+OpenMP-based CPU/GPU execution prototype.
+\href{https://github.com/tanvirahmedkhan74/DynApex}{Code}.
 
-\internHeading
-    {\href{https://milab-nsu.github.io/}{Machine Intelligence Lab (MILab)}}
-    {North South University}
-    {Mar 2025 -- Present}
+\section{Technical Skills and Languages}
+\textbf{Machine learning:} PyTorch, Hugging Face Transformers, multimodal fusion,
+knowledge distillation, retrieval and reranking.\par
+\textbf{Vision and systems:} Gaussian splatting, FLAME/3DMM, TensorRT, Jetson AGX Orin,
+streaming pipelines, Docker, Linux, FastAPI, SQL and FAISS.\par
+\textbf{Programming:} Python, C++, JavaScript and React Native.\par
+\textbf{Languages:} Bangla (native); English (IELTS Academic 7.0, July 2026).
 
-\itemListStart
-
-    \myItem{
-        \textbf{Research Assistant}.
-        Advisors:
-        \href{https://scholar.google.com/citations?user=w5djOYsAAAAJ\&hl=en}
-             {Dr.~Nabeel Mohammed}
-        and
-        \href{https://scholar.google.com/citations?user=Pe8C-SUAAAAJ\&hl=en}
-             {Dr.~Shafin Rahman}.
-    }
-
-    \myItem{
-        Contribute to research in multimodal learning, low-resource NLP,
-        and speech-driven visual systems, including the publications
-        listed above.
-    }
-
-    \myItem{
-        Developed distributed multi-GPU inference and chunked execution
-        for collaborative talking-avatar systems; investigated
-        Audio2Face--Three.js integration and ARKit blend-shape recovery.
-    }
-
-    \myItem{
-        Collaborated with Niloy on the PersonaPlex--IMTalker pipeline
-        deployed and evaluated on Jetson AGX Orin, including streaming,
-        renderer studies, and acceleration.
-    }
-
-    \myItem{
-        Distinguished renderer acceleration from end-to-end latency
-        through profiling. Exploring a research-manuscript direction;
-        client-side A/V timing and long-session behavior need further evaluation.
-    }
-
-\itemListEnd
-
-
-%=========================================================
-% SELECTED RESEARCH PROJECTS
-%=========================================================
-
-\section{Selected Research and Engineering Projects}
-
-
-% --------------------------------------------------------
-% PNEUMA
-% --------------------------------------------------------
-
-\projHeading
-    {PNEUMA --- Video Memory for Long-Form Question Answering}
-    {Four-person undergraduate thesis under Dr.~Nabeel Mohammed, integrating
-     pretrained perception with SQL, multi-aspect vector retrieval, and temporal
-     memory. Retrieval and visual grounding need further evaluation.}
-    {Completed Dec 2025}
-    {\href{https://tanvirahmedkhan74.github.io/research/pneuma/}
-           {Research overview}}
-
-
-% --------------------------------------------------------
-% Saliency Detection
-% --------------------------------------------------------
-
-\projHeading
-    {Saliency Detection via Knowledge Distillation}
-    {Knowledge-distillation prototype using a
-     Peekaboo/DINO teacher and UKAN student with
-     mask-supervised and teacher--student objectives.}
-    {Aug 2024 -- Dec 2024}
-    {\href{https://github.com/tanvirahmedkhan74/Periphery.git}
-           {GitHub}}
-
-
-% --------------------------------------------------------
-% DynApex
-% --------------------------------------------------------
-
-\projHeading
-    {DynApex: Dynamic CPU/GPU Parallelization}
-    {C++ prototype for dependency and cycle analysis,
-     pragma injection, and OpenMP-based CPU and
-     target execution.}
-    {Aug 2024 -- Dec 2024}
-    {\href{https://github.com/tanvirahmedkhan74/DynApex.git}
-           {GitHub}}
-
-
-%=========================================================
-% INDUSTRY EXPERIENCE
-%=========================================================
-
-\section{Industry Experience}
-
-\internHeading
-    {Tuctuc}
-    {Spain (Remote)}
-    {Jan 2022 -- Jun 2026}
-
-\itemListStart
-
-    \myItem{
-        \textbf{Junior Software Engineer}.
-        Maintained and extended Odoo-based ERP systems
-        and developed cross-platform mobile applications
-        using React Native.
-    }
-
-\itemListEnd
-
-
-%=========================================================
-% TECHNICAL SKILLS
-%=========================================================
-
-\section{Technical Skills}
-
-\skillListStart
-
-    \item
-    \textbf{Machine Learning:}
-    PyTorch,
-    Hugging Face Transformers,
-    Knowledge Distillation,
-    Multimodal Fusion
-
-    \item
-    \textbf{Vision \& Avatar Systems:}
-    3D Gaussian Splatting,
-    FLAME/3DMM,
-    NVIDIA Audio2Face,
-    ARKit Blend Shapes
-
-    \item
-    \textbf{Retrieval \& Memory:}
-    Retrieval-Augmented Generation,
-    FAISS,
-    SQL,
-    Temporal Graphs,
-    Sentiment Analysis
-
-    \item
-    \textbf{Systems \& Deployment:}
-    Multi-GPU Inference,
-    TensorRT,
-    Docker,
-    Linux,
-    NVIDIA Jetson AGX Orin,
-    FastAPI,
-    Git
-
-    \item
-    \textbf{Programming:}
-    Python,
-    C++,
-    JavaScript,
-    React Native
-
-    \item
-    \textbf{Languages:}
-    Bangla (Native),
-    English (C1)
-
-\skillListEnd
-
-
-%=========================================================
-% AWARDS & HONORS
-%=========================================================
-
-\section{Awards \& Honors}
-
-\cvEntry
-    {\textbf{Academic Scholarship}, North South University}
-    {2023}
-
-\vspace{2pt}
-
-\cvEntry
-    {\textbf{Participant}, ICPC Asia Dhaka Preliminary Contest}
-    {2021}
-
-
-%=========================================================
-% END
-%=========================================================
-
+\newpage
+\section{Applied Research Experience: MILab}
+\internHeading{Machine Intelligence Lab}{North South University}{Mar 2025 -- Present}
+\textbf{Research Assistant}. Advisors: Dr.~Nabeel Mohammed and Dr.~Shafin Rahman.\par
+Our work spans conversational avatars, 3D representation and embedded inference.
+I held primary technical responsibility in earlier integration and investigation work,
+and contributed within the team to the later real-time Orin customization and RAG/tool integration.
+These systems investigations inform my independent research on representation, measurement and timing.\par
+\vspace{5pt}
+\workstream{MuseTalk 512$\times$512 training and high-resolution development}{musetalk-high-resolution}
+{Developed training and high-resolution avatar workflows around upstream MuseTalk components.}
+\workstream{MuseTalk / LatentSync conversational pipelines}{conversational-server}
+{Worked on speech, generation and playback queues, chunked execution and server-side multi-GPU
+latency engineering within our conversational-avatar development.}
+\workstream{Gaussian avatar--Moshi integration}{gaussian-moshi}
+{Integrated GaussianTalker-based avatars with Moshi/Mimi speech representations and streaming execution.}
+\workstream{Head-wobble stabilization investigations}{head-wobble}
+{Investigated unwanted head motion through controlled avatar training and motion/rendering analyses.}
+\workstream{Pixel3DMM fitting and stabilization}{pixel3dmm}
+{Explored upstream Pixel3DMM fitting as a route to more stable facial representation and motion estimation.}
+\workstream{Custom FLAME articulation}{flame}
+{Developed custom FLAME integration and articulation investigations, separating fitting, motion and rendering.}
+\workstream{Moshi--MuseTalk integration}{moshi-musetalk}
+{Built streaming adapters and execution infrastructure connecting Moshi speech generation to MuseTalk.}
+\workstream{Moshi--IMTalker integration}{moshi-imtalker}
+{Developed the feature-to-motion bridge and chunk contracts for streaming IMTalker avatar generation.}
+\workstream{PersonaPlex--IMTalker integration}{personaplex-imtalker}
+{Worked on the speech-to-motion interface and streaming integration, preceding later device customization.}
+\workstream{IMTalker renderer distillation}{renderer-distillation}
+{Developed fixed-identity teacher--student renderer work and profiling to study the rendering bottleneck.}
+\workstream{Jetson AGX Orin export and optimization}{orin-optimization}
+{Worked on TensorRT/export tooling, precision and graph checks, and component-level performance profiling.}
+\workstream{Real-time PersonaPlex--IMTalker customization on Orin}{orin-real-time}
+{Contributed to our team-developed real-time system on Jetson AGX Orin; integration,
+renderer studies and device constraints formed part of this collaborative work.}
+\workstream{RAG and tool calling in the avatar pipeline}{rag-tools}
+{Participated in our team's retrieval and tool-augmentation work connecting external information
+with the conversational-avatar pipeline.}
 \end{document}

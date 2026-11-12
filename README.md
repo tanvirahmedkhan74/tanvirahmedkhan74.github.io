@@ -1,89 +1,56 @@
-# Academic Portfolio — Tanvir Ahmed Khan
+# Academic portfolio — Tanvir Ahmed Khan
 
-Static academic homepage and research-dossier site for [tanvirahmedkhan74.github.io](https://tanvirahmedkhan74.github.io/).
+Static academic homepage for [tanvirahmedkhan74.github.io](https://tanvirahmedkhan74.github.io/). Semantic HTML, one shared stylesheet, no framework or application JavaScript, and no build step.
 
-The site is organized around research questions, evidence, project status, and contribution boundaries. It uses semantic HTML and one shared stylesheet. There is no framework, client-side JavaScript, font service, package manager requirement, or build step.
+The site separates independent research in progress, published collaborative papers, MILab applied projects and the academic CV. The reading layout uses a persistent header and a compact desktop profile column. At narrow widths or short heights, the profile reflows into the document. Navigation remains visible without JavaScript; project pages include contents links and a persistent parent/location strip.
 
-The September 2026 renovation uses a narrow reading column, system serif typography, a restrained blue link color, and conventional bibliography entries. Research pages share the same article layout. See `RENOVATION_NOTES.md` for the editorial decisions and validation record.
+## Pages
 
-## Information architecture
+- `/`: profile, current research, publications and background.
+- `/research/`: ERL, CG-SWR, RIFT and deadline articulation; completed PNEUMA thesis; other and archived studies.
+- `/publications/`: four published collaborative works, full bylines, publisher links and individual contributions.
+- `/milab/`: thirteen distinct, individually linked applied-research workstreams.
+- `/cv/`: web CV and synchronized three-page PDF.
+- `/notes/`: personal reflections, separate from research findings.
+- `/research/rsi/`: retained archived pilot, excluded from current listings and the sitemap, with `noindex`.
+- `/research/avatar-systems/`: compatibility entry pointing readers to the differentiated MILab index.
 
-```text
-/
-├── index.html
-├── cv/index.html
-├── research/
-│   ├── index.html
-│   ├── erl/
-│   ├── rift/
-│   ├── rsi/
-│   ├── avatar-systems/
-│   ├── pneuma/
-│   ├── airflow/
-│   └── archive/streamtalker-gs/
-├── notes/
-├── assets/public/
-│   ├── css/main.css
-│   ├── documents/
-│   ├── figures/
-│   └── images/
-├── 404.html
-├── robots.txt
-├── sitemap.xml
-└── tools/                   # local preview and validation
-```
+## Local preview and checks
 
-## Public asset policy
+From this directory:
 
-Only `assets/public/**` is intended for publication as website assets. The rest of the local `assets/` tree contains research records, source PDFs, academic material, and working files. `.gitignore` excludes new files there, but does not untrack existing files; check the tracked file list before publication. Hiding a file from site navigation is not a privacy control.
-
-The two unused ERL experiment figures were removed from the current public asset tree on 28 October 2026 and preserved in an ignored local archive. Previously published versions remain in Git history; this update does not rewrite that history. Supplied manuscript PDFs are reference inputs and must not be copied into the public tree.
-
-See `PUBLIC_ASSET_RISK_AUDIT.md` before adding or moving any asset.
-
-## Local preview
-
-From the repository root, run (Python 3.9 or newer):
-
-```text
+```sh
+python tools/check_site.py
 python tools/preview.py --port 8080
 ```
 
-Then open `http://127.0.0.1:8080/`. This local-only server exposes the public HTML routes, public assets, and site metadata, and serves the custom 404 page for other paths. It does not serve private working documents or directory listings. Root-relative links require a server rather than opening files directly from disk. The same HTML/CSS/assets are the production site; no compilation is required.
+Open `http://127.0.0.1:8080/`. The preview serves only the public HTML routes, `assets/public/`, favicons and site metadata. It does not expose private working files or directory listings. Root-relative links require this server.
 
-## Validation
+Optional browser QA requires Playwright, axe-core and an installed Chromium runtime. It can reuse packages in the ignored cache:
 
-Run `python tools/check_site.py` to check all public pages, local links and anchors, image metadata, heading order, HTML nesting, accessibility references, canonical/social metadata, JSON-LD, and the sitemap. This check uses only the Python standard library.
-
-Optional browser testing uses Playwright and axe-core. With a preview server running, install these development tools in the ignored cache directory:
-
-```text
-npm install --prefix .cache/renovation --no-save --package-lock=false playwright @axe-core/playwright
+```sh
+npm install --prefix .cache/renovation --no-save --package-lock=false playwright axe-core
+PLAYWRIGHT_MODULE="$PWD/.cache/renovation/node_modules/playwright" \
+AXE_MODULE="$PWD/.cache/renovation/node_modules/axe-core/axe.min.js" \
+node tools/check_browser.cjs
 ```
 
-Point `PLAYWRIGHT_MODULE` and `AXE_MODULE` at those installed packages, then run `node tools/check_browser.cjs`. `PREVIEW_URL` defaults to `http://127.0.0.1:8080`; `BROWSER_EXECUTABLE` can point to an existing Chromium headless executable. If no browser is installed, use Playwright's browser installer. Reports and screenshots are written under `.cache/renovation/` and are not published.
+`PREVIEW_URL` defaults to `http://127.0.0.1:8080`. `BROWSER_EXECUTABLE` can select an existing Chromium executable. The script covers 17 routes at seven widths, accessibility, scroll positions, profile reflow, keyboard/skip links, direct hashes, controlled video, reduced motion, no-JavaScript navigation and the preview privacy boundary. It includes a 720px CSS viewport to approximate the layout reflow of a 1440px desktop at 200% zoom; a real browser zoom check remains part of manual review. Reports stay under `.cache/portfolio-update/browser/`. A blocked or unavailable browser run is not a passing result.
 
-The browser check covers all 13 pages at 320, 390, 430, 768, 1024, 1440, and 1920 pixels; accessibility at mobile and desktop widths; native disclosures; keyboard navigation; table scrolling; operation without JavaScript; printable news; PDF/figure delivery; and custom 404 behavior. There is no separate application lint or type-check pipeline because the site contains no application JavaScript or TypeScript.
+## Public assets and visuals
 
-## Content rules
+Only `assets/public/**` is intended for website assets. Other local `assets/` directories and `.cache/` contain private inputs, source packages or working files. Ignoring a previously tracked file does not untrack it; review the exact staged list before publication. The preview allowlist does not change GitHub Pages behavior.
 
-- ERL is active research on evidence loss across retrieval, selection, and reading in multi-hop QA. RIFT studies audio-driven facial motion and neural-renderer measurement reliability; its methodology continues to develop. Both manuscripts are in preparation and neither has been submitted. Keep venue plans, detailed unpublished methods, numerical results, and follow-up protocols private. RSI is an engineering pilot whose growth hypothesis remains untested. Distinguish completed work from proposed experiments.
-- PNEUMA is a completed four-person undergraduate thesis under Dr. Nabeel Mohammed (December 2025). Architectural renovation and renewed evaluation are prospective subsequent work; no reliable aggregate QA accuracy is established.
-- CAT-GS is published in Neurocomputing, article 135392 (2026), DOI 10.1016/j.neucom.2026.135392; the owner confirms acceptance on 12 October. The accepted AACL-IJCNLP paper links to its public OpenReview record.
-- Keep StreamTalker-GS labeled as an archived negative-result study.
-- Speech-avatar work is collaborative MILab applied research with industry involvement. The Jetson PersonaPlex–IMTalker pipeline was developed with Niloy; a manuscript direction remains exploratory.
-- Integrate attribution naturally: distinguish external foundations, collaborative engineering, individual contributions, and proposed work without turning project pages into audit reports.
-- Verify publication status and every numeric claim against a primary source.
-- Do not add ignored internal files directly to the public site.
+The coordinated illustrations are in `assets/public/figures/refresh-2026/`. Published-work thumbnails are conceptual artwork, including the rainfall illustration; they are not empirical result images. WIP figures explain research questions without private methods or results. The optional deadline and MILab loops have native controls, compressed WebM/MP4 versions, GIF downloads, static posters and reduced-motion fallbacks. There is no autoplay. Earlier, denser avatar and PNEUMA figures have been retired from the current public asset tree; historical Git versions remain unchanged.
 
-## Deployment
+## Content and CV maintenance
 
-### CV synchronization
+ERL and deadline articulation are first-author work in preparation. ACL, TMLR, and the alternative NeurIPS 2027 or ICCV 2027 plans are targets, not submissions or acceptances. RIFT uses a project-level lead-research label. CG-SWR is active experimental work on representation/readout gaps and constrained weight repair. Keep these separate from the four published collaborative papers. Preserve upstream model attribution and the distinction between primary earlier MILab work and major team contributions to the final Orin and RAG stages.
 
-`/cv/` contains the current web CV and a download link to `assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf`. The public two-page PDF is synchronized with the LaTeX source, current project status, and December 2025 degree completion. The latest official transcript explicitly confirms that completion month; the September 2026 certificate issue date is not treated as a conferral date. The September owner-supplied build remains the historical baseline.
+AACL links to its official 2026 main long-paper proceedings. CAT-GS retains the distinction between online publication in 2026 and January 2027 assignment. Private manuscripts, raw records, internal protocols, credentials and source ZIPs are not public downloads.
 
-The editable source is `assets/Tanvir_s_Resume_Latest_2/main.tex` with `myresume.sty`. Upload the accompanying `Tanvir_Ahmed_Khan_CV_Overleaf.zip` to Overleaf, select XeLaTeX, and inspect the compiled PDF. For future revisions, replace the public PDF only with the reviewed output and update its download-link version. Keep the web CV and source in sync on future edits. The source ZIP is a local handoff, not a public website asset.
+CV source: `assets/Tanvir_s_Resume_Latest_2/main.tex` with `myresume.sty`; use XeLaTeX. Public output: `assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf`. Keep the web CV, TeX, reviewed PDF and private source package synchronized. Build intermediates and the current source package remain in `.cache/portfolio-update/cv/`. The pre-existing deleted source-adjacent `main.pdf` is a separate historical build and is not needed by the website.
 
-The editorial revision is on `academic-editorial-revision-20261015`, based on `codex/academic-homepage-renovation`. Pushing this review branch is authorized; merging and deployment remain separate actions. The local preview's allowlist does not alter GitHub Pages hosting behavior.
+No push, deployment or paper submission is part of this local refresh. Preserve unrelated working-tree changes and stage intended files explicitly.
 
 Content © Tanvir Ahmed Khan.

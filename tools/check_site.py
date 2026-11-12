@@ -11,6 +11,7 @@ from xml.etree import ElementTree
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://tanvirahmedkhan74.github.io'
 PAGES = [ROOT/'index.html', ROOT/'404.html', ROOT/'cv/index.html',
+         ROOT/'milab/index.html', ROOT/'publications/index.html',
          *sorted((ROOT/'notes').rglob('index.html')), *sorted((ROOT/'research').rglob('index.html'))]
 VOID = set('area base br col embed hr img input link meta param source track wbr'.split())
 
@@ -33,7 +34,7 @@ class Page(HTMLParser):
             self.ids.append(a['id'])
         for field in ('aria-labelledby', 'aria-describedby', 'aria-controls'):
             self.refs.extend(a.get(field, '').split())
-        for field in ('href', 'src'):
+        for field in ('href', 'src', 'poster'):
             if a.get(field):
                 self.links.append(a[field])
         for source in a.get('srcset', '').split(','):
@@ -103,8 +104,30 @@ def main():
                 errors.append(f'{label}: Link outside public HTML routes: {link}')
     sitemap = ElementTree.parse(ROOT/'sitemap.xml')
     urls = {node.text for node in sitemap.findall('.//{*}loc')}
-    expected = {ORIGIN + route(p) for p in PAGES if p.name != '404.html'}
+    expected = {ORIGIN + route(p) for p in PAGES
+                if pages[p].metas.get('robots') != 'noindex'}
     if urls != expected: errors.append(f'Sitemap route mismatch: {urls ^ expected}')
+    # Editorial and accessibility contracts for the current public surface.
+    for path, page in pages.items():
+        text = path.read_text(encoding='utf-8')
+        label = path.relative_to(ROOT).as_posix()
+        if 'class="site-header"' not in text or 'class="profile"' not in text:
+            errors.append(f'{label}: Missing shared navigation/profile layout')
+        if re.search(r'\b(?:TODO|Codex|claim-ledger|context-evidence|checkpoint identities)\b', text, re.I):
+            errors.append(f'{label}: Private editorial wording on public page')
+        if path != ROOT/'research/rsi/index.html' and re.search(r'\bRSI\b|/research/rsi/', text):
+            errors.append(f'{label}: Archived RSI appears on a current page')
+        if '<video' in text:
+            for attrs in re.findall(r'<video\b([^>]*)>', text):
+                if 'autoplay' in attrs or 'controls' not in attrs or 'poster=' not in attrs:
+                    errors.append(f'{label}: Video needs controls, poster and no autoplay')
+    milab_ids = set(pages[ROOT/'milab/index.html'].ids)
+    workstreams = {'musetalk-high-resolution', 'conversational-server', 'gaussian-moshi',
+                   'head-wobble', 'pixel3dmm', 'flame', 'moshi-musetalk', 'moshi-imtalker',
+                   'personaplex-imtalker', 'renderer-distillation', 'orin-optimization',
+                   'orin-real-time', 'rag-tools'}
+    if not workstreams <= milab_ids:
+        errors.append(f'Missing MILab workstreams: {workstreams - milab_ids}')
     if errors:
         print('\n'.join(errors))
         return 1
