@@ -155,7 +155,7 @@
 
 \titlespacing*{\section}
     {0pt}
-    {9pt}
+    {8pt}
     {5pt}
 
 
@@ -168,6 +168,7 @@
 %=========================================================
 
 \newcommand{\cvSubsection}[1]{%
+    \par\Needspace{8\baselineskip}%
     \vspace{2pt}%
     {%
         \sffamily
@@ -321,7 +322,7 @@
 %=========================================================
 
 \newlength{\cvStatusWidth}
-\setlength{\cvStatusWidth}{5.1cm}
+\setlength{\cvStatusWidth}{5.45cm}
 
 \newcommand{\entryHeading}[2]{%
     \par
@@ -388,8 +389,37 @@
     }
     {%
         \end{itemize}%
-        \vspace{7pt}%
+        \vspace{6pt}%
     }
+
+
+%=========================================================
+% GROUP HEADING
+%
+% A sans-serif label for a group of related milestones, with
+% the same right-aligned status column as the entry headings.
+%
+% \milabGroup{Group title}{Role}
+%=========================================================
+
+\newcommand{\milabGroup}[2]{%
+    \par\addvspace{4pt}%
+    \Needspace{5\baselineskip}%
+    \begingroup
+    \renewcommand{\arraystretch}{1.0}%
+    \setlength{\tabcolsep}{0pt}%
+    \begin{tabularx}
+        {\textwidth}
+        {@{}>{\RaggedRight\arraybackslash}X@{\hspace{0.8em}}>{\raggedleft\arraybackslash}p{\cvStatusWidth}@{}}
+
+        {\sffamily\bfseries\fontsize{10.5pt}{12.5pt}\selectfont #1}
+        &
+        {\small #2}
+
+    \end{tabularx}%
+    \endgroup
+    \par\nobreak\vspace{4pt}%
+}
 
 
 %=========================================================

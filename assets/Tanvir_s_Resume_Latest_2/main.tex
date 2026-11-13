@@ -32,16 +32,16 @@ long-video understanding; neural-renderer measurement; speech-driven visual inte
 \textbf{CGPA: 3.80/4.00}\enspace\textbar\enspace\textit{Summa Cum Laude}.
 Degree requirements completed December 2025.\par
 {\small Selected coursework: Pattern Recognition; Machine Learning; Probability and Statistics;
-Numerical Methods; Introduction to Linear Algebra; Design and Analysis of Algorithms.}
+Numerical Methods; Design and Analysis of Algorithms.}
 
-\section{First-Author Manuscripts in Preparation}
-{\small\textit{Each project title links to its project page.}\par}
-\vspace{4pt}
+\section{Research in Progress}
+\cvSubsection{First-author manuscripts in preparation}
+\vspace{2pt}
 
 \researchEntry{ERL --- Evidence selection in multi-hop question answering}
-{First author\enspace\textperiodcentered\enspace In preparation}
+{First author\enspace\textperiodcentered\enspace In preparation\newline Planned target: ACL}
 {\textit{From Transit Routing to Evidence Selection: Conditional Audits of Multi-Hop QA
-Failures.}\enspace Planned target: ACL.}
+Failures.}}
 {https://tanvirahmedkhan74.github.io/research/erl/}
 \begin{points}
 \item Trace where supporting evidence is lost across candidate access, selection and reading,
@@ -50,10 +50,10 @@ using controlled studies rather than end-to-end accuracy alone.
 against stronger baselines and reader controls, and negative routing findings are retained.
 \end{points}
 
-\researchEntry{RIFT --- Reliability of finite-difference probes in a released renderer}
-{First author\enspace\textperiodcentered\enspace In preparation}
+\researchEntry{RIFT --- Reliability of renderer measurements}
+{First author\enspace\textperiodcentered\enspace In preparation\newline Planned target: TMLR}
 {\textit{Finite-difference probes across hard feature selection: a frozen-index audit of one
-released talking-head renderer.}\enspace Planned target: TMLR.}
+released talking-head renderer.}}
 {https://tanvirahmedkhan74.github.io/research/rift/}
 \begin{points}
 \item Hold feature selections fixed so that a measured difference separates a change of discrete
@@ -62,9 +62,10 @@ choice from the renderer's local response.
 scope, retaining negative and ambiguous findings.
 \end{points}
 
-\researchEntry{Deadline-available speech states for full-duplex avatar articulation}
-{First author\enspace\textperiodcentered\enspace Work in progress}
-{Alternative planned targets: NeurIPS 2027 or ICCV 2027.}
+\researchEntry{Deadline articulation --- Information available at playback}
+{First author\enspace\textperiodcentered\enspace Work in progress\newline
+Planned: NeurIPS 2027 / ICCV 2027}
+{\textit{Deadline-Available Speech States for Full-Duplex Avatar Articulation.}}
 {https://tanvirahmedkhan74.github.io/research/deadline-articulation/}
 \begin{points}
 \item Examine what articulation-relevant information streaming speech-model states carry at a
@@ -73,12 +74,13 @@ playback deadline, and what additional waiting contributes.
 schedules; that expanded programme remains in development.
 \end{points}
 
-\section{Independent Research in Progress}
+\cvSubsection{Independent research}
+\vspace{2pt}
 
-\researchEntry{CG-SWR --- Capacity-gated sparse weight repair for evidence reranking}
-{Independent\enspace\textperiodcentered\enspace Active study}
-{Controlled comparison of supervised readouts and constrained parameter edits in multi-hop
-evidence reranking.}
+\researchEntry{CG-SWR --- Representation and readout gaps in evidence reranking}
+{Independent\enspace\textperiodcentered\enspace Active study\newline
+Preregistered, two-hop scope}
+{\textit{Capacity-Gated Sparse Weight Repair for Multi-Hop Evidence Reranking.}}
 {https://tanvirahmedkhan74.github.io/research/cg-swr/}
 \begin{points}
 \item Investigate the gap between support-selection information encoded in a frozen reranker and
@@ -87,7 +89,6 @@ the information its scoring head uses.
 constrained-editing experiments; the experimental programme is underway.
 \end{points}
 
-\newpage
 \section{Published Collaborative Research}
 \pubListStart
 \item Mahir Shahriar Tamim, Sharjil Khan, Md. Samiul Alim,
@@ -157,56 +158,62 @@ streaming pipelines, Docker, Linux, FastAPI, SQL and FAISS.\par
 \textbf{Programming:} Python, C++, JavaScript and React Native.\par
 \textbf{Languages:} Bangla (native); English (IELTS Academic 7.0, July 2026).
 
-\newpage
+\Needspace{9\baselineskip}
 \section{Applied Research Experience: MILab}
 \internHeading{Machine Intelligence Lab}{North South University}{Mar 2025 -- Present}
 \begingroup\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax
 \textbf{Research Assistant}. Advisors: Dr.~Nabeel Mohammed and Dr.~Shafin Rahman.\par
 Our work spans conversational avatars, 3D representation and embedded inference.
-Held primary technical responsibility in earlier integration and investigation work;
-contributed within the team to the later real-time Orin customization and RAG/tool integration.
+I held primary technical responsibility for the early pipeline, representation and bridge work;
+the real-time Orin customization and the retrieval and tool work were major team efforts.
 These systems investigations inform my independent research on representation, measurement
 and timing.\par
 \endgroup
 \vspace{3pt}
-{\small\textit{Thirteen separate workstreams, in order; each title links to its project page.}\par}
-\vspace{6pt}
+{\small\textit{Thirteen milestones in five strands, in the order they were carried out.
+Project and milestone titles throughout this CV link to their pages.}\par}
+\vspace{4pt}
+
+\milabGroup{Conversational pipelines and response delay}{Primary responsibility}
 \workstream{MuseTalk 512$\times$512 training and high-resolution development}{musetalk-high-resolution}
-{Developed training and high-resolution avatar workflows around upstream MuseTalk components.}
-\workstream{MuseTalk / LatentSync conversational pipelines}{conversational-server}
-{Worked on speech, generation and playback queues, chunked execution and server-side multi-GPU
-latency engineering within our conversational-avatar development.}
-\workstream{Gaussian avatar--Moshi integration}{gaussian-moshi}
-{Integrated GaussianTalker-based avatars with Moshi/Mimi speech representations and streaming
-execution.}
+{Training and high-resolution avatar development on the upstream MuseTalk foundation.}
+\workstream{MuseTalk / LatentSync conversational pipeline and multi-GPU serving}{conversational-server}
+{Chunked execution, persistent text-to-speech, speech and video queues, WebRTC playback, and a
+later multi-GPU server.}
+
+\milabGroup{Face representation and motion stability}{Primary responsibility}
 \workstream{Head-wobble stabilization investigations}{head-wobble}
-{Investigated unwanted head motion through controlled avatar training and motion/rendering
-analyses.}
+{Controlled training and rendering variants isolating unwanted head motion, with failure cases
+retained.}
 \workstream{Pixel3DMM fitting and stabilization}{pixel3dmm}
-{Explored upstream Pixel3DMM fitting as a route to more stable facial representation and motion
-estimation.}
+{Upstream Pixel3DMM as a fitting foundation for face representation and motion estimation.}
 \workstream{Custom FLAME articulation}{flame}
-{Developed custom FLAME integration and articulation investigations, separating fitting, motion
-and rendering.}
+{Custom FLAME integration separating fitting, motion and rendering; one supervision proposal was
+stopped on review.}
+
+\milabGroup{Speech-to-motion bridges and renderer cost}{Primary responsibility}
+\workstream{Gaussian avatar--Moshi integration}{gaussian-moshi}
+{Moshi/Mimi speech representations driving a GaussianTalker-based avatar.}
 \workstream{Moshi--MuseTalk integration}{moshi-musetalk}
-{Built streaming adapters and execution infrastructure connecting Moshi speech generation to
-MuseTalk.}
+{Streaming adapters and execution infrastructure, attentive to chunk boundaries and buffering.}
 \workstream{Moshi--IMTalker integration}{moshi-imtalker}
-{Developed the feature-to-motion bridge and chunk contracts for streaming IMTalker avatar
-generation.}
+{A distinct feature-to-motion bridge and chunk contracts for IMTalker's interface.}
 \workstream{PersonaPlex--IMTalker integration}{personaplex-imtalker}
-{Worked on the speech-to-motion interface and streaming integration, preceding later device
+{The PersonaPlex-to-IMTalker speech-to-motion interface, preceding the later device
 customization.}
 \workstream{IMTalker renderer distillation}{renderer-distillation}
-{Developed fixed-identity teacher--student renderer work and profiling to study the rendering
-bottleneck.}
-\workstream{Jetson AGX Orin export and optimization}{orin-optimization}
-{Worked on TensorRT/export tooling, precision and graph checks, and component-level performance
-profiling.}
+{Fixed-identity teacher--student renderer and benchmarks separating renderer cost from
+end-to-end response time.}
+
+\milabGroup{Embedded real-time execution on Jetson AGX Orin}{Primary, then team}
+\workstream{Jetson AGX Orin export and TensorRT optimization}{orin-optimization}
+{Export tooling, engine integration, precision and graph checks, and component-level profiling.}
 \workstream{Real-time PersonaPlex--IMTalker customization on Orin}{orin-real-time}
-{Contributed to our team-developed real-time system on Jetson AGX Orin; integration, renderer
-studies and device constraints formed part of this collaborative work.}
-\workstream{RAG and tool calling in the avatar pipeline}{rag-tools}
-{Participated in our team's retrieval and tool-augmentation work connecting external information
-with the conversational-avatar pipeline.}
+{A major team effort; I contributed to integration and system development on the delivered
+system.}
+
+\milabGroup{Retrieval and tool use in the conversation}{Team effort}
+\workstream{RAG and tool calling for conversational avatars}{rag-tools}
+{A major team effort; retrieval, tool access, conditioning and live scheduling were kept as
+separate concerns.}
 \end{document}

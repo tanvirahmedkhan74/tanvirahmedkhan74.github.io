@@ -7,9 +7,9 @@ The site separates independent research in progress, published collaborative pap
 ## Pages
 
 - `/`: profile, current research, publications and background.
-- `/research/`: ERL, CG-SWR, RIFT and deadline articulation; completed PNEUMA thesis; other and archived studies.
+- `/research/`: ERL, CG-SWR, RIFT and deadline articulation, each with its study design and scope; completed PNEUMA thesis; other and archived studies.
 - `/publications/`: four published collaborative works, full bylines, publisher links and individual contributions.
-- `/milab/`: thirteen distinct, individually linked applied-research workstreams.
+- `/milab/`: five strands of applied research holding thirteen named milestones, each milestone keeping its own anchor.
 - `/cv/`: web CV and synchronized three-page PDF.
 - `/notes/`: personal reflections, separate from research findings.
 - `/research/rsi/`: retained archived pilot, excluded from current listings and the sitemap, with `noindex`.
