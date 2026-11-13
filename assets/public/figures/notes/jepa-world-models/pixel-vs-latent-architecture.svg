@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="t d">
+<title id="t">Predicting pixels versus predicting latents</title><desc id="d">Left: a masked-autoencoder style pipeline sends visible patches through an encoder and decoder and is scored on every hidden pixel. Right: a JEPA style pipeline sends context through an encoder and predictor, and the target comes from a separate target encoder; the loss is on latent features.</desc>
+<rect width="960" height="600" fill="#f4f3ed"/>
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#23364a"/></marker><marker id="ah-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ad8145"/></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#427d77"/></marker><marker id="ah-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#345e83"/></marker><marker id="ah-grey" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5d666d"/></marker></defs>
+<rect x="14" y="12" width="452" height="576" fill="none" stroke="#b4c3c4" stroke-width="2" rx="8"/>
+<rect x="494" y="12" width="452" height="576" fill="none" stroke="#b4c3c4" stroke-width="2" rx="8"/>
+<text x="240.0" y="46.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="23" fill="#23364a" text-anchor="middle" font-weight="bold">Predict pixels (MAE style)</text>
+<text x="720.0" y="46.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="23" fill="#23364a" text-anchor="middle" font-weight="bold">Predict latents (JEPA style)</text>
+<rect x="24" y="80" width="120" height="66" fill="#cfe0dd" stroke="#345e83" stroke-width="2" rx="8"/>
+<text x="84.0" y="107.8" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">Visible</text>
+<text x="84.0" y="131.5" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">context</text>
+<rect x="174" y="80" width="120" height="66" fill="#cfe0dd" stroke="#345e83" stroke-width="2" rx="8"/>
+<text x="234.0" y="119.7" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">Encoder</text>
+<rect x="324" y="80" width="122" height="66" fill="#cfe0dd" stroke="#345e83" stroke-width="2" rx="8"/>
+<text x="385.0" y="119.7" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">Decoder</text>
+<line x1="145.0" y1="113.0" x2="173.0" y2="113.0" stroke="#23364a" stroke-width="2" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<line x1="295.0" y1="113.0" x2="323.0" y2="113.0" stroke="#23364a" stroke-width="2" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<line x1="370.0" y1="147.0" x2="370.0" y2="219.0" stroke="#23364a" stroke-width="2" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<rect x="504" y="80" width="120" height="66" fill="#cfe0dd" stroke="#345e83" stroke-width="2" rx="8"/>
+<text x="564.0" y="107.8" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">Visible</text>
+<text x="564.0" y="131.5" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">context</text>
+<rect x="654" y="80" width="120" height="66" fill="#cfe0dd" stroke="#345e83" stroke-width="2" rx="8"/>
+<text x="714.0" y="119.7" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">Encoder</text>
+<rect x="804" y="80" width="122" height="66" fill="#cfe0dd" stroke="#345e83" stroke-width="2" rx="8"/>
+<text x="865.0" y="119.7" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">Predictor</text>
+<line x1="625.0" y1="113.0" x2="653.0" y2="113.0" stroke="#23364a" stroke-width="2" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<line x1="775.0" y1="113.0" x2="803.0" y2="113.0" stroke="#23364a" stroke-width="2" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<line x1="850.0" y1="147.0" x2="850.0" y2="219.0" stroke="#23364a" stroke-width="2" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<rect x="294" y="220" width="152" height="66" fill="#fff" stroke="#ad8145" stroke-width="2" rx="8"/>
+<text x="370.0" y="247.8" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">Predicted</text>
+<text x="370.0" y="271.5" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">pixels</text>
+<rect x="774" y="220" width="152" height="66" fill="#fff" stroke="#427d77" stroke-width="2" rx="8"/>
+<text x="850.0" y="247.8" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">Predicted</text>
+<text x="850.0" y="271.5" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">latent</text>
+<rect x="24" y="220" width="230" height="66" fill="#fff" stroke="#ad8145" stroke-width="2" rx="8"/>
+<text x="139.0" y="247.8" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">Target: the hidden</text>
+<text x="139.0" y="271.5" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">pixels themselves</text>
+<rect x="504" y="220" width="236" height="66" fill="#fff" stroke="#427d77" stroke-width="2" rx="8"/>
+<text x="622.0" y="247.8" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">Target patch through</text>
+<text x="622.0" y="271.5" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">target encoder</text>
+<text x="540.0" y="322.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#5d666d" text-anchor="start" font-weight="normal">(EMA copy, no gradient)</text>
+<line x1="139.0" y1="287.0" x2="139.0" y2="359.0" stroke="#23364a" stroke-width="2" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<line x1="370.0" y1="287.0" x2="370.0" y2="359.0" stroke="#23364a" stroke-width="2" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<line x1="522.0" y1="287.0" x2="522.0" y2="359.0" stroke="#23364a" stroke-width="2" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<line x1="850.0" y1="287.0" x2="850.0" y2="359.0" stroke="#23364a" stroke-width="2" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<rect x="24" y="360" width="422" height="54" fill="#fff" stroke="#23364a" stroke-width="2" rx="8"/>
+<text x="235.0" y="393.6" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">Loss: squared error on every pixel</text>
+<rect x="504" y="360" width="422" height="54" fill="#fff" stroke="#23364a" stroke-width="2" rx="8"/>
+<text x="715.0" y="393.6" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">Loss: distance between latent vectors</text>
+<text x="240.0" y="452.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="bold">To score well the model must match</text>
+<text x="240.0" y="482.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">exact texture and lighting</text>
+<text x="240.0" y="510.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">sensor noise in the hidden patch</text>
+<text x="240.0" y="538.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">and where the ball is</text>
+<text x="720.0" y="452.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="bold">To score well the model must produce</text>
+<text x="720.0" y="482.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">whatever the target encoder keeps</text>
+<text x="720.0" y="510.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">(this can include or drop texture:</text>
+<text x="720.0" y="538.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">it depends on training)</text>
+</svg>

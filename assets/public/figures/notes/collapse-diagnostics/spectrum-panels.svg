@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="t d">
+<title id="t">Covariance eigenvalue spectra of four eight-dimensional clouds on a log scale</title><desc id="d">Four bar charts of the eight covariance eigenvalues, log scale from 1e-7 to 10. The healthy cloud has eight bars near 1. The complete collapse has eight tiny bars near 1e-6. The dimensional collapse has two tall bars and six near 1e-6. The decorrelated dependent cloud has eight bars between 0.6 and 1.5.</desc>
+<rect width="960" height="600" fill="#f4f3ed"/>
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#23364a"/></marker><marker id="ah-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ad8145"/></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#427d77"/></marker><marker id="ah-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#345e83"/></marker><marker id="ah-grey" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5d666d"/></marker></defs>
+<rect x="14" y="10" width="222" height="580" fill="none" stroke="#b4c3c4" stroke-width="2" rx="8"/>
+<text x="125.0" y="40.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="bold">Healthy</text>
+<line x1="64.0" y1="400.0" x2="226.0" y2="400.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="58.0" y="406.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-7</text>
+<line x1="64.0" y1="320.0" x2="226.0" y2="320.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="58.0" y="326.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-5</text>
+<line x1="64.0" y1="240.0" x2="226.0" y2="240.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="58.0" y="246.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-3</text>
+<line x1="64.0" y1="160.0" x2="226.0" y2="160.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="58.0" y="166.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-1</text>
+<line x1="64.0" y1="80.0" x2="226.0" y2="80.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="58.0" y="86.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e1</text>
+<rect x="72" y="116.76485817919519" width="15" height="283.2351418208048" fill="#345e83" stroke="none" stroke-width="0" rx="1"/>
+<rect x="92" y="117.72078520900254" width="15" height="282.27921479099746" fill="#345e83" stroke="none" stroke-width="0" rx="1"/>
+<rect x="112" y="118.06449261573079" width="15" height="281.9355073842692" fill="#345e83" stroke="none" stroke-width="0" rx="1"/>
+<rect x="132" y="119.69758241119291" width="15" height="280.3024175888071" fill="#345e83" stroke="none" stroke-width="0" rx="1"/>
+<rect x="152" y="120.77485615635618" width="15" height="279.2251438436438" fill="#345e83" stroke="none" stroke-width="0" rx="1"/>
+<rect x="172" y="121.9549450735172" width="15" height="278.0450549264828" fill="#345e83" stroke="none" stroke-width="0" rx="1"/>
+<rect x="192" y="123.43468882042202" width="15" height="276.565311179578" fill="#345e83" stroke="none" stroke-width="0" rx="1"/>
+<rect x="212" y="123.6531059467851" width="15" height="276.3468940532149" fill="#345e83" stroke="none" stroke-width="0" rx="1"/>
+<text x="125.0" y="430.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="middle" font-weight="normal">eigenvalues, largest first</text>
+<text x="28.0" y="470.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">effective rank 7.98</text>
+<text x="28.0" y="502.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">trace 7.96</text>
+<text x="28.0" y="534.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">min std 0.936</text>
+<text x="28.0" y="566.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#5d666d" text-anchor="start" font-weight="normal">of 8 dimensions</text>
+<rect x="250" y="10" width="222" height="580" fill="none" stroke="#b4c3c4" stroke-width="2" rx="8"/>
+<text x="361.0" y="40.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="bold">Complete collapse</text>
+<line x1="300.0" y1="400.0" x2="462.0" y2="400.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="294.0" y="406.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-7</text>
+<line x1="300.0" y1="320.0" x2="462.0" y2="320.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="294.0" y="326.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-5</text>
+<line x1="300.0" y1="240.0" x2="462.0" y2="240.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="294.0" y="246.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-3</text>
+<line x1="300.0" y1="160.0" x2="462.0" y2="160.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="294.0" y="166.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-1</text>
+<line x1="300.0" y1="80.0" x2="462.0" y2="80.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="294.0" y="86.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e1</text>
+<rect x="308" y="356.9607026047029" width="15" height="43.039297395297126" fill="#ad8145" stroke="none" stroke-width="0" rx="1"/>
+<rect x="328" y="357.5947131459421" width="15" height="42.40528685405792" fill="#ad8145" stroke="none" stroke-width="0" rx="1"/>
+<rect x="348" y="358.34312266884956" width="15" height="41.65687733115044" fill="#ad8145" stroke="none" stroke-width="0" rx="1"/>
+<rect x="368" y="358.6122936248511" width="15" height="41.38770637514892" fill="#ad8145" stroke="none" stroke-width="0" rx="1"/>
+<rect x="388" y="360.307075901968" width="15" height="39.692924098031995" fill="#ad8145" stroke="none" stroke-width="0" rx="1"/>
+<rect x="408" y="361.49958532535493" width="15" height="38.50041467464507" fill="#ad8145" stroke="none" stroke-width="0" rx="1"/>
+<rect x="428" y="362.7305014228291" width="15" height="37.26949857717091" fill="#ad8145" stroke="none" stroke-width="0" rx="1"/>
+<rect x="448" y="364.2409956762871" width="15" height="35.75900432371287" fill="#ad8145" stroke="none" stroke-width="0" rx="1"/>
+<text x="361.0" y="430.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="middle" font-weight="normal">eigenvalues, largest first</text>
+<text x="264.0" y="470.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">effective rank 7.98</text>
+<text x="264.0" y="502.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">trace 8.1e-06</text>
+<text x="264.0" y="534.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">min std 9.6e-04</text>
+<text x="264.0" y="566.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#5d666d" text-anchor="start" font-weight="normal">of 8 dimensions</text>
+<rect x="486" y="10" width="222" height="580" fill="none" stroke="#b4c3c4" stroke-width="2" rx="8"/>
+<text x="597.0" y="40.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="bold">Dimensional collapse</text>
+<line x1="536.0" y1="400.0" x2="698.0" y2="400.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="530.0" y="406.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-7</text>
+<line x1="536.0" y1="320.0" x2="698.0" y2="320.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="530.0" y="326.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-5</text>
+<line x1="536.0" y1="240.0" x2="698.0" y2="240.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="530.0" y="246.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-3</text>
+<line x1="536.0" y1="160.0" x2="698.0" y2="160.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="530.0" y="166.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-1</text>
+<line x1="536.0" y1="80.0" x2="698.0" y2="80.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="530.0" y="86.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e1</text>
+<rect x="544" y="91.93611336802383" width="15" height="308.0638866319762" fill="#427d77" stroke="none" stroke-width="0" rx="1"/>
+<rect x="564" y="101.00046020303847" width="15" height="298.9995397969615" fill="#427d77" stroke="none" stroke-width="0" rx="1"/>
+<rect x="584" y="330.02994997231366" width="15" height="69.97005002768634" fill="#427d77" stroke="none" stroke-width="0" rx="1"/>
+<rect x="604" y="337.9398170868569" width="15" height="62.06018291314308" fill="#427d77" stroke="none" stroke-width="0" rx="1"/>
+<rect x="624" y="343.7555131545178" width="15" height="56.244486845482186" fill="#427d77" stroke="none" stroke-width="0" rx="1"/>
+<rect x="644" y="358.9749385700791" width="15" height="41.025061429920925" fill="#427d77" stroke="none" stroke-width="0" rx="1"/>
+<rect x="664" y="367.34140284893033" width="15" height="32.65859715106967" fill="#427d77" stroke="none" stroke-width="0" rx="1"/>
+<rect x="684" y="368.1995219035218" width="15" height="31.800478096478173" fill="#427d77" stroke="none" stroke-width="0" rx="1"/>
+<text x="597.0" y="430.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="middle" font-weight="normal">eigenvalues, largest first</text>
+<text x="500.0" y="470.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">effective rank 2.02</text>
+<text x="500.0" y="502.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">trace 8.02</text>
+<text x="500.0" y="534.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">min std 1</text>
+<text x="500.0" y="566.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#5d666d" text-anchor="start" font-weight="normal">of 8 dimensions</text>
+<rect x="722" y="10" width="222" height="580" fill="none" stroke="#b4c3c4" stroke-width="2" rx="8"/>
+<text x="833.0" y="40.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="bold">Decorrelated, dependent</text>
+<line x1="772.0" y1="400.0" x2="934.0" y2="400.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="766.0" y="406.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-7</text>
+<line x1="772.0" y1="320.0" x2="934.0" y2="320.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="766.0" y="326.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-5</text>
+<line x1="772.0" y1="240.0" x2="934.0" y2="240.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="766.0" y="246.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-3</text>
+<line x1="772.0" y1="160.0" x2="934.0" y2="160.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="766.0" y="166.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e-1</text>
+<line x1="772.0" y1="80.0" x2="934.0" y2="80.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="766.0" y="86.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="end" font-weight="normal">1e1</text>
+<rect x="780" y="113.6619098213418" width="15" height="286.3380901786582" fill="#5d666d" stroke="none" stroke-width="0" rx="1"/>
+<rect x="800" y="115.79474776151437" width="15" height="284.2052522384856" fill="#5d666d" stroke="none" stroke-width="0" rx="1"/>
+<rect x="820" y="117.04896446743692" width="15" height="282.9510355325631" fill="#5d666d" stroke="none" stroke-width="0" rx="1"/>
+<rect x="840" y="118.51005771351402" width="15" height="281.489942286486" fill="#5d666d" stroke="none" stroke-width="0" rx="1"/>
+<rect x="860" y="120.45220479371642" width="15" height="279.5477952062836" fill="#5d666d" stroke="none" stroke-width="0" rx="1"/>
+<rect x="880" y="122.01248645471173" width="15" height="277.98751354528827" fill="#5d666d" stroke="none" stroke-width="0" rx="1"/>
+<rect x="900" y="124.59057927749251" width="15" height="275.4094207225075" fill="#5d666d" stroke="none" stroke-width="0" rx="1"/>
+<rect x="920" y="127.23227745388476" width="15" height="272.76772254611524" fill="#5d666d" stroke="none" stroke-width="0" rx="1"/>
+<text x="833.0" y="430.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#5d666d" text-anchor="middle" font-weight="normal">eigenvalues, largest first</text>
+<text x="736.0" y="470.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">effective rank 7.94</text>
+<text x="736.0" y="502.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">trace 8.28</text>
+<text x="736.0" y="534.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">min std 0.932</text>
+<text x="736.0" y="566.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#5d666d" text-anchor="start" font-weight="normal">of 8 dimensions</text>
+</svg>

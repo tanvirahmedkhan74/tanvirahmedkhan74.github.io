@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="t d">
+<title id="t">Gradient size of four regulariser terms as a cloud shrinks towards a point</title><desc id="d">A log-log plot of gradient norm against the scale r of an isotropic Gaussian cloud, from 1 down to 1e-5. VICReg variance hinge on variance and SIGReg fall in proportion to r. VICReg hinge on standard deviation is constant until r is about 0.01 and then falls. VISReg scale term is constant. VISReg shape term grows as r falls.</desc>
+<rect width="960" height="600" fill="#f4f3ed"/>
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#23364a"/></marker><marker id="ah-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ad8145"/></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#427d77"/></marker><marker id="ah-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#345e83"/></marker><marker id="ah-grey" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5d666d"/></marker></defs>
+<rect x="8" y="8" width="944" height="584" fill="none" stroke="#b4c3c4" stroke-width="2" rx="8"/>
+<line x1="90.0" y1="480.0" x2="590.0" y2="480.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<line x1="90.0" y1="480.0" x2="90.0" y2="60.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<line x1="85.0" y1="480.0" x2="90.0" y2="480.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<line x1="90.0" y1="480.0" x2="590.0" y2="480.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="80.0" y="486.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="end" font-weight="normal">1e-7</text>
+<line x1="85.0" y1="396.0" x2="90.0" y2="396.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<line x1="90.0" y1="396.0" x2="590.0" y2="396.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="80.0" y="402.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="end" font-weight="normal">1e-5</text>
+<line x1="85.0" y1="312.0" x2="90.0" y2="312.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<line x1="90.0" y1="312.0" x2="590.0" y2="312.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="80.0" y="318.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="end" font-weight="normal">1e-3</text>
+<line x1="85.0" y1="228.0" x2="90.0" y2="228.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<line x1="90.0" y1="228.0" x2="590.0" y2="228.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="80.0" y="234.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="end" font-weight="normal">1e-1</text>
+<line x1="85.0" y1="144.0" x2="90.0" y2="144.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<line x1="90.0" y1="144.0" x2="590.0" y2="144.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="80.0" y="150.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="end" font-weight="normal">1e1</text>
+<line x1="85.0" y1="60.0" x2="90.0" y2="60.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<line x1="90.0" y1="60.0" x2="590.0" y2="60.0" stroke="#b4c3c4" stroke-width="1" stroke-linecap="round"/>
+<text x="80.0" y="66.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="end" font-weight="normal">1e3</text>
+<line x1="90.0" y1="480.0" x2="90.0" y2="486.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<text x="90.0" y="508.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">1e-5</text>
+<line x1="190.0" y1="480.0" x2="190.0" y2="486.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<text x="190.0" y="508.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">1e-4</text>
+<line x1="290.0" y1="480.0" x2="290.0" y2="486.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<text x="290.0" y="508.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">1e-3</text>
+<line x1="390.0" y1="480.0" x2="390.0" y2="486.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<text x="390.0" y="508.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">1e-2</text>
+<line x1="490.0" y1="480.0" x2="490.0" y2="486.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<text x="490.0" y="508.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">1e-1</text>
+<line x1="590.0" y1="480.0" x2="590.0" y2="486.0" stroke="#23364a" stroke-width="2" stroke-linecap="round"/>
+<text x="590.0" y="508.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">1</text>
+<text x="340.0" y="538.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">cloud scale r  (smaller = closer to a point)</text>
+<text x="30.0" y="36.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">gradient norm</text>
+<path d="M590.0,266.1 L490.0,261.9 L390.0,268.2 L290.0,304.0 L190.0,345.9 L90.0,387.9" fill="none" stroke="#345e83" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="590.0" cy="266.1" r="4" fill="#345e83"/>
+<circle cx="490.0" cy="261.9" r="4" fill="#345e83"/>
+<circle cx="390.0" cy="268.2" r="4" fill="#345e83"/>
+<circle cx="290.0" cy="304.0" r="4" fill="#345e83"/>
+<circle cx="190.0" cy="345.9" r="4" fill="#345e83"/>
+<circle cx="90.0" cy="387.9" r="4" fill="#345e83"/>
+<line x1="640.0" y1="120.0" x2="700.0" y2="120.0" stroke="#345e83" stroke-width="3.5" stroke-linecap="round"/>
+<text x="712.0" y="126.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">VICReg, hinge on std</text>
+<path d="M590.0,254.1 L490.0,291.2 L390.0,333.2 L290.0,375.2 L190.0,417.2 L90.0,459.2" fill="none" stroke="#345e83" stroke-width="3.5" stroke-dasharray="8 5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="590.0" cy="254.1" r="4" fill="#345e83"/>
+<circle cx="490.0" cy="291.2" r="4" fill="#345e83"/>
+<circle cx="390.0" cy="333.2" r="4" fill="#345e83"/>
+<circle cx="290.0" cy="375.2" r="4" fill="#345e83"/>
+<circle cx="190.0" cy="417.2" r="4" fill="#345e83"/>
+<circle cx="90.0" cy="459.2" r="4" fill="#345e83"/>
+<line x1="640.0" y1="182.0" x2="700.0" y2="182.0" stroke="#345e83" stroke-width="3.5" stroke-dasharray="8 5" stroke-linecap="round"/>
+<text x="712.0" y="188.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">VICReg, hinge on variance</text>
+<path d="M590.0,201.0 L490.0,169.2 L390.0,210.5 L290.0,252.4 L190.0,294.4 L90.0,336.4" fill="none" stroke="#ad8145" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="590.0" cy="201.0" r="4" fill="#ad8145"/>
+<circle cx="490.0" cy="169.2" r="4" fill="#ad8145"/>
+<circle cx="390.0" cy="210.5" r="4" fill="#ad8145"/>
+<circle cx="290.0" cy="252.4" r="4" fill="#ad8145"/>
+<circle cx="190.0" cy="294.4" r="4" fill="#ad8145"/>
+<circle cx="90.0" cy="336.4" r="4" fill="#ad8145"/>
+<line x1="640.0" y1="244.0" x2="700.0" y2="244.0" stroke="#ad8145" stroke-width="3.5" stroke-linecap="round"/>
+<text x="712.0" y="250.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">SIGReg</text>
+<path d="M590.0,306.8 L490.0,251.1 L390.0,249.4 L290.0,249.2 L190.0,249.2 L90.0,249.2" fill="none" stroke="#427d77" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="590.0" cy="306.8" r="4" fill="#427d77"/>
+<circle cx="490.0" cy="251.1" r="4" fill="#427d77"/>
+<circle cx="390.0" cy="249.4" r="4" fill="#427d77"/>
+<circle cx="290.0" cy="249.2" r="4" fill="#427d77"/>
+<circle cx="190.0" cy="249.2" r="4" fill="#427d77"/>
+<circle cx="90.0" cy="249.2" r="4" fill="#427d77"/>
+<line x1="640.0" y1="306.0" x2="700.0" y2="306.0" stroke="#427d77" stroke-width="3.5" stroke-linecap="round"/>
+<text x="712.0" y="312.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">VISReg scale term</text>
+<path d="M590.0,314.8 L490.0,272.8 L390.0,230.8 L290.0,189.1 L190.0,149.0 L90.0,85.3" fill="none" stroke="#427d77" stroke-width="3.5" stroke-dasharray="8 5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="590.0" cy="314.8" r="4" fill="#427d77"/>
+<circle cx="490.0" cy="272.8" r="4" fill="#427d77"/>
+<circle cx="390.0" cy="230.8" r="4" fill="#427d77"/>
+<circle cx="290.0" cy="189.1" r="4" fill="#427d77"/>
+<circle cx="190.0" cy="149.0" r="4" fill="#427d77"/>
+<circle cx="90.0" cy="85.3" r="4" fill="#427d77"/>
+<line x1="640.0" y1="368.0" x2="700.0" y2="368.0" stroke="#427d77" stroke-width="3.5" stroke-dasharray="8 5" stroke-linecap="round"/>
+<text x="712.0" y="374.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="start" font-weight="normal">VISReg shape term</text>
+<text x="640.0" y="460.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#5d666d" text-anchor="start" font-weight="normal">Magnitudes are not comparable</text>
+<text x="640.0" y="484.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#5d666d" text-anchor="start" font-weight="normal">across terms (each has its own</text>
+<text x="640.0" y="508.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#5d666d" text-anchor="start" font-weight="normal">normalisation and weight);</text>
+<text x="640.0" y="532.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#5d666d" text-anchor="start" font-weight="normal">only the slope in r is.</text>
+<text x="640.0" y="566.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#5d666d" text-anchor="start" font-weight="normal">Toy gradient analysis, not training.</text>
+</svg>

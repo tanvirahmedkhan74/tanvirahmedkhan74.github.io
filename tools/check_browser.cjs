@@ -23,7 +23,10 @@ const out = path.join(root, '.cache/portfolio-update/browser');
 const routes = ['/', '/research/', '/publications/', '/milab/', '/cv/',
   '/research/erl/', '/research/cg-swr/', '/research/rift/', '/research/deadline-articulation/',
   '/research/pneuma/', '/research/airflow/', '/research/avatar-systems/', '/research/rsi/',
-  '/research/archive/streamtalker-gs/', '/notes/', '/notes/appearance-of-wisdom/', '/404.html'];
+  '/research/archive/streamtalker-gs/', '/notes/', '/notes/appearance-of-wisdom/',
+  '/notes/study/', '/notes/study/rank-and-collapse/', '/notes/study/gaussian-splatting/',
+  '/notes/study/attention/', '/notes/study/jepa-world-models/',
+  '/notes/study/collapse-diagnostics/', '/404.html'];
 const widths = [320, 390, 430, 768, 1024, 1440, 1920];
 const orientationRoutes = ['/', '/research/', '/publications/', '/milab/', '/research/deadline-articulation/'];
 
@@ -49,6 +52,9 @@ const orientationRoutes = ['/', '/research/', '/publications/', '/milab/', '/res
         const layout = await page.evaluate(() => ({
           overflow: document.documentElement.scrollWidth > innerWidth + 1,
           broken: [...document.images].filter(i => !i.naturalWidth).map(i => i.src),
+          mathOverflow: [...document.querySelectorAll('.equation')]
+            .filter(e => e.scrollWidth > e.clientWidth + 1 && getComputedStyle(e).overflowX !== 'auto')
+            .length,
           nav: [...document.querySelectorAll('.nav-menu a')].every(a => {
             const r = a.getBoundingClientRect(); return r.width > 0 && r.left >= 0 && r.right <= innerWidth + 1;
           }),
@@ -58,6 +64,7 @@ const orientationRoutes = ['/', '/research/', '/publications/', '/milab/', '/res
         assert.equal(layout.overflow, false, `${route} overflows at ${width}`);
         assert.deepEqual(layout.broken, [], `${route} broken image at ${width}`);
         assert.ok(layout.nav, `${route} navigation hidden at ${width}`);
+        assert.equal(layout.mathOverflow, 0, `${route} equation overflows at ${width}`);
         assert.ok(layout.headerHeight <= layout.offset + 2, `${route} sticky offset too short at ${width}`);
         if ([390, 1440].includes(width)) {
           await page.addScriptTag({ content: axeSource });
@@ -141,9 +148,21 @@ const orientationRoutes = ['/', '/research/', '/publications/', '/milab/', '/res
     assert.equal(new URL(plain.url()).pathname, '/cv/');
     await nojs.close();
     assert.ok([...requests].every(url => url.startsWith(base + '/')), 'Unexpected external runtime dependency');
-    const report = { layouts: routes.length * widths.length, widths, audits, positions, errors };
+    // A request still in flight when the next navigation starts is cancelled by the browser,
+    // not broken by the site: deferred images and the tab icon abort this way, and which ones
+    // do differs between runs. Each abort is re-fetched here; one that serves 200 on its own
+    // was a cancellation, and anything else stays a fault.
+    const faults = [], cancelled = [];
+    for (const entry of errors) {
+      const aborted = entry.match(/^(\S+): net::ERR_ABORTED$/);
+      if (!aborted) { faults.push(entry); continue; }
+      const retry = await context.request.get(aborted[1]);
+      (retry.status() === 200 ? cancelled : faults).push(entry);
+    }
+    const report = { layouts: routes.length * widths.length, widths, audits, positions,
+                     errors: faults, cancelledRequests: cancelled };
     fs.writeFileSync(path.join(out, 'browser-report.json'), JSON.stringify(report, null, 2));
-    assert.deepEqual(errors, []);
+    assert.deepEqual(faults, []);
     assert.equal(audits.flatMap(a => a.violations).length, 0, 'Accessibility violations; inspect browser-report.json');
     console.log(`PASS: ${report.layouts} layouts; ${audits.length} accessibility audits; scrolling, reflow, keyboard, anchors, motion, privacy and PDF.`);
   } finally { await browser.close(); }

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="t d">
+<title id="t">Three pairs of claims that should not be merged</title><desc id="d">Three rows. Action-free video learning versus action-conditioned robot control; video generation versus world-model planning; a probing result versus evidence of physical understanding.</desc>
+<rect width="960" height="600" fill="#f4f3ed"/>
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#23364a"/></marker><marker id="ah-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ad8145"/></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#427d77"/></marker><marker id="ah-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#345e83"/></marker><marker id="ah-grey" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5d666d"/></marker></defs>
+<text x="480.0" y="36.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="26" fill="#23364a" text-anchor="middle" font-weight="bold">Pairs that look alike and are not</text>
+<rect x="20" y="64" width="400" height="150" fill="#cfe0dd" stroke="#345e83" stroke-width="2" rx="8"/>
+<text x="220.0" y="121.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="bold">Action-free video learning</text>
+<text x="220.0" y="146.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="normal">no actions in the data;</text>
+<text x="220.0" y="171.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="normal">features for recognition</text>
+<rect x="540" y="64" width="400" height="150" fill="#cfe0dd" stroke="#427d77" stroke-width="2" rx="8"/>
+<text x="740.0" y="121.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="bold">Action-conditioned control</text>
+<text x="740.0" y="146.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="normal">actions are inputs; the model</text>
+<text x="740.0" y="171.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="normal">can score candidate actions</text>
+<text x="480.0" y="156.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="56" fill="#ad8145" text-anchor="middle" font-weight="bold">≠</text>
+<rect x="20" y="240" width="400" height="150" fill="#cfe0dd" stroke="#345e83" stroke-width="2" rx="8"/>
+<text x="220.0" y="297.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="bold">Video generation</text>
+<text x="220.0" y="322.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="normal">output is pixels a person</text>
+<text x="220.0" y="347.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="normal">looks at</text>
+<rect x="540" y="240" width="400" height="150" fill="#cfe0dd" stroke="#427d77" stroke-width="2" rx="8"/>
+<text x="740.0" y="297.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="bold">World-model planning</text>
+<text x="740.0" y="322.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="normal">output is an action chosen by</text>
+<text x="740.0" y="347.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="normal">scoring imagined outcomes</text>
+<text x="480.0" y="332.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="56" fill="#ad8145" text-anchor="middle" font-weight="bold">≠</text>
+<rect x="20" y="416" width="400" height="150" fill="#cfe0dd" stroke="#345e83" stroke-width="2" rx="8"/>
+<text x="220.0" y="473.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="bold">A probe decodes a quantity</text>
+<text x="220.0" y="498.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="normal">a small head recovers position</text>
+<text x="220.0" y="523.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="normal">from frozen latents</text>
+<rect x="540" y="416" width="400" height="150" fill="#cfe0dd" stroke="#427d77" stroke-width="2" rx="8"/>
+<text x="740.0" y="473.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="bold">Physical understanding</text>
+<text x="740.0" y="498.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="normal">needs tests beyond decoding,</text>
+<text x="740.0" y="523.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="middle" font-weight="normal">such as held-out interventions</text>
+<text x="480.0" y="508.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="56" fill="#ad8145" text-anchor="middle" font-weight="bold">≠</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="t d">
+<title id="t">The null direction of a rank-1 matrix</title><desc id="d">In the input plane, parallel lines x plus 2y equals c are each sent to a single point c times (1, 2) on the image line. The gold line through the origin is the null space.</desc>
+<rect width="960" height="600" fill="#f4f3ed"/>
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#23364a"/></marker><marker id="ah-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ad8145"/></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#427d77"/></marker><marker id="ah-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#345e83"/></marker></defs>
+<text x="250.0" y="38.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="22" fill="#23364a" text-anchor="middle" font-weight="bold">Input plane: lines that collapse</text>
+<text x="715.0" y="38.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="22" fill="#23364a" text-anchor="middle" font-weight="bold">Output plane</text>
+<rect x="20" y="52" width="460" height="528" fill="none" stroke="#b4c3c4" stroke-width="2" rx="6"/>
+<rect x="500" y="52" width="440" height="528" fill="none" stroke="#b4c3c4" stroke-width="2" rx="6"/>
+<line x1="30.0" y1="336.5" x2="470.0" y2="336.5" stroke="#b4c3c4" stroke-width="2" stroke-linecap="round"/>
+<line x1="250.0" y1="510.4" x2="250.0" y2="121.6" stroke="#b4c3c4" stroke-width="2" stroke-linecap="round"/>
+<line x1="30.0" y1="303.2" x2="444.4" y2="510.4" stroke="#345e83" stroke-width="3" stroke-linecap="round"/>
+<line x1="30.0" y1="149.7" x2="470.0" y2="369.7" stroke="#345e83" stroke-width="3" stroke-linecap="round"/>
+<line x1="30.0" y1="226.5" x2="470.0" y2="446.5" stroke="#ad8145" stroke-width="5" stroke-linecap="round"/>
+<line x1="250.0" y1="336.5" x2="352.3" y2="387.6" stroke="#ad8145" stroke-width="5" marker-end="url(#ah-gold)" stroke-linecap="round"/>
+<text x="35.1" y="295.8" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#345e83" text-anchor="start" font-weight="normal">c = −3</text>
+<text x="35.1" y="219.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#ad8145" text-anchor="start" font-weight="normal">c = 0: null space</text>
+<text x="35.1" y="142.3" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#345e83" text-anchor="start" font-weight="normal">c = 3</text>
+<circle cx="301.2" cy="285.3" r="7" fill="#23364a"/>
+<circle cx="403.5" cy="336.5" r="7" fill="#23364a"/>
+<text x="311.2" y="273.3" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="start" font-weight="normal">p</text>
+<text x="411.5" y="324.5" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="start" font-weight="normal">q</text>
+<text x="464.9" y="142.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#ad8145" text-anchor="end" font-weight="normal">null direction (2, −1)</text>
+<line x1="596.4" y1="558.5" x2="826.3" y2="98.7" stroke="#427d77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="625.2" cy="501.0" r="8" fill="#345e83"/>
+<circle cx="711.4" cy="328.6" r="8" fill="#ad8145"/>
+<circle cx="797.6" cy="156.2" r="8" fill="#345e83"/>
+<text x="783.6" y="160.2" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="end" font-weight="normal">c = 3: A p = A q = (3, 6)</text>
+<text x="725.4" y="356.6" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#ad8145" text-anchor="start" font-weight="normal">c = 0: (0, 0)</text>
+<text x="639.2" y="507.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="start" font-weight="normal">c = −3: (−3, −6)</text>
+</svg>

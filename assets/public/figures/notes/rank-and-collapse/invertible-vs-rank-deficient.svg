@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="t d">
+<title id="t">Invertible map versus rank-deficient map</title><desc id="d">Top row: a matrix with determinant 2 turns the unit square into a parallelogram, with no information lost. Bottom row: a rank-1 matrix sends two different input points to the same output point.</desc>
+<rect width="960" height="600" fill="#f4f3ed"/>
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#23364a"/></marker><marker id="ah-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ad8145"/></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#427d77"/></marker><marker id="ah-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#345e83"/></marker></defs>
+<text x="250.0" y="38.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="22" fill="#23364a" text-anchor="middle" font-weight="bold">Input plane</text>
+<text x="700.0" y="38.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="22" fill="#23364a" text-anchor="middle" font-weight="bold">Output plane</text>
+<rect x="20" y="52" width="440" height="258" fill="none" stroke="#b4c3c4" stroke-width="2" rx="6"/>
+<rect x="480" y="52" width="460" height="258" fill="none" stroke="#b4c3c4" stroke-width="2" rx="6"/>
+<rect x="20" y="322" width="440" height="270" fill="none" stroke="#b4c3c4" stroke-width="2" rx="6"/>
+<rect x="480" y="322" width="460" height="270" fill="none" stroke="#b4c3c4" stroke-width="2" rx="6"/>
+<polygon points="165.0,220.0 265.0,220.0 265.0,120.0 165.0,120.0" fill="#cfe0dd" fill-opacity="0.8" stroke="#345e83" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="555.0,220.0 755.0,220.0 855.0,120.0 655.0,120.0" fill="#cfe0dd" fill-opacity="0.8" stroke="#345e83" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="165.0" y1="220.0" x2="265.0" y2="220.0" stroke="#23364a" stroke-width="3" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<line x1="165.0" y1="220.0" x2="165.0" y2="120.0" stroke="#23364a" stroke-width="3" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<line x1="555.0" y1="220.0" x2="755.0" y2="220.0" stroke="#23364a" stroke-width="3" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<line x1="555.0" y1="220.0" x2="655.0" y2="120.0" stroke="#23364a" stroke-width="3" marker-end="url(#ah-ink)" stroke-linecap="round"/>
+<circle cx="215.0" cy="170.0" r="6" fill="#ad8145"/>
+<circle cx="705.0" cy="170.0" r="6" fill="#ad8145"/>
+<text x="273.0" y="246.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="start" font-weight="normal">e1</text>
+<text x="157.0" y="112.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="end" font-weight="normal">e2</text>
+<text x="761.0" y="246.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="start" font-weight="normal">S e1 = (2, 0)</text>
+<text x="667.0" y="112.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="start" font-weight="normal">S e2 = (1, 1)</text>
+<text x="40.0" y="292.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="22" fill="#427d77" text-anchor="start" font-weight="bold">Invertible: det S = 2, rank 2.</text>
+<text x="492.0" y="292.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#427d77" text-anchor="start" font-weight="normal">One input per output; S⁻¹ undoes it.</text>
+<line x1="198.6" y1="371.5" x2="316.8" y2="430.5" stroke="#ad8145" stroke-width="3" marker-end="url(#ah-gold)" stroke-linecap="round"/>
+<circle cx="198.6" cy="371.5" r="7" fill="#345e83"/>
+<circle cx="316.8" cy="430.5" r="7" fill="#345e83"/>
+<text x="194.6" y="357.5" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="end" font-weight="normal">p = (1, 1)</text>
+<text x="330.8" y="434.5" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="start" font-weight="normal">q = (3, 0)</text>
+<text x="40.0" y="484.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#ad8145" text-anchor="start" font-weight="normal">q − p = (2, −1) is a null vector:</text>
+<text x="40.0" y="512.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#ad8145" text-anchor="start" font-weight="normal">A(q − p) = (0, 0)</text>
+<line x1="661.0" y1="532.0" x2="756.4" y2="341.3" stroke="#427d77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="668.9" cy="516.1" r="5" fill="#5d666d"/>
+<circle cx="748.4" cy="357.2" r="9" fill="#ad8145"/>
+<text x="734.4" y="361.2" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#23364a" text-anchor="end" font-weight="normal">A p = A q = (3, 6)</text>
+<text x="681.6" y="542.1" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#427d77" text-anchor="start" font-weight="normal">image line</text>
+<text x="40.0" y="560.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="22" fill="#ad8145" text-anchor="start" font-weight="bold">Rank 1: p and q collide.</text>
+<text x="492.0" y="580.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#ad8145" text-anchor="start" font-weight="normal">Nothing downstream can tell them apart.</text>
+</svg>

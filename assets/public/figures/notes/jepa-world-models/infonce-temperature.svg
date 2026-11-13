@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="t d">
+<title id="t">InfoNCE softmax over one positive and three negatives at three temperatures</title><desc id="d">Three bar panels for temperature 1, 0.5 and 0.1. The probability on the positive grows from about 0.46 to about 0.68 to about 0.9995 as temperature falls; the loss is minus the log of that probability.</desc>
+<rect width="960" height="600" fill="#f4f3ed"/>
+<defs><marker id="ah-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#23364a"/></marker><marker id="ah-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ad8145"/></marker><marker id="ah-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#427d77"/></marker><marker id="ah-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#345e83"/></marker><marker id="ah-grey" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5d666d"/></marker></defs>
+<text x="480.0" y="34.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="24" fill="#23364a" text-anchor="middle" font-weight="bold">One anchor, one positive, three negatives</text>
+<rect x="20" y="60" width="296" height="450" fill="none" stroke="#b4c3c4" stroke-width="2" rx="8"/>
+<text x="168.0" y="94.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="22" fill="#23364a" text-anchor="middle" font-weight="bold">temperature τ = 1</text>
+<line x1="40.0" y1="440.0" x2="300.0" y2="440.0" stroke="#b4c3c4" stroke-width="2" stroke-linecap="round"/>
+<rect x="54" y="302.93669956945973" width="44" height="137.06330043054024" fill="#ad8145" stroke="none" stroke-width="0" rx="2"/>
+<text x="76.0" y="294.9" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">0.457</text>
+<text x="76.0" y="466.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">pos</text>
+<rect x="116" y="378.41348919905784" width="44" height="61.58651080094217" fill="#345e83" stroke="none" stroke-width="0" rx="2"/>
+<text x="138.0" y="370.4" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">0.205</text>
+<text x="138.0" y="466.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">neg 1</text>
+<rect x="178" y="384.2742205810317" width="44" height="55.725779418968244" fill="#345e83" stroke="none" stroke-width="0" rx="2"/>
+<text x="200.0" y="376.3" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">0.186</text>
+<text x="200.0" y="466.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">neg 2</text>
+<rect x="240" y="394.37559065045065" width="44" height="45.624409349549374" fill="#345e83" stroke="none" stroke-width="0" rx="2"/>
+<text x="262.0" y="386.4" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">0.152</text>
+<text x="262.0" y="466.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">neg 3</text>
+<text x="168.0" y="490.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#427d77" text-anchor="middle" font-weight="bold">loss = 0.783</text>
+<rect x="332" y="60" width="296" height="450" fill="none" stroke="#b4c3c4" stroke-width="2" rx="8"/>
+<text x="480.0" y="94.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="22" fill="#23364a" text-anchor="middle" font-weight="bold">temperature τ = 0.5</text>
+<line x1="352.0" y1="440.0" x2="612.0" y2="440.0" stroke="#b4c3c4" stroke-width="2" stroke-linecap="round"/>
+<rect x="366" y="237.02280692976214" width="44" height="202.97719307023786" fill="#ad8145" stroke="none" stroke-width="0" rx="2"/>
+<text x="388.0" y="229.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">0.677</text>
+<text x="388.0" y="466.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">pos</text>
+<rect x="428" y="399.0196114867901" width="44" height="40.98038851320992" fill="#345e83" stroke="none" stroke-width="0" rx="2"/>
+<text x="450.0" y="391.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">0.137</text>
+<text x="450.0" y="466.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">neg 1</text>
+<rect x="490" y="406.44809565115133" width="44" height="33.55190434884864" fill="#345e83" stroke="none" stroke-width="0" rx="2"/>
+<text x="512.0" y="398.4" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">0.112</text>
+<text x="512.0" y="466.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">neg 2</text>
+<rect x="552" y="417.5094859322964" width="44" height="22.490514067703586" fill="#345e83" stroke="none" stroke-width="0" rx="2"/>
+<text x="574.0" y="409.5" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">0.075</text>
+<text x="574.0" y="466.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">neg 3</text>
+<text x="480.0" y="490.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#427d77" text-anchor="middle" font-weight="bold">loss = 0.391</text>
+<rect x="644" y="60" width="296" height="450" fill="none" stroke="#b4c3c4" stroke-width="2" rx="8"/>
+<text x="792.0" y="94.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="22" fill="#23364a" text-anchor="middle" font-weight="bold">temperature τ = 0.1</text>
+<line x1="664.0" y1="440.0" x2="924.0" y2="440.0" stroke="#b4c3c4" stroke-width="2" stroke-linecap="round"/>
+<rect x="678" y="140.14260442086004" width="44" height="299.85739557913996" fill="#ad8145" stroke="none" stroke-width="0" rx="2"/>
+<text x="700.0" y="132.1" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">0.9995</text>
+<text x="700.0" y="466.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">pos</text>
+<rect x="740" y="439.899409050083" width="44" height="0.10059094991698131" fill="#345e83" stroke="none" stroke-width="0" rx="2"/>
+<text x="762.0" y="431.9" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">0.0003</text>
+<text x="762.0" y="466.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">neg 1</text>
+<rect x="802" y="439.96299465755766" width="44" height="0.03700534244236363" fill="#345e83" stroke="none" stroke-width="0" rx="2"/>
+<text x="824.0" y="432.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">0.0001</text>
+<text x="824.0" y="466.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">neg 2</text>
+<rect x="864" y="439.9949918714993" width="44" height="0.005008128500705127" fill="#345e83" stroke="none" stroke-width="0" rx="2"/>
+<text x="886.0" y="432.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">0.0000</text>
+<text x="886.0" y="466.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#23364a" text-anchor="middle" font-weight="normal">neg 3</text>
+<text x="792.0" y="490.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" fill="#427d77" text-anchor="middle" font-weight="bold">loss = 0.0005</text>
+<text x="480.0" y="548.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#23364a" text-anchor="middle" font-weight="normal">scores s = (0.9, 0.1, 0.0, −0.2); chance loss for four candidates is log 4 = 1.386</text>
+</svg>
