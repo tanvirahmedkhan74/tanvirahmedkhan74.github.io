@@ -23,3 +23,5 @@ Desktop.ini
 node_modules/
 .cache/
 *.log
+
+/mailing/interview_prep_dkchae/
