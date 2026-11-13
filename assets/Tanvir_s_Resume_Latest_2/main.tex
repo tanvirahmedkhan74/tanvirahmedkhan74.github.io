@@ -7,6 +7,15 @@
 \newcommand{\workstream}[3]{%
 \runinEntry{\href{https://tanvirahmedkhan74.github.io/milab/\##2}{#1}.}{#3}}
 
+% Referee: name and doctorate, right-aligned location, position, relationship, email.
+\newcommand{\refEntry}[5]{%
+\par\addvspace{2pt}%
+\Needspace{4\baselineskip}%
+\entryHeading{#1}{#2}%
+\nobreak\vspace{1pt}%
+{\small\RaggedRight #3.\par #4\enspace\textbullet\enspace\href{mailto:#5}{#5}\par}%
+\vspace{4pt}}
+
 \begin{document}
 \begin{center}
 {\sffamily\bfseries\fontsize{24pt}{27pt}\selectfont Tanvir Ahmed Khan}\par
@@ -23,8 +32,12 @@
 \end{center}
 
 \section{Research Interests}
-Multimodal representation learning; long-video understanding; neural-renderer measurement;
-speech-driven visual interaction; evidence selection and memory for question answering.
+\textbf{Representation and memory:} multimodal representation learning; long-video
+understanding; evidence selection and memory for question answering.\par
+\textbf{Responsible AI:} faithfulness and evaluation; grounding model statements in testable
+evidence; retaining negative and ambiguous findings.\par
+\textbf{Applications:} AI for healthcare and the life sciences; neural-renderer measurement;
+speech-driven visual interaction.
 
 \section{Education}
 \eduHeading{North South University}{Dhaka, Bangladesh}
@@ -33,56 +46,6 @@ speech-driven visual interaction; evidence selection and memory for question ans
 Degree requirements completed December 2025.\par
 {\small Selected coursework: Pattern Recognition; Machine Learning; Probability and Statistics;
 Numerical Methods; Introduction to Linear Algebra; Design and Analysis of Algorithms.}
-
-\section{Research in Progress}
-\cvSubsection{First-author manuscripts in preparation}
-\vspace{2pt}
-
-\researchEntry{ERL --- Evidence selection in multi-hop question answering}
-{First author\enspace\textperiodcentered\enspace In preparation\statusbreak Planned target: ACL}
-{\textit{From Transit Routing to Evidence Selection: Conditional Audits of Multi-Hop QA
-Failures.}}
-{https://tanvirahmedkhan74.github.io/research/erl/}
-\begin{points}
-\item Trace where supporting evidence is lost across candidate access, selection and reading, using controlled studies rather than end-to-end accuracy.
-\item Lead the research design, implementation and analysis. Selection gains are qualified against stronger baselines and reader controls; negative findings are retained.
-\end{points}
-
-\researchEntry{RIFT --- Reliability of renderer measurements}
-{First author\enspace\textperiodcentered\enspace In preparation\statusbreak Planned target: TMLR}
-{\textit{Finite-difference probes across hard feature selection: a frozen-index audit of one
-released talking-head renderer.}}
-{https://tanvirahmedkhan74.github.io/research/rift/}
-\begin{points}
-\item Hold feature selections fixed so that a measured difference separates a change of discrete
-choice from the renderer's local response.
-\item Lead the experimental design, implementation and interpretation within one renderer, retaining negative and ambiguous findings.
-\end{points}
-
-\researchEntry{Deadline articulation --- Information available at playback}
-{First author\enspace\textperiodcentered\enspace Work in progress\statusbreak
-Planned: NeurIPS 2027 / ICCV 2027}
-{\textit{Deadline-Available Speech States for Full-Duplex Avatar Articulation.}}
-{https://tanvirahmedkhan74.github.io/research/deadline-articulation/}
-\begin{points}
-\item Examine what articulation-relevant information streaming speech-model states carry at a
-playback deadline, and what additional waiting contributes.
-\item A completed pilot diagnostic motivates an expanded study of trained readouts and timing schedules, still in development.
-\end{points}
-
-\cvSubsection{Independent research in progress}
-\vspace{2pt}
-
-\researchEntry{CG-SWR --- Representation and readout gaps in evidence reranking}
-{Independent research\enspace\textperiodcentered\enspace Active study\statusbreak
-Preregistered, two-hop scope}
-{\textit{Capacity-Gated Sparse Weight Repair for Multi-Hop Evidence Reranking.}}
-{https://tanvirahmedkhan74.github.io/research/cg-swr/}
-\begin{points}
-\item Investigate the gap between support-selection information encoded in a frozen reranker and
-the information its scoring head uses.
-\item Design and implement the controlled comparisons, evaluation infrastructure and constrained-editing experiments, now underway.
-\end{points}
 
 \section{Published Collaborative Research}
 \pubListStart
@@ -118,6 +81,58 @@ Bangladesh's 2024 Mass Uprising.'' \textit{IEEE ICCIT 2025}.
 {\small\textit{Contribution:} data collection and filtering, LDA topic modelling,
 baseline evaluation and visualizations.}
 \pubListEnd
+
+\section{Research in Progress}
+\cvSubsection{First-author manuscripts in preparation}
+\vspace{2pt}
+
+\researchEntry{ERL --- Evidence selection in multi-hop question answering}
+{First author\enspace\textperiodcentered\enspace In preparation\statusbreak Planned target: ACL}
+{\textit{From Transit Routing to Evidence Selection: Conditional Audits of Multi-Hop QA
+Failures.}\enspace Where supporting evidence is lost across candidate access, selection and
+reading.}
+{https://tanvirahmedkhan74.github.io/research/erl/}
+\par\addvspace{5pt}
+
+\researchEntry{RIFT --- Reliability of renderer measurements}
+{First author\enspace\textperiodcentered\enspace In preparation\statusbreak Planned target: TMLR}
+{\textit{Finite-difference probes across hard feature selection: a frozen-index audit of one
+released talking-head renderer.}\enspace Feature selections held fixed, so that a measured
+difference separates a change of discrete choice from the renderer's local response.}
+{https://tanvirahmedkhan74.github.io/research/rift/}
+\par\addvspace{5pt}
+
+\researchEntry{Deadline articulation --- Information available at playback}
+{First author\enspace\textperiodcentered\enspace Work in progress\statusbreak
+Planned: NeurIPS 2027 / ICCV 2027}
+{\textit{Deadline-Available Speech States for Full-Duplex Avatar Articulation.}\enspace What
+articulation-relevant information streaming speech-model states carry at a playback deadline,
+and what additional waiting contributes.}
+{https://tanvirahmedkhan74.github.io/research/deadline-articulation/}
+\par\addvspace{5pt}
+
+\cvSubsection{Independent research in progress}
+\vspace{2pt}
+
+\researchEntry{CG-SWR --- Representation and readout gaps in evidence reranking}
+{Independent research\enspace\textperiodcentered\enspace Active study\statusbreak
+Preregistered, two-hop scope}
+{\textit{Capacity-Gated Sparse Weight Repair for Multi-Hop Evidence Reranking.}\enspace The gap
+between support-selection information encoded in a frozen reranker and the information its
+scoring head uses.}
+{https://tanvirahmedkhan74.github.io/research/cg-swr/}
+\par\addvspace{5pt}
+
+\cvSubsection{Collaborative manuscripts in preparation}
+\vspace{2pt}
+
+\researchEntry{CiteCheck --- Residue-level grounding of protein-function predictions}
+{Co-author\enspace\textperiodcentered\enspace In preparation}
+{\textit{Turning Protein Function Predictions into Testable Residue-Level Hypotheses.}\enspace Ties a predicted protein-function statement to the residues that support it and
+tests whether the statement depends on the residues it cites. Lead author: Mahir Shahriar
+Tamim.}
+{https://tanvirahmedkhan74.github.io/publications/\#citecheck}
+\par\addvspace{5pt}
 
 \section{Undergraduate Thesis}
 \entryHeading{\href{https://tanvirahmedkhan74.github.io/research/pneuma/}{PNEUMA --- Video memory for long-form question answering}}{Completed Dec 2025}
@@ -156,7 +171,7 @@ streaming pipelines, Docker, Linux, FastAPI, SQL and FAISS.\par
 \internHeading{Machine Intelligence Lab}{North South University}{Mar 2025 -- Present}
 \begingroup\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax
 \textbf{Research Assistant}. Advisors: Dr.~Nabeel Mohammed and Dr.~Shafin Rahman.\par
-Our work spans conversational avatars, 3D representation and embedded inference. I held primary
+Our work spans conversational avatars, 3D representation and embedded inference. Primary
 technical responsibility for the early pipeline, representation and bridge work; the real-time
 Orin customization and the retrieval and tool work were major team efforts.\par
 \endgroup
@@ -203,9 +218,25 @@ own interface and buffering behaviour.}
 \workstream{Jetson AGX Orin export and TensorRT optimization}{orin-optimization}
 {Export tooling, engine integration, precision and graph checks, component-level profiling.}
 \workstream{Real-time PersonaPlex--IMTalker customization on Orin}{orin-real-time}
-{I contributed to integration and system development on the delivered system.}
+{A major team effort; contribution to integration and system development on the delivered
+system.}
 
 \milabGroup{Retrieval and tool use in the conversation}{Team effort}
 \workstream{RAG and tool calling for conversational avatars}{rag-tools}
 {Retrieval, tool access and live scheduling kept as separate concerns.}
+
+\section{References}
+\refEntry{Dr.~Nabeel Mohammed, Ph.D. (Monash University)}{Dhaka, Bangladesh}
+{Associate Professor, Department of Electrical and Computer Engineering, North South
+University}
+{Thesis supervisor (PNEUMA), MILab advisor, CAT-GS co-author}
+{nabeel.mohammed@northsouth.edu}
+\refEntry{Dr.~Shafin Rahman, Ph.D. (Australian National University)}{Dhaka, Bangladesh}
+{Department of Electrical and Computer Engineering, North South University}
+{MILab advisor; co-author on CAT-GS}
+{shafin.rahman@northsouth.edu}
+\refEntry{Dr.~Mohammad Ali Moni, Ph.D. (University of Cambridge)}{Australia}
+{Program Lead, Program for AI and Digital Health Technology, Charles Sturt University}
+{Co-author on the AACL 2026 crisis-sentiment study}
+{mmoni@csu.edu.au}
 \end{document}
