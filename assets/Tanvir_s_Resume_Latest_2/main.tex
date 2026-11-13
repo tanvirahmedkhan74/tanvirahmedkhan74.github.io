@@ -17,7 +17,7 @@
 \Needspace{2\baselineskip}%
 \begingroup\RaggedRight
 \setlength{\hangindent}{1.25em}\setlength{\hangafter}{1}%
-\textbf{#1}\enspace #3, #2.\enspace\href{mailto:#5}{#5}\par
+\textbf{#1}\enspace #3, #2.\enspace #4.\enspace\href{mailto:#5}{#5}\par
 \endgroup\vspace{3pt}}
 
 \begin{document}
@@ -36,23 +36,21 @@
 \end{center}
 
 \section{Research Interests}
-\textbf{Computer vision and representation:} image and video representation learning;
-multimodal fusion; long-video understanding; evidence selection and memory for question
-answering.\par
+\textbf{Computer vision and natural language processing:} image and video representation
+learning; multimodal fusion; long-video understanding; evidence selection and memory for
+question answering.\par
 \textbf{Responsible AI:} faithfulness and evaluation; grounding model statements in testable
 evidence; retaining negative and ambiguous findings.\par
-\textbf{Applications:} AI for healthcare and the life sciences; neural-renderer measurement;
+\textbf{Applications:} AI for healthcare and life sciences; renderer measurement;
 speech-driven visual interaction.
 
 \section{Education}
 \eduHeading{North South University}{Dhaka, Bangladesh}
 {B.Sc. in Computer Science and Engineering}{2021 -- Dec 2025}
 \textbf{CGPA: 3.80/4.00}\enspace\textbar\enspace\textit{Summa Cum Laude}\enspace\textbar\enspace
-\href{https://www.northsouth.edu/academic/grading-policy.html}{Grading policy}.
-Degree requirements completed December 2025.\par
+\href{https://www.northsouth.edu/academic/grading-policy.html}{Grading policy}\par
 {\small Academic merit scholarship (50\%), 2022--2025.\par}
-{\small Selected coursework: Pattern Recognition; Machine Learning; Probability and Statistics;
-Numerical Methods; Introduction to Linear Algebra; Design and Analysis of Algorithms.}
+{\small Degree requirements completed December 2025.\par}
 
 \section{Published Collaborative Research}
 \pubListStart
@@ -136,8 +134,7 @@ scoring head uses.}
 \researchEntry{CiteCheck --- Residue-level grounding of protein-function predictions}
 {Co-author\enspace\textperiodcentered\enspace In preparation}
 {\textit{Turning Protein Function Predictions into Testable Residue-Level Hypotheses.}\enspace Ties a predicted protein-function statement to the residues that support it and
-tests whether the statement depends on the residues it cites. Lead author: Mahir Shahriar
-Tamim.}
+tests whether the statement depends on them. Lead author: Mahir Shahriar Tamim.}
 {https://tanvirahmedkhan74.github.io/publications/\#citecheck}
 \par\addvspace{3pt}
 
@@ -146,8 +143,7 @@ Tamim.}
 \nobreak\vspace{1.5pt}
 {\small\RaggedRight Four-person thesis under Dr.~Nabeel Mohammed.\par}
 \begin{points}
-\item Primary technical responsibility over six months.
-\item A training-free system combining pretrained perception, structured storage, multi-aspect text retrieval and temporal organization.
+\item Training-free system: pretrained perception, structured storage, multi-aspect retrieval, temporal organization.
 \end{points}
 
 \section{Software Engineering Experience}
@@ -161,8 +157,8 @@ and developed cross-platform mobile applications using React Native.
 teacher--student objectives.\enspace
 \href{https://github.com/tanvirahmedkhan74/Periphery}{Code}}
 \runinEntry{DynApex.}
-{C++ dependency and cycle analysis, pragma injection, and OpenMP-based CPU/GPU
-execution prototype.\enspace
+{C++ dependency and cycle analysis with pragma injection and OpenMP CPU/GPU
+execution.\enspace
 \href{https://github.com/tanvirahmedkhan74/DynApex}{Code}}
 
 \section{Technical Skills and Languages}
@@ -175,16 +171,15 @@ streaming pipelines, Docker, Linux, FastAPI, SQL and FAISS.\par
 
 \Needspace{9\baselineskip}
 \section{Applied Research Experience: MILab}
-\internHeading{Machine Intelligence Lab}{North South University}{Mar 2025 -- Present}
+\internHeading{\href{https://milab-nsu.github.io/}{Machine Intelligence Lab}}{North South University}{Mar 2025 -- Present}
 \begingroup\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax
 \textbf{Research Assistant}. Advisors: Dr.~Nabeel Mohammed and Dr.~Shafin Rahman.\par
-Our work spans conversational avatars, 3D representation and embedded inference;
-responsibility for each strand is given beside its heading.\par
+Our work spans conversational avatars, 3D representation and embedded inference.\par
 \endgroup
 \vspace{3pt}
 \vspace{4pt}
 \milabGroup{Conversational pipelines and response delay}{Primary responsibility}
-\groupSummary{Building and serving the streaming talking-avatar pipeline, through to multi-GPU serving and an industry partner’s robot head.}
+\groupSummary{Building and serving the streaming talking-avatar pipeline, to multi-GPU serving and an industry partner’s robot head.}
 \workstreamsStart
 \workstream{MuseTalk 512$\times$512 training and high-resolution development}{musetalk-high-resolution}
 \workstream{MuseTalk / LatentSync conversational pipeline and multi-GPU serving}{conversational-server}
@@ -192,14 +187,14 @@ responsibility for each strand is given beside its heading.\par
 \workstreamsEnd
 
 \milabGroup{Audio-driven 3D avatars and blendshape control}{Primary responsibility}
-\groupSummary{Driving 3D character rigs from speech through NVIDIA’s Audio2Face, and recovering named blendshape controls from its output.}
+\groupSummary{Driving 3D character rigs from speech through NVIDIA’s Audio2Face, and recovering named blendshape controls from it.}
 \workstreamsStart
 \workstream{Audio2Face-driven 3D avatars in the browser}{a2f-threejs}
 \workstream{Recovering blendshape controls from vertex animation}{a2f-blendshape}
 \workstreamsEnd
 
 \milabGroup{Face representation and motion stability}{Primary responsibility}
-\groupSummary{Fitting and representation work on the avatar face, with controlled investigations into unwanted head motion; failures retained.}
+\groupSummary{Fitting and representation on the avatar face, with controlled investigations into unwanted head motion; failures kept.}
 \workstreamsStart
 \workstream{Head-wobble stabilization investigations}{head-wobble}
 \workstream{Pixel3DMM fitting and stabilization}{pixel3dmm}
@@ -230,14 +225,14 @@ responsibility for each strand is given beside its heading.\par
 \section{References}
 \refEntry{Dr.~Nabeel Mohammed, Ph.D. (Monash University)}{Dhaka}
 {Associate Professor, Dept.~of Electrical and Computer Engineering, North South University}
-{PNEUMA supervisor, MILab advisor, CAT-GS co-author}
+{PNEUMA thesis supervisor and MILab advisor; co-author on CAT-GS}
 {nabeel.mohammed@northsouth.edu}
 \refEntry{Dr.~Shafin Rahman, Ph.D. (Australian National University)}{Dhaka}
 {Dept.~of Electrical and Computer Engineering, North South University}
-{MILab advisor, CAT-GS co-author}
+{MILab advisor; co-author on CAT-GS}
 {shafin.rahman@northsouth.edu}
 \refEntry{Dr.~Mohammad Ali Moni, Ph.D. (University of Cambridge)}{Australia}
 {Program Lead, Program for AI and Digital Health Technology, Charles Sturt University}
-{AACL 2026 co-author}
+{Co-author on the AACL 2026 crisis-sentiment study}
 {mmoni@csu.edu.au}
 \end{document}
