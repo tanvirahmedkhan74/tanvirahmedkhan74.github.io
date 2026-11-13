@@ -12,7 +12,7 @@
 
 The current public set contains the synchronized three-page academic CV and conceptual publication/research illustrations. Dense legacy avatar and PNEUMA figures have been retired from the current public tree, with local historical copies retained privately. Existing Git history and deployments are unchanged.
 
-The site distinguishes published collaborative work, manuscripts in preparation, active independent studies and the five MILab strands and their thirteen milestones. Venue plans are explicitly identified as plans. No private manuscript, evidence report, internal protocol, credential, contract or CV source ZIP is part of the public asset set. RSI is an archived, non-indexed compatibility page rather than current research.
+The site distinguishes published collaborative work, manuscripts in preparation, active independent studies and the six MILab strands and their seventeen milestones. Venue plans are explicitly identified as plans. No private manuscript, evidence report, internal protocol, credential, contract or CV source ZIP is part of the public asset set. RSI is an archived, non-indexed compatibility page rather than current research.
 
 The dated sections below remain historical records of earlier revisions.
 

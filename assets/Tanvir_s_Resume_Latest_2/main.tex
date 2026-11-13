@@ -44,10 +44,8 @@ Numerical Methods; Introduction to Linear Algebra; Design and Analysis of Algori
 Failures.}}
 {https://tanvirahmedkhan74.github.io/research/erl/}
 \begin{points}
-\item Trace where supporting evidence is lost across candidate access, selection and reading,
-using controlled studies rather than end-to-end accuracy alone.
-\item Lead the research design, implementation and analysis. Selection gains are qualified
-against stronger baselines and reader controls, and negative routing findings are retained.
+\item Trace where supporting evidence is lost across candidate access, selection and reading, using controlled studies rather than end-to-end accuracy.
+\item Lead the research design, implementation and analysis. Selection gains are qualified against stronger baselines and reader controls; negative findings are retained.
 \end{points}
 
 \researchEntry{RIFT --- Reliability of renderer measurements}
@@ -58,8 +56,7 @@ released talking-head renderer.}}
 \begin{points}
 \item Hold feature selections fixed so that a measured difference separates a change of discrete
 choice from the renderer's local response.
-\item Lead the experimental design, implementation and interpretation within a single-renderer
-scope, retaining negative and ambiguous findings.
+\item Lead the experimental design, implementation and interpretation within one renderer, retaining negative and ambiguous findings.
 \end{points}
 
 \researchEntry{Deadline articulation --- Information available at playback}
@@ -70,8 +67,7 @@ Planned: NeurIPS 2027 / ICCV 2027}
 \begin{points}
 \item Examine what articulation-relevant information streaming speech-model states carry at a
 playback deadline, and what additional waiting contributes.
-\item A completed pilot diagnostic motivates an expanded study of trained readouts and timing
-schedules; that expanded programme remains in development.
+\item A completed pilot diagnostic motivates an expanded study of trained readouts and timing schedules, still in development.
 \end{points}
 
 \cvSubsection{Independent research in progress}
@@ -85,8 +81,7 @@ Preregistered, two-hop scope}
 \begin{points}
 \item Investigate the gap between support-selection information encoded in a frozen reranker and
 the information its scoring head uses.
-\item Design and implement the controlled comparisons, evaluation infrastructure and
-constrained-editing experiments; the experimental programme is underway.
+\item Design and implement the controlled comparisons, evaluation infrastructure and constrained-editing experiments, now underway.
 \end{points}
 
 \section{Published Collaborative Research}
@@ -131,8 +126,7 @@ baseline evaluation and visualizations.}
 \begin{points}
 \item Carried out the core technical implementation over six months; teammates contributed to the
 real-time JavaScript application.
-\item The training-free system combines pretrained perception, structured storage, multi-aspect
-text retrieval and temporal organization.
+\item A training-free system combining pretrained perception, structured storage, multi-aspect text retrieval and temporal organization.
 \end{points}
 
 \section{Software Engineering Experience}
@@ -163,11 +157,9 @@ streaming pipelines, Docker, Linux, FastAPI, SQL and FAISS.\par
 \internHeading{Machine Intelligence Lab}{North South University}{Mar 2025 -- Present}
 \begingroup\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax
 \textbf{Research Assistant}. Advisors: Dr.~Nabeel Mohammed and Dr.~Shafin Rahman.\par
-Our work spans conversational avatars, 3D representation and embedded inference.
-I held primary technical responsibility for the early pipeline, representation and bridge work;
-the real-time Orin customization and the retrieval and tool work were major team efforts.
-This systems work informs my independent research on representation, measurement
-and timing.\par
+Our work spans conversational avatars, 3D representation and embedded inference. I held primary
+technical responsibility for the early pipeline, representation and bridge work; the real-time
+Orin customization and the retrieval and tool work were major team efforts.\par
 \endgroup
 \vspace{3pt}
 \vspace{4pt}
@@ -175,42 +167,46 @@ and timing.\par
 \workstream{MuseTalk 512$\times$512 training and high-resolution development}{musetalk-high-resolution}
 {Training and high-resolution avatar development on the upstream MuseTalk foundation.}
 \workstream{MuseTalk / LatentSync conversational pipeline and multi-GPU serving}{conversational-server}
-{Chunked execution, persistent text-to-speech, speech and video queues, WebRTC playback, and a
-later multi-GPU server.}
+{Chunked execution, persistent text-to-speech, speech and video queues, WebRTC playback
+and a later multi-GPU server.}
+\workstream{Streaming avatar on a humanoid robot face}{robot-face}
+{The streaming avatar face running on an industry partner's humanoid robot head; a team
+effort, the hardware theirs.}
+
+\milabGroup{Audio-driven 3D avatars and blendshape control}{Primary responsibility}
+\workstream{Audio2Face-driven 3D avatars in the browser}{a2f-threejs}
+{A pre-trained Audio2Face model in a Three.js viewer, also tested on a MetaHuman rig; formats,
+mapping and playback alignment were the obstacles.}
+\workstream{Recovering blendshape controls from vertex animation}{a2f-blendshape}
+{Per-frame vertex offsets recovered as 52 blendshape weights by a regularised
+inverse solve; recovered weights stayed damped against the reference.}
 
 \milabGroup{Face representation and motion stability}{Primary responsibility}
 \workstream{Head-wobble stabilization investigations}{head-wobble}
-{Controlled training and rendering variants isolating unwanted head motion, with failure cases
+{Controlled training and rendering variants isolating unwanted head motion, failure cases
 retained.}
 \workstream{Pixel3DMM fitting and stabilization}{pixel3dmm}
 {Upstream Pixel3DMM as a fitting foundation for face representation and motion estimation.}
 \workstream{Custom FLAME articulation}{flame}
-{Custom FLAME integration separating fitting, motion and rendering; one supervision proposal was
-stopped on review.}
+{Custom FLAME integration separating fitting, motion and rendering; one supervision proposal
+was stopped on review.}
 
 \milabGroup{Speech-to-motion bridges and renderer cost}{Primary responsibility}
 \workstream{Gaussian avatar--Moshi integration}{gaussian-moshi}
-{Moshi/Mimi speech representations driving a GaussianTalker-based avatar with streaming execution.}
-\workstream{Moshi--MuseTalk integration}{moshi-musetalk}
-{Streaming adapters and execution infrastructure, attentive to chunk boundaries and buffering.}
-\workstream{Moshi--IMTalker integration}{moshi-imtalker}
-{A distinct feature-to-motion bridge and chunk contracts for IMTalker's interface.}
-\workstream{PersonaPlex--IMTalker integration}{personaplex-imtalker}
-{The PersonaPlex-to-IMTalker speech-to-motion interface, preceding the later device
-customization.}
+{Moshi/Mimi speech representations driving a GaussianTalker-based avatar, streaming.}
+\workstream{Moshi--MuseTalk, Moshi--IMTalker and PersonaPlex--IMTalker bridges}{bridges}
+{Streaming adapters and chunk contracts for three speech-to-renderer pairings, each with its
+own interface and buffering behaviour.}
 \workstream{IMTalker renderer distillation}{renderer-distillation}
-{Fixed-identity teacher--student renderer and benchmarks separating renderer cost from
-end-to-end response time.}
+{Fixed-identity teacher--student renderer and benchmarks isolating renderer cost.}
 
 \milabGroup{Embedded real-time execution on Jetson AGX Orin}{Primary, then team}
 \workstream{Jetson AGX Orin export and TensorRT optimization}{orin-optimization}
-{Export tooling, engine integration, precision and graph checks, and component-level profiling.}
+{Export tooling, engine integration, precision and graph checks, component-level profiling.}
 \workstream{Real-time PersonaPlex--IMTalker customization on Orin}{orin-real-time}
-{A major team effort; I contributed to integration and system development on the delivered
-system.}
+{I contributed to integration and system development on the delivered system.}
 
 \milabGroup{Retrieval and tool use in the conversation}{Team effort}
 \workstream{RAG and tool calling for conversational avatars}{rag-tools}
-{A major team effort; retrieval, tool access, conditioning and live scheduling were kept as
-separate concerns.}
+{Retrieval, tool access and live scheduling kept as separate concerns.}
 \end{document}
