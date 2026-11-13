@@ -105,3 +105,5 @@ body:has(#understanding-the-substrate-by-rebuilding-it:target) .page-contents a[
 @media(max-width:519px){:root{--header:123px}}@media(max-width:480px){:root{--header:143px}.nav-menu{display:grid;grid-template-columns:repeat(3,1fr);gap:0 12px}.nav-menu a{font-size:.76rem;min-height:36px;padding:7px 0}.nav{padding-top:6px}.profile .affiliation{line-height:1.45}.profile .affiliation br{display:block}}
 
 .workstream-contents .section-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 18px}@media(max-width:600px){.workstream-contents .section-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* CV groups: a summary line above the workstream titles. */
+.cv-group-summary{font-size:.93rem;color:var(--muted);margin-bottom:9px}.cv-workstreams li{margin-bottom:7px}
