@@ -111,12 +111,11 @@ body:has(#understanding-the-substrate-by-rebuilding-it:target) .page-contents a[
 /* A personal epigraph on the home page. */
 .epigraph{margin:26px 0 4px;padding-left:20px;border-left:2px solid #97b6bc;font-style:italic}.epigraph p{margin-bottom:0}
 /* Recent news: a height-limited, keyboard-focusable feed. */
-.news-hint{font:.78rem/1.6 var(--sans);color:var(--muted);margin-bottom:12px}
-.news-scroll{max-height:370px;overflow-y:auto;padding-right:16px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);scrollbar-gutter:stable}
+.news-scroll{max-height:370px;overflow-y:auto;margin-top:4px;padding-right:16px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);scrollbar-gutter:stable}
 .news-list{list-style:none;padding:0;margin:0}
 .news-item{display:grid;grid-template-columns:132px minmax(0,1fr);gap:4px 22px;padding:15px 0;border-bottom:1px solid var(--line)}
 .news-item:last-child{border-bottom:0}
 .news-date{margin:2px 0 0}
 .news-text{font-size:.95rem;margin-bottom:0}
 @media(max-width:760px){.news-item{grid-template-columns:1fr;gap:3px}}
-@media print{.news-scroll{max-height:none;overflow:visible;border:0;padding-right:0}.news-hint{display:none}.news-item{break-inside:avoid}}
+@media print{.news-scroll{max-height:none;overflow:visible;border:0;padding-right:0}.news-item{break-inside:avoid}}
