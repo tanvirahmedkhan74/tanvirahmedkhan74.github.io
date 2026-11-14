@@ -20,6 +20,14 @@
 \textbf{#1}\enspace #3, #2.\enspace #4.\enspace\href{mailto:#5}{#5}\par
 \endgroup\vspace{3pt}}
 
+% Profile rows: a fixed label column, so the eye runs down one edge.
+\newcommand{\profileStart}{%
+\begin{description}[style=multiline,leftmargin=3.55cm,labelwidth=3.4cm,labelsep=0.15cm,
+                    font=\sffamily\bfseries\fontsize{9.2pt}{11pt}\selectfont,
+                    itemsep=3pt,topsep=1pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\profileEnd}{\end{description}}
+\newcommand{\prow}[2]{\item[#1]{\small\RaggedRight #2\par}}
+
 \begin{document}
 \begin{center}
 {\sffamily\bfseries\fontsize{24pt}{27pt}\selectfont Tanvir Ahmed Khan}\par
@@ -35,14 +43,27 @@
 \href{https://orcid.org/0009-0009-0519-8021}{ORCID}}
 \end{center}
 
-\section{Research Interests}
-\textbf{Computer vision and natural language processing:} image and video representation
-learning; multimodal fusion; long-video understanding; evidence selection and memory for
-question answering.\par
-\textbf{Responsible AI:} faithfulness and evaluation; grounding model statements in testable
-evidence; retaining negative and ambiguous findings.\par
-\textbf{Applications:} AI for healthcare and life sciences; renderer measurement;
-speech-driven visual interaction.
+\section{Profile}
+{\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax
+I study what a learned representation carries through a system, and what a measurement of it
+establishes. My work covers \textbf{speech-driven avatar systems}, from multi-GPU streaming
+pipelines to 3D face representation and real-time inference on Jetson AGX Orin, together with
+\textbf{evidence selection} in multi-hop question answering and the reliability of
+\textbf{renderer measurements}. I have four co-authored papers in \textit{Neurocomputing},
+\textit{PLOS ONE}, AACL 2026 and IEEE ICCIT 2025. Three first-author manuscripts and one
+co-authored manuscript are in preparation, alongside a preregistered study. I am seeking a
+\textbf{Ph.D. or research-based M.Sc. position for 2027}.
+\par}
+\vspace{4pt}
+\profileStart
+\prow{Vision and language}{Computer vision and natural language processing; image and
+video representation learning; multimodal fusion; long-video understanding; evidence
+selection and memory for question answering}
+\prow{Responsible AI}{Faithfulness and evaluation; grounding statements in testable
+evidence; negative findings kept}
+\prow{Applications}{AI for healthcare and life sciences; renderer measurement; speech-driven
+visual interaction}
+\profileEnd
 
 \section{Education}
 \eduHeading{North South University}{Dhaka, Bangladesh}
