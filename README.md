@@ -2,16 +2,16 @@
 
 Static academic homepage for [tanvirahmedkhan74.github.io](https://tanvirahmedkhan74.github.io/). Semantic HTML, one shared stylesheet, no framework or application JavaScript, and no build step.
 
-The site separates independent research in progress, published collaborative papers, MILab applied projects and the academic CV. The reading layout uses a persistent header and a compact desktop profile column. At narrow widths or short heights, the profile reflows into the document. Navigation remains visible without JavaScript; project pages include contents links and a persistent parent/location strip.
+The site separates first-author research in progress, co-authored publications, MILab applied projects and the academic CV. The reading layout uses a persistent header and a compact desktop profile column. At narrow widths or short heights, the profile reflows into the document. Navigation remains visible without JavaScript; project pages include contents links and a persistent parent/location strip.
 
 ## Pages
 
 - `/`: profile, current research, publications and background.
-- `/research/`: ERL, CG-SWR, RIFT and deadline articulation, each with its study design and scope; completed PNEUMA thesis; other and archived studies.
-- `/publications/`: four published collaborative works, full bylines, publisher links and individual contributions.
+- `/research/`: ERL, CG-SWR, RIFT and deadline articulation, each leading with what the study has found so far; completed PNEUMA thesis; other and archived studies.
+- `/publications/`: four co-authored papers, full bylines, publisher and arXiv links, and the individual contribution shown open under each.
 - `/milab/`: six strands of applied research holding seventeen named milestones, each milestone keeping its own anchor.
-- `/cv/`: web CV and synchronized three-page PDF.
-- `/notes/`: personal reflections, separate from research findings.
+- `/cv/`: web CV and synchronized two-page PDF.
+- `/notes/` and `/notes/study/`: personal reflections and study notes, linked from the footer and not from the header menu.
 - `/research/rsi/`: retained archived pilot, excluded from current listings and the sitemap, with `noindex`.
 - `/research/avatar-systems/`: compatibility entry pointing readers to the differentiated MILab index.
 
@@ -41,15 +41,15 @@ node tools/check_browser.cjs
 
 Only `assets/public/**` is intended for website assets. Other local `assets/` directories and `.cache/` contain private inputs, source packages or working files. Ignoring a previously tracked file does not untrack it; review the exact staged list before publication. The preview allowlist does not change GitHub Pages behavior.
 
-The coordinated illustrations are in `assets/public/figures/refresh-2026/`. Published-work thumbnails are conceptual artwork, including the rainfall illustration; they are not empirical result images. WIP figures explain research questions without private methods or results. The optional deadline and MILab loops have native controls, compressed WebM/MP4 versions, GIF downloads, static posters and reduced-motion fallbacks. There is no autoplay. Earlier, denser avatar and PNEUMA figures have been retired from the current public asset tree; historical Git versions remain unchanged.
+The coordinated illustrations are in `assets/public/figures/refresh-2026/`. Published-work thumbnails are conceptual artwork, including the rainfall illustration; they are not empirical result images. WIP figures explain research questions without private methods or results. The conceptual deadline and MILab loops and the PNEUMA illustration are no longer referenced by any page; their files remain in the asset tree. The robot-head and six-variant MILab clips are shown open; the other clips stay collapsed. There is no autoplay. Earlier, denser avatar and PNEUMA figures have been retired from the current public asset tree; historical Git versions remain unchanged.
 
 ## Content and CV maintenance
 
-ERL, RIFT and deadline articulation are first-author work in preparation. ACL, TMLR, and the alternative NeurIPS 2027 or ICCV 2027 plans are targets, not submissions or acceptances. RIFT’s first-author role is stated without exposing its full author list. CG-SWR is active experimental work on representation/readout gaps and constrained weight repair. Keep these separate from the four published collaborative papers. Preserve upstream model attribution and the distinction between primary earlier MILab work and major team contributions to the final Orin and RAG stages.
+ERL, RIFT and deadline articulation are first-author work in preparation; CG-SWR is a first-author preregistered study in progress. None has been submitted. Each public entry states what the study has found so far in words, without exact unpublished figures; the drafts themselves stay private under the ignored `assets/ref/`. Venue plans are no longer listed. The RIFT entry uses the title of the current draft, and CG-SWR keeps its public title. CiteCheck results stay with its lead author. Keep these separate from the four co-authored publications. State upstream model attribution once, in the MILab Foundations section, and keep the distinction between primary earlier MILab work and team contributions to the robot head, the final Orin system and the RAG stage.
 
-AACL links to its official 2026 main long-paper proceedings. CAT-GS retains the distinction between online publication in 2026 and January 2027 assignment. Private manuscripts, raw records, internal protocols, credentials and source ZIPs are not public downloads.
+AACL links to its official 2026 main long-paper proceedings. CAT-GS is listed as published online in 2026, in the January 2027 issue. Private manuscripts, raw records, internal protocols, credentials and source ZIPs are not public downloads.
 
-CV source: `assets/Tanvir_s_Resume_Latest_2/main.tex` with `myresume.sty`; use XeLaTeX. Public output: `assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf`. Keep the web CV, TeX, reviewed PDF and private source package synchronized. Build intermediates and the current source package remain in `.cache/portfolio-update/cv/`. The pre-existing deleted source-adjacent `main.pdf` is a separate historical build and is not needed by the website.
+CV source: `assets/Tanvir_s_Resume_Latest_2/main.tex` with `myresume.sty`; use XeLaTeX. `padua_cv.tex` reads `main.tex` and changes only the closing sentence of the profile, so the two-page versions cannot drift. Public output: `assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf`. Keep the web CV, TeX, reviewed PDF and private source package synchronized. Build intermediates and the current source package remain in `.cache/portfolio-update/cv/`. The pre-existing deleted source-adjacent `main.pdf` is a separate historical build and is not needed by the website.
 
 No push, deployment or paper submission is part of this local refresh. Preserve unrelated working-tree changes and stage intended files explicitly.
 

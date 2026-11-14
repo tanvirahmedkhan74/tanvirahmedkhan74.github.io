@@ -1,5 +1,13 @@
 # Portfolio and CV revision record
 
+## 14 November 2026: review fixes
+
+- The owner supplied the current ERL, RIFT, deadline-articulation, CG-SWR and CiteCheck drafts and asked for the fixes from an independent review of the CV and portfolio. This supersedes the 28 October decision to omit findings: each first-author entry now states what the study has found so far, in words and without exact unpublished figures. Venue targets are removed. CiteCheck results stay with its lead author.
+- CV rebuilt at two pages from one source. Order: profile, education, publications, research in progress, thesis, MILab, software, projects, skills, references. Entries lead with the paper title and role. The RIFT title follows the current draft; the CG-SWR title is unchanged at the owner's request. MILab is six one-sentence strands with outcomes, each heading linked to its section of the site. `padua_cv.tex` now reads `main.tex`.
+- Site: research pages lead with findings and a first-person role; "Author list: anonymous" removed; PNEUMA page says what the team built and why the direction ended, without its decorative figure; MILab prose is first person with the per-item disclaimers cut and attribution stated once; contributions are open by default; arXiv links added; notes moved from the header menu to the footer.
+- Not established and left unchanged: an individual role within the four-person PNEUMA thesis, and whether the Tuctuc role was part-time. No data figures were added, because the only ones available are in the unpublished drafts.
+- Previous CV sources and PDFs are in `.cache/portfolio-update/cv/history/2026-11-14-pre-review/`. Validation: `tools/check_site.py` passes on 23 pages; both PDFs are two pages with no overfull lines.
+
 ## 28 October 2026: active research and public disclosure update
 
 - Reviewed the owner's current RIFT and ERL drafts, existing profile, and prior portfolio decisions. The owner's clarification governs status: neither manuscript has been submitted, regardless of template labels in the supplied drafts.
