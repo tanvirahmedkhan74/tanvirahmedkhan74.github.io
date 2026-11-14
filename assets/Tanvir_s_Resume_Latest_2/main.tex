@@ -6,6 +6,29 @@
 % padua_cv.tex. Nothing else differs between versions, so they cannot drift.
 \providecommand{\cvSeeking}{Ph.D. or research-based M.Sc. position for 2027}
 \providecommand{\cvPdfTitle}{Tanvir Ahmed Khan - Academic CV}
+% What a variant may also replace. Each default below is the generic CV.
+%   \cvProfile    the profile paragraph, up to but not including "I am seeking ..."
+%   \cvInterests  the interest rows, as \prow{label}{text} lines
+%   \cvResearch   the research threads, chosen and ordered from
+%                 \threadEvidence (or \threadEvidenceCore, without the reranker follow-up),
+%                 \threadAvatars, \threadAvatarsBrief, \threadGrounding
+\providecommand{\cvProfile}{%
+I am a Research Assistant at the Machine Intelligence Lab, where I build and measure
+speech-driven talking-avatar systems. My own research asks one question in two settings: when a
+model retains useful information in an intermediate representation, can the next stage actually
+use it? I study this in multi-hop question answering, where supporting evidence can be retrieved
+and still never reach the answer, and in talking avatars, where the speech model's states and the
+renderer's measurements decide what the face can do. I have \textbf{four co-authored papers} in
+\textit{Neurocomputing}, \textit{PLOS ONE}, AACL-IJCNLP 2026 and IEEE ICCIT 2025, and
+first-author manuscripts in preparation on both questions.}
+\providecommand{\cvInterests}{%
+\prow{Vision and language}{Computer vision and natural language processing; image and
+video representation learning; multimodal fusion; long-video understanding; evidence
+selection and memory for question answering}
+\prow{Responsible AI}{Faithfulness and evaluation; measurement reliability; grounding statements
+in testable evidence}
+\prow{Applications}{Speech-driven visual interaction; AI for healthcare and life sciences}}
+\providecommand{\cvResearch}{\threadEvidence\threadAvatars\threadGrounding}
 
 \documentclass[a4paper,11pt]{article}
 \usepackage{myresume}
@@ -28,7 +51,7 @@
                     font=\sffamily\bfseries\fontsize{9.2pt}{11pt}\selectfont,
                     itemsep=3pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
 \newcommand{\profileEnd}{\end{description}}
-\newcommand{\prow}[2]{\item[#1]{\small\RaggedRight #2\par}}
+\newcommand{\prow}[2]{\item[#1]{\small\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax #2\par}}
 
 % A compact publication list.
 \newcommand{\pubStart}{%
@@ -48,6 +71,71 @@
 {\sffamily\fontsize{8.6pt}{10.5pt}\selectfont #2\par}%
 \nobreak\vspace{1.5pt}%
 {\small\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax #3\par}}
+
+% A research thread: one label over the studies that share a question.
+\newcommand{\thread}[1]{%
+\par\addvspace{5pt}\Needspace{4\baselineskip}%
+{\sffamily\bfseries\fontsize{9.6pt}{11.5pt}\selectfont #1\par}\nobreak\vspace{-2.5pt}}
+
+% A study told in one paragraph: linked title, status, then the finding.
+% \wipline{title}{status}{finding}{project page}
+\newcommand{\wipline}[4]{%
+\par\addvspace{3pt}%
+{\small\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax
+\setlength{\hangindent}{1.25em}\setlength{\hangafter}{1}%
+\textbf{\href{#4}{#1}}\enspace{\sffamily\fontsize{8.6pt}{10.5pt}\selectfont #2.}\enspace #3\par}}
+
+\newcommand{\threadEvidenceCore}{%
+\thread{Evidence use in multi-hop question answering}
+\wip{From Transit Routing to Evidence Selection: Conditional Audits of Multi-Hop QA Failures}
+{Lead author\enspace\textperiodcentered\enspace Manuscript in preparation}
+{Separate audits of evidence access, selection and reading. Learned graph routing tied BM25 at a
+matched budget; a selection add-on gained little over fine-tuned cross-encoders, and no end-to-end
+answer gain was established.}
+{https://tanvirahmedkhan74.github.io/research/erl/}}
+\newcommand{\threadEvidence}{\threadEvidenceCore
+\wipline{Follow-up: Capacity-Gated Sparse Weight Repair for Multi-Hop Evidence Reranking}
+{Lead author, preregistered}
+{A linear probe on a frozen reranker recovers evidence signal that its scoring head does not use;
+confirmation pending.}
+{https://tanvirahmedkhan74.github.io/research/cg-swr/}}
+
+\newcommand{\threadAvatars}{%
+\thread{Speech-driven talking avatars}
+\wip{Deadline-Available Speech States for Full-Duplex Avatar Articulation}
+{Lead author\enspace\textperiodcentered\enspace Manuscript in preparation}
+{Most of the apparent lookahead a streaming speech model offers for lip motion comes from its
+decoding schedule and costs no delay; waiting a further 160\,ms improved lip-aperture prediction by
+far less than the margin set in advance.}
+{https://tanvirahmedkhan74.github.io/research/deadline-articulation/}
+\wip{A Frozen-Index Audit of Finite-Difference Probes in One Released Talking-Head Renderer}
+{Lead author\enspace\textperiodcentered\enspace Manuscript in preparation}
+{A finite-difference probe through this renderer can cross a hard feature selection. Holding the
+selection fixed removed most of the measured response at the first set of states; the replication
+was partial, and the original local-linearity check still fails.}
+{https://tanvirahmedkhan74.github.io/research/rift/}}
+
+% The same thread at one paragraph per study, for a reader outside vision.
+\newcommand{\threadAvatarsBrief}{%
+\thread{Speech-driven talking avatars}
+\wipline{Deadline-Available Speech States for Full-Duplex Avatar Articulation}
+{Lead author, in preparation}
+{Most of the lookahead a streaming speech model seems to offer for lip motion comes from its
+decoding schedule; waiting longer added little.}
+{https://tanvirahmedkhan74.github.io/research/deadline-articulation/}
+\wipline{A Frozen-Index Audit of Finite-Difference Probes in One Released Talking-Head Renderer}
+{Lead author, in preparation}
+{A measurement audit: much of a finite-difference response came from a hard feature selection
+changing, not from the renderer's local behaviour.}
+{https://tanvirahmedkhan74.github.io/research/rift/}}
+
+\newcommand{\threadGrounding}{%
+\thread{Grounding predictions in testable evidence}
+\wip{Turning Protein Function Predictions into Testable Residue-Level Hypotheses}
+{Co-author\enspace\textperiodcentered\enspace Manuscript in preparation\enspace\textperiodcentered\enspace Lead author: Mahir Shahriar Tamim}
+{Ties a predicted protein-function statement to the residues that support it and tests whether
+the statement depends on them.}
+{https://tanvirahmedkhan74.github.io/publications/\#citecheck}}
 
 % One strand of the lab work: a heading linked to its section of the portfolio,
 % who did it, and one sentence on what was done and what came of it.
@@ -107,24 +195,12 @@ North South University\enspace\textbullet\enspace Dhaka, Bangladesh}\par
 
 \section{Profile}
 {\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax
-I am a Research Assistant at the Machine Intelligence Lab, where I build and measure
-speech-driven talking-avatar systems. My own research asks one question in several
-settings: when a model retains useful information in an intermediate representation, can the next
-stage actually use it? I study this in multi-hop question answering, where supporting evidence can
-be retrieved and still never reach the answer, and in talking-head renderers, where a hard feature
-selection changes what a measurement means. I have \textbf{four co-authored papers} in
-\textit{Neurocomputing}, \textit{PLOS ONE}, AACL-IJCNLP 2026 and IEEE ICCIT 2025, two first-author
-manuscripts in preparation and two further first-author studies in progress. I am seeking a
+\cvProfile\ I am seeking a
 \textbf{\cvSeeking}.
 \par}
 \vspace{4pt}
 \profileStart
-\prow{Vision and language}{Computer vision and natural language processing; image and
-video representation learning; multimodal fusion; long-video understanding; evidence
-selection and memory for question answering}
-\prow{Responsible AI}{Faithfulness and evaluation; measurement reliability; grounding statements
-in testable evidence}
-\prow{Applications}{Speech-driven visual interaction; AI for healthcare and life sciences}
+\cvInterests
 \profileEnd
 
 \section{Education}
@@ -175,49 +251,18 @@ evaluation and visualizations.}
 \pubEnd
 
 \section{Research in Progress}
-\wip{From Transit Routing to Evidence Selection: Conditional Audits of Multi-Hop QA Failures}
-{Lead author\enspace\textperiodcentered\enspace Manuscript in preparation}
-{Separate audits of evidence access, selection and reading. Learned graph routing tied BM25 at a
-matched budget; a selection add-on gained little over fine-tuned cross-encoders, and no end-to-end
-answer gain was established.}
-{https://tanvirahmedkhan74.github.io/research/erl/}
-
-\wip{A Frozen-Index Audit of Finite-Difference Probes in One Released Talking-Head Renderer}
-{Lead author\enspace\textperiodcentered\enspace Manuscript in preparation}
-{A finite-difference probe through this renderer can cross a hard feature selection. Holding the
-selection fixed removed most of the measured response at the first set of states; the replication
-was partial, and the original local-linearity check still fails.}
-{https://tanvirahmedkhan74.github.io/research/rift/}
-
-\wip{Deadline-Available Speech States for Full-Duplex Avatar Articulation}
-{Lead author\enspace\textperiodcentered\enspace Work in progress}
-{Most of the apparent lookahead a streaming speech model offers for lip motion comes from its
-decoding schedule and costs no delay; waiting a further 160\,ms improved lip-aperture prediction by
-far less than the margin set in advance.}
-{https://tanvirahmedkhan74.github.io/research/deadline-articulation/}
-
-\wip{Capacity-Gated Sparse Weight Repair for Multi-Hop Evidence Reranking}
-{Lead author\enspace\textperiodcentered\enspace Preregistered study, two-hop scope}
-{A linear probe on a frozen reranker recovers evidence-selection signal that its scoring head does
-not use. Trained heads recover most of that gap and random edits none; the sealed confirmation is
-pending.}
-{https://tanvirahmedkhan74.github.io/research/cg-swr/}
-
-\wip{Turning Protein Function Predictions into Testable Residue-Level Hypotheses}
-{Co-author\enspace\textperiodcentered\enspace Manuscript in preparation\enspace\textperiodcentered\enspace Lead author: Mahir Shahriar Tamim}
-{Ties a predicted protein-function statement to the residues that support it and tests whether
-the statement depends on them.}
-{https://tanvirahmedkhan74.github.io/publications/\#citecheck}
+\vspace{-3pt}
+\cvResearch
 
 \section{Undergraduate Thesis}
 \entryHeading{\href{https://tanvirahmedkhan74.github.io/research/pneuma/}{PNEUMA --- Video memory
 for long-form question answering}}{Completed Dec 2025}
 \par\nobreak\vspace{1pt}
 {\small\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax
-Four-person thesis supervised by Dr.~Nabeel Mohammed. We stored pretrained-model descriptions of a
-video in SQL records, vector indices and a temporal graph, so that one moment could be retrieved by
-action, object, place, audio or time. Our evaluation left grounding and consistency unresolved; that
-question now drives my work on evidence selection.\par}
+Four-person thesis supervised by Dr.~Nabeel Mohammed; I designed the methodology and pipeline and
+led the work. We stored pretrained-model descriptions of a video in SQL records, vector indices and a
+temporal graph. Our evaluation left grounding and consistency unresolved; that question now drives
+my work on evidence selection.\par}
 
 \section{Applied Research Experience}
 \internHeading{\href{https://milab-nsu.github.io/}{Machine Intelligence Lab}}
@@ -256,15 +301,14 @@ PersonaPlex--IMTalker system.}
 \section{Software Engineering Experience}
 \internHeading{Tuctuc}{Spain (Remote)}{Jan 2022 -- Jun 2026}
 \par\vspace{-8pt}
-{\small\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax \textbf{Junior Software Engineer}. Maintained and extended Odoo-based ERP
-systems and developed cross-platform mobile applications using React Native.\par}
+{\small\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax \textbf{Junior Software Engineer}. Maintained and extended Odoo-based ERP systems and built React Native mobile applications.\par}
 
 \section{Engineering Projects}
-{\small\RaggedRight
+{\small\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000\relax
 \textbf{\href{https://github.com/tanvirahmedkhan74/Periphery}{Saliency detection via knowledge
 distillation.}}\enspace Peekaboo/DINO teacher and UKAN student prototype.\par
 \vspace{1.5pt}
-\textbf{\href{https://github.com/tanvirahmedkhan74/DynApex}{DynApex.}}\enspace C++ dependency
+\textbf{\href{https://github.com/tanvirahmedkhan74/DynApex}{DynApex}} (course group project).\enspace C++ dependency
 and cycle analysis with pragma injection and OpenMP CPU/GPU execution.\par}
 
 \section{Technical Skills and Languages}

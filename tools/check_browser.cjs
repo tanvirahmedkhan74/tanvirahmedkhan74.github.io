@@ -84,15 +84,17 @@ const orientationRoutes = ['/', '/research/', '/publications/', '/milab/', '/res
           const header = document.querySelector('.site-header').getBoundingClientRect();
           const profile = document.querySelector('.profile').getBoundingClientRect();
           const footer = document.querySelector('.site-footer').getBoundingClientRect();
-          const location = document.querySelector('.page-location').getBoundingClientRect();
+          // The home page is the root of the site and carries no parent breadcrumb.
+          const breadcrumb = document.querySelector('.page-location');
+          const location = breadcrumb ? breadcrumb.getBoundingClientRect().top : null;
           return { header: header.top, profileTop: profile.top, profileBottom: profile.bottom, footer: footer.top,
-            location: location.top, parent: !!document.querySelector('.page-location a[href]') };
+            location, parent: breadcrumb ? !!breadcrumb.querySelector('a[href]') : null };
         });
         assert.ok(Math.abs(state.header) < 2, `${route} header lost at ${progress}`);
         assert.ok(state.profileTop >= 65, `${route} profile overlaps header`);
         assert.ok(state.profileBottom <= state.footer + 1, `${route} profile overlaps footer`);
-        assert.ok(state.location >= 64, `${route} local context overlaps header`);
-        assert.ok(state.parent);
+        assert.ok(state.location === null || state.location >= 64, `${route} local context overlaps header`);
+        assert.ok(state.parent === null ? route === '/' : state.parent, `${route} breadcrumb has no parent link`);
         positions.push({ route, progress, ...state });
       }
     }
@@ -110,9 +112,12 @@ const orientationRoutes = ['/', '/research/', '/publications/', '/milab/', '/res
     assert.equal(await page.locator(':focus').innerText(), 'Skip to content');
     await page.keyboard.press('Enter');
     assert.equal(await page.locator(':focus').getAttribute('id'), 'main');
+    // Contributions are open by default, so the keyboard has to toggle, not just open.
+    const contribution = page.locator('.contribution').first();
+    const wasOpen = await contribution.evaluate(el => el.open);
     await page.locator('.contribution summary').first().focus();
     await page.keyboard.press('Enter');
-    assert.ok(await page.locator('.contribution').first().evaluate(el => el.open));
+    assert.equal(await contribution.evaluate(el => el.open), !wasOpen, 'Enter does not toggle a contribution');
     await page.locator('.nav-menu a').filter({ hasText: 'Publications', exact: true }).click();
     assert.equal(new URL(page.url()).pathname, '/publications/');
     await page.goto(base + '/milab/#rag-tools');
@@ -123,14 +128,17 @@ const orientationRoutes = ['/', '/research/', '/publications/', '/milab/', '/res
     await page.goBack();
     assert.equal(new URL(page.url()).hash, '#rag-tools');
     // Controlled motion, real video decoding, static reduced-motion fallback.
-    await page.goto(base + '/research/deadline-articulation/');
-    assert.equal(await page.locator('video').getAttribute('autoplay'), null);
-    await page.locator('.animation summary').click();
-    await page.locator('video').evaluate(async el => { el.load(); await new Promise((resolve, reject) => { el.onloadedmetadata = resolve; el.onerror = reject; }); });
-    assert.ok(await page.locator('video').evaluate(el => el.duration > 6 && el.videoWidth === 960));
+    // The lab page carries the demonstration clips; the research pages lead with findings.
+    await page.goto(base + '/milab/');
+    const clip = page.locator('.animation video').first();
+    assert.equal(await clip.getAttribute('autoplay'), null);
+    await page.locator('.animation').first().evaluate(el => { el.open = true; });
+    await clip.evaluate(async el => { el.load(); await new Promise((resolve, reject) => { el.onloadedmetadata = resolve; el.onerror = reject; }); });
+    assert.ok(await clip.evaluate(el => el.duration > 1 && el.videoWidth === Number(el.getAttribute('width'))),
+      'Clip does not decode at its declared size');
     await page.emulateMedia({ reducedMotion: 'reduce' });
-    assert.equal(await page.locator('video').isVisible(), false);
-    assert.equal(await page.locator('.motion-note').isVisible(), true);
+    assert.equal(await clip.isVisible(), false);
+    assert.equal(await page.locator('.animation .motion-note').first().isVisible(), true);
     await page.emulateMedia({ reducedMotion: 'no-preference' });
     // Preview allowlist, including newly added pages, PDF delivery and private cache exclusion.
     for (const missing of ['/missing-page/', '/README.md', '/.git/config', '/.cache/portfolio-update/content-model.md', '/assets/Tanvir_s_Resume_Latest_2/main.tex']) {
