@@ -51,7 +51,7 @@ PNEUMA: the owner stated on 14 November 2026 that he designed the methodology an
 
 AACL links to its official 2026 main long-paper proceedings. CAT-GS is listed as published online in 2026, in the January 2027 issue. Private manuscripts, raw records, internal protocols, credentials and source ZIPs are not public downloads.
 
-CV source: `assets/Tanvir_s_Resume_Latest_2/main.tex` with `myresume.sty`; use XeLaTeX. `padua_cv.tex` reads `main.tex` and changes only the closing sentence of the profile, so the two-page versions cannot drift. Public output: `assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf`. Keep the web CV, TeX, reviewed PDF and private source package synchronized. Build intermediates and the current source package remain in `.cache/portfolio-update/cv/`. The pre-existing deleted source-adjacent `main.pdf` is a separate historical build and is not needed by the website.
+CV source: `assets/Tanvir_s_Resume_Latest_2/main.tex` with `myresume.sty`; use XeLaTeX. `padua_cv.tex` is frozen as sent to Padua on 14 November 2026: it reads `padua_main.tex` (main.tex at cb5c7fd), not `main.tex`. Public output: `assets/public/documents/Tanvir_Ahmed_Khan_CV.pdf`. Keep the web CV, TeX, reviewed PDF and private source package synchronized. Build intermediates and the current source package remain in `.cache/portfolio-update/cv/`. The pre-existing deleted source-adjacent `main.pdf` is a separate historical build and is not needed by the website.
 
 No push, deployment or paper submission is part of this local refresh. Preserve unrelated working-tree changes and stage intended files explicitly.
 
